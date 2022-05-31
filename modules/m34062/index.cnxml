@@ -1,0 +1,82 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+  <title>Parseval's and Plancherel's Theorems</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m34062</md:content-id>
+  <md:title>Parseval's and Plancherel's Theorems</md:title>
+  <md:abstract/>
+  <md:uuid>43d34d4a-7919-4fca-b99c-c34c3163ee09</md:uuid>
+</metadata>
+
+<content>
+    
+      <para id="id249836">When dealing with transform coefficients, we will see that our notions of
+<emphasis effect="italics">distance</emphasis> and <emphasis effect="italics">angle</emphasis> carry over to the coefficient space.</para>
+      <para id="id249850">Let <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>,</m:mo><m:mi>y</m:mi><m:mo>∈</m:mo><m:mi>V</m:mi></m:mrow></m:math> and suppose that <m:math overflow="scroll"><m:msub><m:mfenced separators="" open="{" close="}"><m:msub><m:mi>v</m:mi><m:mi>k</m:mi></m:msub></m:mfenced><m:mrow><m:mi>k</m:mi><m:mo>∈</m:mo><m:mi>Γ</m:mi></m:mrow></m:msub></m:math> is an orthobasis. (<m:math overflow="scroll"><m:mi>Γ</m:mi></m:math> denotes the index set, which could be finite or infinite.)
+Then <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:msub><m:mo>∑</m:mo><m:mrow><m:mi>k</m:mi><m:mo>∈</m:mo><m:mi>Γ</m:mi></m:mrow></m:msub><m:msub><m:mi>α</m:mi><m:mi>k</m:mi></m:msub><m:msub><m:mi>v</m:mi><m:mi>k</m:mi></m:msub></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:msub><m:mo>∑</m:mo><m:mrow><m:mi>k</m:mi><m:mo>∈</m:mo><m:mi>Γ</m:mi></m:mrow></m:msub><m:msub><m:mi>β</m:mi><m:mi>k</m:mi></m:msub><m:msub><m:mi>v</m:mi><m:mi>k</m:mi></m:msub></m:mrow></m:math>, and</para>
+      <equation id="id249987"><m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:msub>
+              <m:mfenced separators="" open="〈" close="〉">
+                <m:mi>x</m:mi>
+                <m:mo>,</m:mo>
+                <m:mi>y</m:mi>
+              </m:mfenced>
+              <m:mi>V</m:mi>
+            </m:msub>
+            <m:mo>=</m:mo>
+            <m:munder>
+<m:mrow>
+              <m:mo>∑</m:mo>
+</m:mrow>        
+      <m:mrow>
+                <m:mi>k</m:mi>
+                <m:mo>∈</m:mo>
+                <m:mi>Γ</m:mi>
+              </m:mrow>
+            </m:munder>
+            <m:msub>
+              <m:mi>α</m:mi>
+              <m:mi>k</m:mi>
+            </m:msub>
+            <m:mover>
+              <m:msub>
+                <m:mi>β</m:mi>
+                <m:mi>k</m:mi>
+              </m:msub>
+              <m:mo>¯</m:mo>
+            </m:mover>
+            <m:mo>.</m:mo>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id250052">So</para>
+      <equation id="id250057">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:msub>
+              <m:mfenced separators="" open="〈" close="〉">
+                <m:mi>x</m:mi>
+                <m:mo>,</m:mo>
+                <m:mi>y</m:mi>
+              </m:mfenced>
+              <m:mi>V</m:mi>
+            </m:msub>
+            <m:mo>=</m:mo>
+            <m:msub>
+              <m:mfenced separators="" open="〈" close="〉">
+                <m:mi>α</m:mi>
+                <m:mo>,</m:mo>
+                <m:mi>β</m:mi>
+              </m:mfenced>
+              <m:msub>
+                <m:mi>ℓ</m:mi>
+                <m:mn>2</m:mn>
+              </m:msub>
+            </m:msub>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id250112">This is Plancherel's theorem. Parseval's theorem follows since <m:math overflow="scroll"><m:mrow><m:msub><m:mfenced separators="" open="〈" close="〉"><m:mi>x</m:mi><m:mo>,</m:mo><m:mi>x</m:mi></m:mfenced><m:mi>V</m:mi></m:msub><m:mo>=</m:mo><m:msub><m:mfenced separators="" open="〈" close="〉"><m:mi>α</m:mi><m:mo>,</m:mo><m:mi>α</m:mi></m:mfenced><m:msub><m:mi>ℓ</m:mi><m:mn>2</m:mn></m:msub></m:msub></m:mrow></m:math> which implies that <m:math overflow="scroll"><m:mrow><m:msubsup><m:mfenced open="∥" close="∥"><m:mi>x</m:mi></m:mfenced><m:mrow><m:mi>V</m:mi></m:mrow><m:mn>2</m:mn></m:msubsup><m:mo>=</m:mo><m:msubsup><m:mfenced open="∥" close="∥"><m:mi>x</m:mi></m:mfenced><m:mrow><m:msub><m:mi>ℓ</m:mi><m:mn>2</m:mn></m:msub></m:mrow><m:mn>2</m:mn></m:msubsup></m:mrow></m:math>. Thus, an orthobasis makes every inner product space equivalent to <m:math overflow="scroll"><m:msub><m:mi>ℓ</m:mi><m:mn>2</m:mn></m:msub></m:math>!
+</para>
+  </content>
+</document>

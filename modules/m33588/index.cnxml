@@ -1,0 +1,121 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+  <title>Introduction to Digital Signal Processing</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m33588</md:content-id>
+  <md:title>Introduction to Digital Signal Processing</md:title>
+  <md:abstract/>
+  <md:uuid>b00d997a-9d9a-41d7-923e-98452bbf97fb</md:uuid>
+</metadata>
+
+<content>
+      <!--empty paragraphs get left behind.-->
+      <section id="uid1"><title>Information, Signals and Systems</title><!--empty paragraphs get left behind.-->
+        <para id="id63445">Signal processing concerns primarily with signals and systems that operate on signals to extract useful information. In this course our concept of a “signal” will be very broad, encompassing virtually any data that can be represented as an organized “collection” of data.</para>
+        <!--empty paragraphs get left behind.-->
+<example id="eip-id6912945">      
+  
+        <list id="id63803" display="block" list-type="bulleted">
+          <item id="uid2">A continuous function <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:math></item>
+          <item id="uid3">A sequence of discrete data points <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>[</m:mo><m:mi>n</m:mi><m:mo>]</m:mo></m:mrow></m:math></item>
+          <item id="uid4">A multi-dimensional array of data
+</item>
+          <item id="uid5">Audio, images, video, voltage of antenna
+</item>
+          <item id="uid6">Stock prices, potassium concentration in a neuron
+</item>
+        </list>
+</example>        
+<para id="id63894">Our concept of a “system” will be a black box that takes a signal as input and provides another signal as
+output.</para>
+        <!--empty paragraphs get left behind.-->
+<example id="eip-id6876755">        
+
+        <list id="id63912" display="block" list-type="bulleted">
+          <item id="uid7">Analog-to-digital converters (ADCs)
+</item>
+          <item id="uid8">Filters
+</item>
+          <item id="uid9">Decimators/Interpolators
+</item>
+          <item id="uid10">Matched filters
+</item>
+          <item id="uid11">Face recognition systems
+</item>
+        </list>
+</example>        
+<para id="id63973">In this course we will approach signal processing from the point of view that signals are <emphasis effect="italics">vectors</emphasis> living in an appropriate <emphasis effect="italics">vector space</emphasis>, and systems are <emphasis effect="italics">operators</emphasis> that map signal from one vector space to another. This allows us to use a common mathematical framework to talk about how to:</para>
+        <list id="id63996" display="block" list-type="bulleted">
+          <item id="uid12">represent signals
+</item>
+          <item id="uid13">measure similarity/distance between signals
+</item>
+          <item id="uid14">transform signals from one representation to another
+</item>
+          <item id="uid15">understand the operation of linear systems on the signals
+</item>
+        </list>
+        <para id="id64047">Since the ficus of this course in on digital signal processing, this will
+also allow us to use tools from linear algebra to facilitate this
+understanding.</para>
+      </section>
+      <section id="uid16">
+        <title>Digital Signal Processing</title>
+        <!--empty paragraphs get left behind.-->
+        <para id="id64066">DSP is often presented as an alternative to analog signal processing, i.e., instead of a purely analog system as in <link target-id="uid17"/>, we can build a digital implementation of an analog system as in <link target-id="uid18"/>. This can be advantageous since high-precision analog components are expensive (even compared to the cost of an ADC/DAC).</para>
+        <figure id="uid17"><media id="uid17_media" alt="A purely analog system H that maps a continuous-time signal f(t) to a continuous-time signal g(t)">
+            <image mime-type="image/png" src="../../media/01_1.png" id="uid17_onlineimage" width="292"><!-- NOTE: attribute width changes image size online (pixels). original width is 292. --></image>
+            <image mime-type="application/postscript" for="pdf" src="../../media/01_1.eps" id="uid17_printimage" print-width="7.5cm">
+              <!--NOTE: attribute width changes image size in printed PDF (if specified in .tex file)-->
+            </image>
+          </media>
+          
+        <caption>An analog system.</caption></figure>
+        <figure id="uid18"><media id="uid18_media" alt="A mixed analog-digital system that first samples a continuous-time signal f(t) into a discrete-time signal f[n] which is then processed by a digital system H to obtain the discrete-time signal g[n].  The discrete-time signal g[n] is then input to a digital-to-analog converter to obtain the continuous-time signal g(t).">
+            <image mime-type="image/png" src="../../media/01_2.png" id="uid18_onlineimage" width="586"><!-- NOTE: attribute width changes image size online (pixels). original width is 586. --></image>
+            <image mime-type="application/postscript" for="pdf" src="../../media/01_2.eps" id="uid18_printimage" print-width="15.0cm">
+              <!--NOTE: attribute width changes image size in printed PDF (if specified in .tex file)-->
+            </image>
+          </media>
+          
+        <caption>A digital implementation of an analog system.</caption></figure>
+        <para id="id64110">However, the success of DSP derives to a much greater extent from the facts that:</para>
+        <list id="id64114" display="block" list-type="enumerated">
+          <item id="uid19">Discrete-valued signals can be more robust to noise, as illustrated in <link target-id="uid21"/>. In <link target-id="uid21"/>(a), noise may be impossible to eliminate, but in <link target-id="uid21"/>(b) noise can be eliminated entirely by exploiting the discrete structure of the signal.
+</item>
+          <item id="uid20">Once we have a digital, discrete-time signal, we can store it in memory and
+perform highly complex processing.
+</item>
+        </list>
+        <figure id="uid21" orient="vertical"><subfigure id="id64177">
+            <media id="id64177_media" alt="An analog-valued continuous-time signal corrupted by noise.">
+              <image mime-type="image/png" src="../../media/01_3a.png" id="id64177_onlineimage" width="406"><!-- NOTE: attribute width changes image size online (pixels). original width is 406. --></image>
+              <image mime-type="application/postscript" for="pdf" src="../../media/01_3a.eps" id="id64177_printimage" print-width="7.2cm">
+                <!--NOTE: attribute width changes image size in printed PDF (if specified in .tex file)-->
+              </image>
+            </media>
+          </subfigure>
+          <subfigure id="id64188">
+            <media id="id64188_media" alt="A discrete-valued continuous-time signal corrupted by noise.">
+              <image mime-type="image/png" src="../../media/01_3b.png" id="id64188_onlineimage" width="406"><!-- NOTE: attribute width changes image size online (pixels). original width is 406. --></image>
+              <image mime-type="application/postscript" for="pdf" src="../../media/01_3b.eps" id="id64188_printimage" print-width="7.2cm">
+                <!--NOTE: attribute width changes image size in printed PDF (if specified in .tex file)-->
+              </image>
+            </media>
+          </subfigure>
+          
+        <caption>(a) An analog signal corrupted with noise; (b) A discrete-valued signal corrupted with noise.</caption></figure>
+        <para id="id64210">In this course we will consider signal processing systems beyond simple LTI
+filters. Themes of the course include:</para>
+        <list id="id64216" display="block" list-type="bulleted">
+          <item id="uid22">Signals as vectors, vector space geometry
+</item>
+          <item id="uid23">Signal representations and bases
+</item>
+          <item id="uid24">Linear systems analysis and linear algebra
+</item>
+          <item id="uid25">“Optimality” in signal processing (e.g., optimal filter design)
+</item>
+        </list>
+      </section>
+  </content>
+</document>

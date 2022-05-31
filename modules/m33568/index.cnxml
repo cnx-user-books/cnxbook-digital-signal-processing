@@ -1,0 +1,135 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+  <title>Metric Spaces</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m33568</md:content-id>
+  <md:title>Metric Spaces</md:title>
+  <md:abstract/>
+  <md:uuid>e7f6b82c-e1ec-4dcd-8fd7-b1b658e6f3b6</md:uuid>
+</metadata>
+
+<content>
+  <para id="id2253179">We will view signals as elements of certain mathematical spaces. The spaces
+have a common structure, so it will be useful to think of them in the
+abstract.</para>
+<!--empty paragraphs get left behind.-->
+      <section id="uid1"><title>Metric Spaces</title><para id="id2253825"><title>Definition 1</title>A <emphasis effect="italics">set</emphasis> is a (possibly infinite) collection of distinct objects.</para>
+<!--empty paragraphs get left behind.-->
+<example id="eip-id1164363146618">
+        <list id="id2253854" display="block" list-type="bulleted">
+          <item id="uid3">The empty set: <m:math overflow="scroll"><m:mrow><m:mi>∅</m:mi><m:mo>=</m:mo><m:mo>{</m:mo><m:mo>}</m:mo></m:mrow></m:math> (plays a role akin to zero)
+</item>
+          <item id="uid4">Binary numbers: <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>1</m:mn><m:mo>}</m:mo></m:mrow></m:math></item>
+          <item id="uid5">Natural numbers: <m:math overflow="scroll"><m:mrow><m:mi mathvariant="double-struck">N</m:mi><m:mo>=</m:mo><m:mo>{</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:mn>2</m:mn><m:mo>,</m:mo><m:mn>3</m:mn><m:mo>,</m:mo><m:mo>.</m:mo><m:mo>.</m:mo><m:mo>.</m:mo><m:mo>}</m:mo></m:mrow></m:math></item>
+          <item id="uid6">Integers: <m:math overflow="scroll"><m:mrow><m:mi mathvariant="double-struck">Z</m:mi><m:mo>=</m:mo><m:mo>{</m:mo><m:mo>.</m:mo><m:mo>.</m:mo><m:mo>.</m:mo><m:mo>,</m:mo><m:mo>-</m:mo><m:mn>2</m:mn><m:mo>,</m:mo><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:mn>2</m:mn><m:mo>,</m:mo><m:mo>.</m:mo><m:mo>.</m:mo><m:mo>.</m:mo><m:mo>}</m:mo></m:mrow></m:math> (<m:math overflow="scroll"><m:mi>Z</m:mi></m:math> is short for “Zahlen”, German for “numbers”)
+</item>
+          <item id="uid7">Rational numbers: <m:math overflow="scroll"><m:mi mathvariant="double-struck">Q</m:mi></m:math> (<m:math overflow="scroll"><m:mi>Q</m:mi></m:math> for “quotient”)
+</item>
+          <item id="uid8">Real numbers: <m:math overflow="scroll"><m:mi mathvariant="double-struck">R</m:mi></m:math></item>
+          <item id="uid9">Complex numbers: <m:math overflow="scroll"><m:mi mathvariant="double-struck">C</m:mi></m:math></item>
+        </list>
+</example>
+        <para id="id2253118">In this course we will assume familiarity with a number of common set operations. In particular, for the sets <m:math overflow="scroll"><m:mrow><m:mi>A</m:mi><m:mo>=</m:mo><m:mo>{</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>1</m:mn><m:mo>}</m:mo></m:mrow></m:math>, <m:math overflow="scroll"><m:mrow><m:mi>B</m:mi><m:mo>=</m:mo><m:mo>{</m:mo><m:mn>1</m:mn><m:mo>}</m:mo></m:mrow></m:math>, <m:math overflow="scroll"><m:mrow><m:mi>C</m:mi><m:mo>=</m:mo><m:mo>{</m:mo><m:mn>2</m:mn><m:mo>}</m:mo></m:mrow></m:math>, we have the operations of:</para>
+        <list id="id2254432" display="block" list-type="labeled-item"><item id="uid10"><label>Union</label><m:math overflow="scroll"><m:mrow><m:mi>A</m:mi><m:mo>∪</m:mo><m:mi>B</m:mi><m:mo>=</m:mo><m:mo>{</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>1</m:mn><m:mo>}</m:mo></m:mrow></m:math>, <m:math overflow="scroll"><m:mrow><m:mi>B</m:mi><m:mo>∪</m:mo><m:mi>C</m:mi><m:mo>=</m:mo><m:mo>{</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:mn>2</m:mn><m:mo>}</m:mo></m:mrow></m:math></item>
+          <item id="uid11"><label>Intersection</label><m:math overflow="scroll"><m:mrow><m:mi>A</m:mi><m:mo>∩</m:mo><m:mi>B</m:mi><m:mo>=</m:mo><m:mo>{</m:mo><m:mn>1</m:mn><m:mo>}</m:mo></m:mrow></m:math>, <m:math overflow="scroll"><m:mrow><m:mi>B</m:mi><m:mo>∩</m:mo><m:mi>C</m:mi><m:mo>=</m:mo><m:mi>∅</m:mi></m:mrow></m:math></item>
+          <item id="uid12">
+            <label>Exclusion</label>
+            <m:math overflow="scroll">
+              <m:mrow>
+                <m:mi>A</m:mi>
+                <m:mo>∖</m:mo>
+                <m:mi>B</m:mi>
+                <m:mo>=</m:mo>
+                <m:mo>{</m:mo>
+                <m:mn>0</m:mn>
+                <m:mo>}</m:mo>
+              </m:mrow>
+            </m:math>
+          </item>
+          <item id="uid13"><label>Complement</label><m:math overflow="scroll"><m:mrow><m:msup><m:mi>A</m:mi><m:mi>c</m:mi></m:msup><m:mrow><m:mo>=</m:mo><m:mi>U</m:mi><m:mo>∖</m:mo><m:mi>A</m:mi></m:mrow></m:mrow></m:math>, <m:math overflow="scroll"><m:mrow><m:msup><m:mi>A</m:mi><m:mi>c</m:mi></m:msup><m:mo>=</m:mo><m:mrow><m:mo>{</m:mo><m:mn>2</m:mn><m:mo>}</m:mo></m:mrow></m:mrow></m:math></item>
+          <item id="uid14">
+            <label>Cartesian Product</label>
+            <m:math overflow="scroll">
+              <m:mrow>
+                <m:msup>
+                  <m:mi>A</m:mi>
+                  <m:mn>2</m:mn>
+                </m:msup>
+                <m:mo>=</m:mo>
+                <m:mi>A</m:mi>
+                <m:mo>×</m:mo>
+                <m:mi>A</m:mi>
+                <m:mo>=</m:mo>
+                <m:mrow>
+                  <m:mo>{</m:mo>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mn>0</m:mn>
+                    <m:mo>,</m:mo>
+                    <m:mn>0</m:mn>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>,</m:mo>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mn>0</m:mn>
+                    <m:mo>,</m:mo>
+                    <m:mn>1</m:mn>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>,</m:mo>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mn>1</m:mn>
+                    <m:mo>,</m:mo>
+                    <m:mn>0</m:mn>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>,</m:mo>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mn>1</m:mn>
+                    <m:mo>,</m:mo>
+                    <m:mn>1</m:mn>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>}</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:math>
+          </item>
+        </list>
+        <para id="id2254745">In order to be useful a set must typically satisfy some additional structure. We begin by defining a notion of distance.</para>
+        <para id="id2254750"><title>Definition 2</title>A <emphasis effect="italics">metric space</emphasis> is a set <m:math overflow="scroll"><m:mi>M</m:mi></m:math> together with a <emphasis effect="italics">metric</emphasis> (distance function)
+<m:math overflow="scroll"><m:mrow><m:mi>d</m:mi><m:mo>:</m:mo><m:mi>M</m:mi><m:mo>×</m:mo><m:mi>M</m:mi><m:mo>→</m:mo><m:mi mathvariant="double-struck">R</m:mi></m:mrow></m:math> such that for all <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>,</m:mo><m:mi>y</m:mi><m:mo>,</m:mo><m:mi>z</m:mi><m:mo>∈</m:mo><m:mi>M</m:mi></m:mrow></m:math></para>
+        <list id="id2254829" display="block" list-type="labeled-item" mark-suffix="">
+          <item id="uid16"><label>M1.</label><m:math overflow="scroll"><m:mrow><m:mi>d</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>,</m:mo><m:mi>y</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mi>d</m:mi><m:mo>(</m:mo><m:mi>y</m:mi><m:mo>,</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:math> (symmetry)
+</item>
+          <item id="uid17"><label>M2.</label><m:math overflow="scroll"><m:mrow><m:mi>d</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>,</m:mo><m:mi>y</m:mi><m:mo>)</m:mo><m:mo>≥</m:mo><m:mn>0</m:mn></m:mrow></m:math> (non-negative)
+</item>
+          <item id="uid18"><label>M3.</label><m:math overflow="scroll"><m:mrow><m:mi>d</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>,</m:mo><m:mi>y</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> iff <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mi>y</m:mi></m:mrow></m:math> (positive semi-definite)
+</item>
+          <item id="uid19"><label>M4.</label><m:math overflow="scroll"><m:mrow><m:mi>d</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>,</m:mo><m:mi>z</m:mi><m:mo>)</m:mo><m:mo>≤</m:mo><m:mi>d</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>,</m:mo><m:mi>y</m:mi><m:mo>)</m:mo><m:mo>+</m:mo><m:mi>d</m:mi><m:mo>(</m:mo><m:mi>y</m:mi><m:mo>,</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow></m:math> (triangle inequality).
+</item>
+        </list>
+<example id="eip-id1164369110696">
+        <list id="id2255041" display="block" list-type="labeled-item"><item id="uid20"><label>Trivial metric</label>(<m:math overflow="scroll"><m:mi>M</m:mi></m:math> is arbitrary)
+<m:math overflow="scroll"><m:mrow><m:mi>d</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>,</m:mo><m:mi>y</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfenced separators="" open="{" close=""><m:mtable><m:mtr><m:mtd columnalign="left"><m:mrow><m:mn>0</m:mn><m:mspace width="4pt"/><m:mi> if </m:mi><m:mspace width="4pt"/><m:mi>x</m:mi><m:mo>=</m:mo><m:mi>y</m:mi><m:mo>,</m:mo></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd columnalign="left"><m:mrow><m:mn>1</m:mn><m:mspace width="4pt"/><m:mi> if </m:mi><m:mspace width="4pt"/><m:mi>x</m:mi><m:mo>≠</m:mo><m:mi>y</m:mi><m:mo>.</m:mo></m:mrow></m:mtd></m:mtr></m:mtable></m:mfenced></m:mrow></m:math></item>
+          <item id="uid21"><label>Standard metric</label>(<m:math overflow="scroll"><m:mrow><m:mi>M</m:mi><m:mo>=</m:mo><m:mi mathvariant="double-struck">R</m:mi></m:mrow></m:math>)
+<m:math overflow="scroll"><m:mrow><m:mi>d</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>,</m:mo><m:mi>y</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mo>|</m:mo><m:mi>x</m:mi><m:mo>-</m:mo><m:mi>y</m:mi><m:mo>|</m:mo></m:mrow></m:math></item>
+          <item id="uid22"><label>Euclidean <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:msub><m:mi>ℓ</m:mi><m:mn>2</m:mn></m:msub><m:mo>)</m:mo></m:mrow></m:math> metric</label>(<m:math overflow="scroll"><m:mrow><m:mi>M</m:mi><m:mo>=</m:mo><m:msup><m:mi mathvariant="double-struck">R</m:mi><m:mi>N</m:mi></m:msup></m:mrow></m:math>)
+<m:math overflow="scroll"><m:mrow><m:mi>d</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>,</m:mo><m:mi>y</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msqrt><m:mrow><m:msubsup><m:mo>∑</m:mo><m:mrow><m:mi>i</m:mi><m:mo>=</m:mo><m:mn>1</m:mn></m:mrow><m:mi>N</m:mi></m:msubsup><m:msup><m:mrow><m:mo>|</m:mo><m:msub><m:mi>x</m:mi><m:mi>i</m:mi></m:msub><m:mo>-</m:mo><m:msub><m:mi>y</m:mi><m:mi>i</m:mi></m:msub><m:mo>|</m:mo></m:mrow><m:mn>2</m:mn></m:msup></m:mrow></m:msqrt></m:mrow></m:math></item>
+          <item id="uid23"><label><m:math overflow="scroll"><m:msub><m:mi>ℓ</m:mi><m:mn>1</m:mn></m:msub></m:math> metric</label>(<m:math overflow="scroll"><m:mrow><m:mi>M</m:mi><m:mo>=</m:mo><m:msup><m:mi mathvariant="double-struck">R</m:mi><m:mi>N</m:mi></m:msup></m:mrow></m:math>)
+<m:math overflow="scroll"><m:mrow><m:mi>d</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>,</m:mo><m:mi>y</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msubsup><m:mo>∑</m:mo><m:mrow><m:mi>i</m:mi><m:mo>=</m:mo><m:mn>1</m:mn></m:mrow><m:mi>N</m:mi></m:msubsup><m:mrow><m:mo>|</m:mo><m:msub><m:mi>x</m:mi><m:mi>i</m:mi></m:msub><m:mo>-</m:mo><m:msub><m:mi>y</m:mi><m:mi>i</m:mi></m:msub><m:mo>|</m:mo></m:mrow></m:mrow></m:math></item>
+          <item id="uid24"><label><m:math overflow="scroll"><m:msub><m:mi>ℓ</m:mi><m:mi>p</m:mi></m:msub></m:math> metric, <m:math overflow="scroll"><m:mrow><m:mn>1</m:mn><m:mo>≤</m:mo><m:mi>p</m:mi><m:mo>&lt;</m:mo><m:mi>∞</m:mi></m:mrow></m:math></label>(<m:math overflow="scroll"><m:mrow><m:mi>M</m:mi><m:mo>=</m:mo><m:msup><m:mi mathvariant="double-struck">R</m:mi><m:mi>N</m:mi></m:msup></m:mrow></m:math>)
+<m:math overflow="scroll"><m:mrow><m:mi>d</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>,</m:mo><m:mi>y</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mfenced separators="" open="(" close=")"><m:msubsup><m:mo>∑</m:mo><m:mrow><m:mi>i</m:mi><m:mo>=</m:mo><m:mn>1</m:mn></m:mrow><m:mi>N</m:mi></m:msubsup><m:msup><m:mrow><m:mo>|</m:mo><m:msub><m:mi>x</m:mi><m:mi>i</m:mi></m:msub><m:mo>-</m:mo><m:msub><m:mi>y</m:mi><m:mi>i</m:mi></m:msub><m:mo>|</m:mo></m:mrow><m:mi>p</m:mi></m:msup></m:mfenced><m:mrow><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>p</m:mi></m:mrow></m:msup></m:mrow></m:math></item>
+          <item id="uid25"><label><m:math overflow="scroll"><m:msub><m:mi>ℓ</m:mi><m:mi>∞</m:mi></m:msub></m:math> metric</label>(<m:math overflow="scroll"><m:mrow><m:mi>M</m:mi><m:mo>=</m:mo><m:msup><m:mi mathvariant="double-struck">R</m:mi><m:mi>N</m:mi></m:msup></m:mrow></m:math>)
+<m:math overflow="scroll"><m:mrow><m:mi>d</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>,</m:mo><m:mi>y</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:munder><m:mo movablelimits="true" form="prefix">max</m:mo><m:mrow><m:mi>i</m:mi><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:mo>.</m:mo><m:mo>.</m:mo><m:mo>.</m:mo><m:mo>,</m:mo><m:mi>N</m:mi></m:mrow></m:munder><m:mrow><m:mo>|</m:mo><m:msub><m:mi>x</m:mi><m:mi>i</m:mi></m:msub><m:mo>-</m:mo><m:msub><m:mi>y</m:mi><m:mi>i</m:mi></m:msub><m:mo>|</m:mo></m:mrow></m:mrow></m:math></item>
+          <item id="uid26"><label><m:math overflow="scroll"><m:msub><m:mi>L</m:mi><m:mi>p</m:mi></m:msub></m:math> metric</label>(<m:math overflow="scroll"><m:mi>M</m:mi></m:math> = real (or complex) valued functions defined on <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow></m:math>)
+<m:math overflow="scroll"><m:mrow><m:msub><m:mi>d</m:mi><m:mi>p</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>,</m:mo><m:mi>y</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mfenced separators="" open="(" close=")"><m:msubsup><m:mo>∫</m:mo><m:mi>a</m:mi><m:mi>b</m:mi></m:msubsup><m:msup><m:mrow><m:mo>|</m:mo><m:mi>x</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>-</m:mo><m:mi>y</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>|</m:mo></m:mrow><m:mi>p</m:mi></m:msup><m:mi>d</m:mi><m:mi>t</m:mi></m:mfenced><m:mrow><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>p</m:mi></m:mrow></m:msup></m:mrow></m:math></item>
+        </list>
+</example>
+<!--empty paragraphs get left behind.-->
+      </section>
+      
+  </content>
+</document>

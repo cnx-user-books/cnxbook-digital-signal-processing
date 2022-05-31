@@ -1,0 +1,266 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+  <title>The DTFT as an “Eigenbasis”</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m34820</md:content-id>
+  <md:title>The DTFT as an “Eigenbasis”</md:title>
+  <md:abstract/>
+  <md:uuid>c8651dc8-8ff9-4433-b076-18f0da4a05ee</md:uuid>
+</metadata>
+
+<content>
+    <section id="id62159">
+      <title>The DTFT as an “Eigenbasis”</title>
+      <para id="id62165">We saw Parseval/Plancherel in the context of orthonormal basis expansions.
+This begs the question, do <m:math overflow="scroll"><m:mi mathvariant="script">F</m:mi></m:math> and <m:math overflow="scroll"><m:msup><m:mi mathvariant="script">F</m:mi><m:mrow><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msup></m:math> just take signals and compute
+their representation in another basis?</para>
+      <para id="id62198">Let's look at <m:math overflow="scroll"><m:mrow><m:msup><m:mi mathvariant="script">F</m:mi><m:mrow><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msup><m:mo>:</m:mo><m:msub><m:mi>L</m:mi><m:mn>2</m:mn></m:msub><m:mrow><m:mo>[</m:mo><m:mo>-</m:mo><m:mi>π</m:mi><m:mo>,</m:mo><m:mi>π</m:mi><m:mo>]</m:mo></m:mrow><m:mo>→</m:mo><m:msub><m:mi>ℓ</m:mi><m:mn>2</m:mn></m:msub><m:mrow><m:mo>(</m:mo><m:mi mathvariant="double-struck">Z</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> first:</para>
+      <equation id="id62602">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:msup>
+              <m:mi mathvariant="script">F</m:mi>
+              <m:mrow>
+                <m:mo>-</m:mo>
+                <m:mn>1</m:mn>
+              </m:mrow>
+            </m:msup>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>X</m:mi>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:msup>
+                  <m:mi>e</m:mi>
+                  <m:mrow>
+                    <m:mi>j</m:mi>
+                    <m:mi>w</m:mi>
+                  </m:mrow>
+                </m:msup>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>=</m:mo>
+            <m:mfrac>
+              <m:mn>1</m:mn>
+              <m:msqrt>
+                <m:mrow>
+                  <m:mn>2</m:mn>
+                  <m:mi>π</m:mi>
+                </m:mrow>
+              </m:msqrt>
+            </m:mfrac>
+            <m:msubsup>
+              <m:mo>∫</m:mo>
+              <m:mrow>
+                <m:mo>-</m:mo>
+                <m:mi>π</m:mi>
+              </m:mrow>
+              <m:mi>π</m:mi>
+            </m:msubsup>
+            <m:mi>X</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:msup>
+                <m:mi>e</m:mi>
+                <m:mrow>
+                  <m:mi>j</m:mi>
+                  <m:mi>ω</m:mi>
+                </m:mrow>
+              </m:msup>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:msup>
+              <m:mi>e</m:mi>
+              <m:mrow>
+                <m:mi>j</m:mi>
+                <m:mi>ω</m:mi>
+                <m:mi>n</m:mi>
+              </m:mrow>
+            </m:msup>
+            <m:mi>d</m:mi>
+            <m:mi>ω</m:mi>
+            <m:mo>.</m:mo>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id62111">Recall that <m:math overflow="scroll"><m:mrow><m:mi>X</m:mi><m:mo>(</m:mo><m:msup><m:mi>e</m:mi><m:mrow><m:mi>j</m:mi><m:mi>ω</m:mi></m:mrow></m:msup><m:mo>)</m:mo></m:mrow></m:math> is really just a function of <m:math overflow="scroll"><m:mi>ω</m:mi></m:math>, so if we replace <m:math overflow="scroll"><m:mi>ω</m:mi></m:math>
+with <m:math overflow="scroll"><m:mi>t</m:mi></m:math>, we get</para>
+      <equation id="id62943">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:msup>
+              <m:mi mathvariant="script">F</m:mi>
+              <m:mrow>
+                <m:mo>-</m:mo>
+                <m:mn>1</m:mn>
+              </m:mrow>
+            </m:msup>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>X</m:mi>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>t</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>=</m:mo>
+            <m:mfrac>
+              <m:mn>1</m:mn>
+              <m:msqrt>
+                <m:mrow>
+                  <m:mn>2</m:mn>
+                  <m:mi>π</m:mi>
+                </m:mrow>
+              </m:msqrt>
+            </m:mfrac>
+            <m:msubsup>
+              <m:mo>∫</m:mo>
+              <m:mrow>
+                <m:mo>-</m:mo>
+                <m:mi>π</m:mi>
+              </m:mrow>
+              <m:mi>π</m:mi>
+            </m:msubsup>
+            <m:mi>X</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>t</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:msup>
+              <m:mi>e</m:mi>
+              <m:mrow>
+                <m:mi>j</m:mi>
+                <m:mi>t</m:mi>
+                <m:mi>n</m:mi>
+              </m:mrow>
+            </m:msup>
+            <m:mi>d</m:mi>
+            <m:mi>t</m:mi>
+            <m:mo>.</m:mo>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id63035">Does this seem familiar? If <m:math overflow="scroll"><m:mrow><m:mi>X</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:math> is a periodic function defined on <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mo>-</m:mo><m:mi>π</m:mi><m:mo>,</m:mo><m:mi>π</m:mi><m:mo>]</m:mo></m:mrow></m:math>,
+then <m:math overflow="scroll"><m:mrow><m:msup><m:mi mathvariant="script">F</m:mi><m:mrow><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msup><m:mrow><m:mo>(</m:mo><m:mi>X</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> is just computing (up to a reversal of the indicies) the continuous-time Fourier series of <m:math overflow="scroll"><m:mrow><m:mi>X</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:math>!</para>
+      <para id="id63126">We said before that the Fourier series is a representation in an orthobasis,
+the sequence of coefficients that we get are just the weights of the
+different basis elements. Thus we have <m:math overflow="scroll"><m:mrow><m:mo>→</m:mo><m:mi>x</m:mi><m:mrow><m:mo>[</m:mo><m:mi>n</m:mi><m:mo>]</m:mo></m:mrow><m:mo>=</m:mo><m:mi mathvariant="script">F</m:mi><m:msup><m:mi mathvariant="script">F</m:mi><m:mrow><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msup><m:mrow><m:mo>(</m:mo><m:mi>X</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> and</para>
+      <equation id="id63183"><m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:mi>X</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>t</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>=</m:mo>
+            <m:munderover>
+              <m:mrow><m:mo>∑</m:mo></m:mrow>
+              <m:mrow>
+                <m:mi>n</m:mi>
+                <m:mo>=</m:mo>
+                <m:mo>-</m:mo>
+                <m:mi>∞</m:mi>
+              </m:mrow>
+              <m:mi>∞</m:mi>
+            </m:munderover>
+            <m:mi>x</m:mi>
+            <m:mrow>
+              <m:mo>[</m:mo>
+              <m:mi>n</m:mi>
+              <m:mo>]</m:mo>
+            </m:mrow>
+            <m:mfenced separators="" open="(" close=")">
+              <m:mfrac>
+                <m:msup>
+                  <m:mi>e</m:mi>
+                  <m:mrow>
+                    <m:mo>-</m:mo>
+                    <m:mi>j</m:mi>
+                    <m:mi>t</m:mi>
+                    <m:mi>n</m:mi>
+                  </m:mrow>
+                </m:msup>
+                <m:msqrt>
+                  <m:mrow>
+                    <m:mn>2</m:mn>
+                    <m:mi>π</m:mi>
+                  </m:mrow>
+                </m:msqrt>
+              </m:mfrac>
+            </m:mfenced>
+            <m:mo>.</m:mo>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id63264">What about <m:math overflow="scroll"><m:mi mathvariant="script">F</m:mi></m:math>? In this case we are taking an <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:msub><m:mi>ℓ</m:mi><m:mn>2</m:mn></m:msub><m:mrow><m:mo>(</m:mo><m:mi mathvariant="double-struck">Z</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> and mapping it to an <m:math overflow="scroll"><m:mrow><m:mi>X</m:mi><m:mo>∈</m:mo><m:msub><m:mi>L</m:mi><m:mn>2</m:mn></m:msub><m:mrow><m:mo>[</m:mo><m:mo>-</m:mo><m:mi>π</m:mi><m:mo>,</m:mo><m:mi>π</m:mi><m:mo>]</m:mo></m:mrow></m:mrow></m:math>. <m:math overflow="scroll"><m:mi>X</m:mi></m:math> represents an infinite
+set of numbers, and when we weight the functions <m:math overflow="scroll"><m:msup><m:mi>e</m:mi><m:mrow><m:mi>j</m:mi><m:mi>ω</m:mi><m:mi>n</m:mi></m:mrow></m:msup></m:math> by <m:math overflow="scroll"><m:mrow><m:mi>X</m:mi><m:mo>(</m:mo><m:mi>ω</m:mi><m:mo>)</m:mo></m:mrow></m:math> and sum
+them all up, we get back the original signal</para>
+      <equation id="id63381">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:mi>x</m:mi>
+            <m:mrow>
+              <m:mo>[</m:mo>
+              <m:mi>n</m:mi>
+              <m:mo>]</m:mo>
+            </m:mrow>
+            <m:mo>=</m:mo>
+            <m:msubsup>
+              <m:mo>∫</m:mo>
+              <m:mrow>
+                <m:mo>-</m:mo>
+                <m:mi>π</m:mi>
+              </m:mrow>
+              <m:mi>π</m:mi>
+            </m:msubsup>
+            <m:mi>X</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>ω</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mfenced separators="" open="(" close=")">
+              <m:mfrac>
+                <m:msup>
+                  <m:mi>e</m:mi>
+                  <m:mrow>
+                    <m:mi>j</m:mi>
+                    <m:mi>ω</m:mi>
+                    <m:mi>n</m:mi>
+                  </m:mrow>
+                </m:msup>
+                <m:msqrt>
+                  <m:mrow>
+                    <m:mn>2</m:mn>
+                    <m:mi>π</m:mi>
+                  </m:mrow>
+                </m:msqrt>
+              </m:mfrac>
+            </m:mfenced>
+            <m:mi>d</m:mi>
+            <m:mi>ω</m:mi>
+            <m:mo>.</m:mo>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id63459">Unfortunately, <m:math overflow="scroll"><m:mrow><m:mfenced open="|" close="|"><m:mfenced separators="" open="|" close="|"><m:mfrac><m:msup><m:mi>e</m:mi><m:mrow><m:mi>j</m:mi><m:mi>ω</m:mi><m:mi>n</m:mi></m:mrow></m:msup><m:msqrt><m:mrow><m:mn>2</m:mn><m:mi>π</m:mi></m:mrow></m:msqrt></m:mfrac></m:mfenced></m:mfenced><m:mo>=</m:mo><m:mi>∞</m:mi></m:mrow></m:math> (<m:math overflow="scroll"><m:mrow><m:mo>≠</m:mo><m:mn>1</m:mn></m:mrow></m:math>) so technically, we can't really
+think of this as a change of basis.</para>
+      <para id="id63522">However, as a unitary transformation, <m:math overflow="scroll"><m:mi mathvariant="script">F</m:mi></m:math> has everything we would ever want
+in a basis and more: We can represent any <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:msub><m:mi>ℓ</m:mi><m:mn>2</m:mn></m:msub><m:mrow><m:mo>(</m:mo><m:mi mathvariant="double-struck">Z</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> using <m:math overflow="scroll"><m:msub><m:mrow><m:mo>{</m:mo><m:msup><m:mi>e</m:mi><m:mrow><m:mi>j</m:mi><m:mi>ω</m:mi><m:mi>n</m:mi></m:mrow></m:msup><m:mo>}</m:mo></m:mrow><m:mrow><m:mi>ω</m:mi><m:mo>∈</m:mo><m:mo>[</m:mo><m:mo>-</m:mo><m:mi>π</m:mi><m:mo>,</m:mo><m:mi>π</m:mi><m:mo>]</m:mo></m:mrow></m:msub></m:math>, and since it is unitary,
+we have Parseval and Plancherel Theorems as well. On top of that, we
+already showed that the set of vectors <m:math overflow="scroll"><m:msub><m:mrow><m:mo>{</m:mo><m:msup><m:mi>e</m:mi><m:mrow><m:mi>j</m:mi><m:mi>ω</m:mi><m:mi>n</m:mi></m:mrow></m:msup><m:mo>}</m:mo></m:mrow><m:mrow><m:mi>ω</m:mi><m:mo>∈</m:mo><m:mo>[</m:mo><m:mo>-</m:mo><m:mi>π</m:mi><m:mo>,</m:mo><m:mi>π</m:mi><m:mo>]</m:mo></m:mrow></m:msub></m:math> are eigenvectors of LSI systems – if this really were a basis, it would
+be called an <emphasis effect="italics">eigenbasis</emphasis>.</para>
+      <para id="id63663">Eigenbases are useful because once we represent a signal using an
+eigenbasis, to compute the output of a system we just need to know what it
+does to its eigenvectors (i.e., its eigenvalues). For an LSI system, <m:math overflow="scroll"><m:mrow><m:mi>H</m:mi><m:mo>(</m:mo><m:msup><m:mi>e</m:mi><m:mrow><m:mi>j</m:mi><m:mi>ω</m:mi></m:mrow></m:msup><m:mo>)</m:mo></m:mrow></m:math>
+represents a set of eigenvalues that provide a complete
+characterization of the system.</para>
+    </section>
+    
+  </content>
+</document>

@@ -1,0 +1,431 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+  <title>Matrix Representation of the Approximation Problem</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m34050</md:content-id>
+  <md:title>Matrix Representation of the Approximation Problem</md:title>
+  <md:abstract/>
+  <md:uuid>e09feb5b-f114-4ac6-acdc-1ab5d621fdb5</md:uuid>
+</metadata>
+
+<content>
+    
+      <para id="id241833">Suppose our inner product space <m:math overflow="scroll"><m:mrow><m:mi>V</m:mi><m:mo>=</m:mo><m:msup><m:mi mathvariant="double-struck">R</m:mi><m:mi>M</m:mi></m:msup></m:mrow></m:math> or <m:math overflow="scroll"><m:msup><m:mi mathvariant="double-struck">C</m:mi><m:mi>M</m:mi></m:msup></m:math> with the standard inner
+product (which induces the <m:math overflow="scroll"><m:msub><m:mi>ℓ</m:mi><m:mn>2</m:mn></m:msub></m:math>-norm).</para>
+      <para id="id241885">Re-examining what we have just derived, we can write our approximation
+<m:math overflow="scroll"><m:mrow><m:mover accent="true"><m:mi>x</m:mi><m:mo>^</m:mo></m:mover><m:mo>=</m:mo><m:mi>P</m:mi><m:mi>x</m:mi><m:mo>=</m:mo><m:mi>V</m:mi><m:mi>c</m:mi></m:mrow></m:math>, where <m:math overflow="scroll"><m:mi>V</m:mi></m:math> is an <m:math overflow="scroll"><m:mrow><m:mi>M</m:mi><m:mo>×</m:mo><m:mi>N</m:mi></m:mrow></m:math> matrix given by</para>
+      <equation id="id241938">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:mi>V</m:mi>
+            <m:mo>=</m:mo>
+            <m:mfenced separators="" open="[" close="]">
+              <m:mtable>
+                <m:mtr>
+                  <m:mtd>
+                    <m:mo>⋮</m:mo>
+                  </m:mtd>
+                  <m:mtd>
+                    <m:mo>⋮</m:mo>
+                  </m:mtd>
+                  <m:mtd/>
+                  <m:mtd>
+                    <m:mo>⋮</m:mo>
+                  </m:mtd>
+                </m:mtr>
+                <m:mtr>
+                  <m:mtd>
+                    <m:msub>
+                      <m:mi>v</m:mi>
+                      <m:mn>1</m:mn>
+                    </m:msub>
+                  </m:mtd>
+                  <m:mtd>
+                    <m:msub>
+                      <m:mi>v</m:mi>
+                      <m:mn>2</m:mn>
+                    </m:msub>
+                  </m:mtd>
+                  <m:mtd>
+                    <m:mo>⋯</m:mo>
+                  </m:mtd>
+                  <m:mtd>
+                    <m:msub>
+                      <m:mi>v</m:mi>
+                      <m:mi>N</m:mi>
+                    </m:msub>
+                  </m:mtd>
+                </m:mtr>
+                <m:mtr>
+                  <m:mtd>
+                    <m:mo>⋮</m:mo>
+                  </m:mtd>
+                  <m:mtd>
+                    <m:mo>⋮</m:mo>
+                  </m:mtd>
+                  <m:mtd/>
+                  <m:mtd>
+                    <m:mo>⋮</m:mo>
+                  </m:mtd>
+                </m:mtr>
+              </m:mtable>
+            </m:mfenced>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id242194">and <m:math overflow="scroll"><m:mi>c</m:mi></m:math> is an <m:math overflow="scroll"><m:mrow><m:mi>N</m:mi><m:mo>×</m:mo><m:mn>1</m:mn></m:mrow></m:math> vector given by</para>
+      <equation id="id242220">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:mfenced separators="" open="[" close="]">
+              <m:mtable>
+                <m:mtr>
+                  <m:mtd>
+                    <m:msub>
+                      <m:mi>c</m:mi>
+                      <m:mn>1</m:mn>
+                    </m:msub>
+                  </m:mtd>
+                </m:mtr>
+                <m:mtr>
+                  <m:mtd>
+                    <m:msub>
+                      <m:mi>c</m:mi>
+                      <m:mn>2</m:mn>
+                    </m:msub>
+                  </m:mtd>
+                </m:mtr>
+                <m:mtr>
+                  <m:mtd>
+                    <m:mo>⋮</m:mo>
+                  </m:mtd>
+                </m:mtr>
+                <m:mtr>
+                  <m:mtd>
+                    <m:msub>
+                      <m:mi>c</m:mi>
+                      <m:mi>N</m:mi>
+                    </m:msub>
+                  </m:mtd>
+                </m:mtr>
+              </m:mtable>
+            </m:mfenced>
+            <m:mo>.</m:mo>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id242272">Given <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:msup><m:mi mathvariant="double-struck">R</m:mi><m:mi>M</m:mi></m:msup></m:mrow></m:math> (or <m:math overflow="scroll"><m:msup><m:mi mathvariant="double-struck">C</m:mi><m:mi>M</m:mi></m:msup></m:math>), our search for the closest approximation
+can be written as</para>
+      <equation id="id242314"><m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:munder>
+<m:mrow>
+              <m:mo movablelimits="true" form="prefix">min</m:mo>
+</m:mrow>
+<m:mrow>        
+      <m:mi>c</m:mi>
+</m:mrow>        
+    </m:munder>
+            <m:msub>
+              <m:mfenced separators="" open="∥" close="∥">
+                <m:mi>x</m:mi>
+                <m:mo>-</m:mo>
+                <m:msub>
+                  <m:mi>V</m:mi>
+                  <m:mi>c</m:mi>
+                </m:msub>
+              </m:mfenced>
+              <m:mn>2</m:mn>
+            </m:msub>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id242359">or as</para>
+      <equation id="id242364"><m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:munder>
+<m:mrow>
+              <m:mo movablelimits="true" form="prefix">min</m:mo>
+</m:mrow>        
+      <m:mrow>
+                <m:mi>c</m:mi>
+                <m:mo>,</m:mo>
+                <m:mi>e</m:mi>
+              </m:mrow>
+            </m:munder>
+            <m:msubsup>
+              <m:mfenced open="∥" close="∥">
+                <m:mi>e</m:mi>
+              </m:mfenced>
+              <m:mrow>
+                <m:mn>2</m:mn>
+              </m:mrow>
+              <m:mn>2</m:mn>
+            </m:msubsup>
+            <m:mspace width="1.em"/>
+            <m:mi> subjectto </m:mi>
+            <m:mspace width="1.em"/>
+            <m:mi>x</m:mi>
+            <m:mo>=</m:mo>
+            <m:mi>V</m:mi>
+            <m:mi>c</m:mi>
+            <m:mo>+</m:mo>
+            <m:mi>e</m:mi>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id242428">Using <m:math overflow="scroll"><m:mi>V</m:mi></m:math>, we can replace <m:math overflow="scroll"><m:mrow><m:mi>G</m:mi><m:mo>=</m:mo><m:msup><m:mi>V</m:mi><m:mi>H</m:mi></m:msup><m:mi>V</m:mi></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>b</m:mi><m:mo>=</m:mo><m:msup><m:mi>V</m:mi><m:mi>H</m:mi></m:msup><m:mi>x</m:mi></m:mrow></m:math>. Thus, our solution can be written as</para>
+      <equation id="id242482">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:mi>c</m:mi>
+            <m:mo>=</m:mo>
+            <m:msup>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:msup>
+                  <m:mi>V</m:mi>
+                  <m:mi>H</m:mi>
+                </m:msup>
+                <m:mi>V</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mrow>
+                <m:mo>-</m:mo>
+                <m:mn>1</m:mn>
+              </m:mrow>
+            </m:msup>
+            <m:msup>
+              <m:mi>V</m:mi>
+              <m:mi>H</m:mi>
+            </m:msup>
+            <m:mi>x</m:mi>
+            <m:mo>,</m:mo>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id242530">which yields the formula</para>
+      <equation id="id242535">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:mover accent="true">
+              <m:mi>x</m:mi>
+              <m:mo>^</m:mo>
+            </m:mover>
+            <m:mo>=</m:mo>
+            <m:mi>V</m:mi>
+            <m:msup>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:msup>
+                  <m:mi>V</m:mi>
+                  <m:mi>H</m:mi>
+                </m:msup>
+                <m:mi>V</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mrow>
+                <m:mo>-</m:mo>
+                <m:mn>1</m:mn>
+              </m:mrow>
+            </m:msup>
+            <m:msup>
+              <m:mi>V</m:mi>
+              <m:mi>H</m:mi>
+            </m:msup>
+            <m:mi>x</m:mi>
+            <m:mo>.</m:mo>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id242592">The matrix <m:math overflow="scroll"><m:mrow><m:msup><m:mi>V</m:mi><m:mo>†</m:mo></m:msup><m:mo>=</m:mo><m:msup><m:mrow><m:mo>(</m:mo><m:msup><m:mi>V</m:mi><m:mi>H</m:mi></m:msup><m:mi>V</m:mi><m:mo>)</m:mo></m:mrow><m:mrow><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msup><m:msup><m:mi>V</m:mi><m:mi>H</m:mi></m:msup></m:mrow></m:math> is known as the “pseudo-inverse.” Why the name “pseudo-inverse”? Observe that</para>
+      <equation id="id242646">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:msup>
+              <m:mi>V</m:mi>
+              <m:mo>†</m:mo>
+            </m:msup>
+            <m:mi>V</m:mi>
+            <m:mo>=</m:mo>
+            <m:msup>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:msup>
+                  <m:mi>V</m:mi>
+                  <m:mi>H</m:mi>
+                </m:msup>
+                <m:mi>V</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mrow>
+                <m:mo>-</m:mo>
+                <m:mn>1</m:mn>
+              </m:mrow>
+            </m:msup>
+            <m:msup>
+              <m:mi>V</m:mi>
+              <m:mi>H</m:mi>
+            </m:msup>
+            <m:mi>V</m:mi>
+            <m:mo>=</m:mo>
+            <m:mi>I</m:mi>
+            <m:mo>.</m:mo>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id242706">Note that <m:math overflow="scroll"><m:mrow><m:mover accent="true"><m:mi>x</m:mi><m:mo>^</m:mo></m:mover><m:mo>=</m:mo><m:mi>V</m:mi><m:msup><m:mi>V</m:mi><m:mo>†</m:mo></m:msup><m:mi>x</m:mi></m:mrow></m:math>. We can verify that <m:math overflow="scroll"><m:mrow><m:mi>V</m:mi><m:msup><m:mi>V</m:mi><m:mo>†</m:mo></m:msup></m:mrow></m:math> is a projection matrix since</para>
+      <equation id="uid1">
+        <m:math overflow="scroll" mode="display">
+          <m:mtable displaystyle="true">
+            <m:mtr>
+              <m:mtd columnalign="right">
+                <m:mrow>
+                  <m:mi>V</m:mi>
+                  <m:msup>
+                    <m:mi>V</m:mi>
+                    <m:mo>†</m:mo>
+                  </m:msup>
+                  <m:mi>V</m:mi>
+                  <m:msup>
+                    <m:mi>V</m:mi>
+                    <m:mo>†</m:mo>
+                  </m:msup>
+                </m:mrow>
+              </m:mtd>
+              <m:mtd columnalign="left">
+                <m:mrow>
+                  <m:mo>=</m:mo>
+                  <m:mi>V</m:mi>
+                  <m:msup>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:msup>
+                        <m:mi>V</m:mi>
+                        <m:mi>H</m:mi>
+                      </m:msup>
+                      <m:mi>V</m:mi>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                    <m:mrow>
+                      <m:mo>-</m:mo>
+                      <m:mn>1</m:mn>
+                    </m:mrow>
+                  </m:msup>
+                  <m:msup>
+                    <m:mi>V</m:mi>
+                    <m:mi>H</m:mi>
+                  </m:msup>
+                  <m:mi>V</m:mi>
+                  <m:msup>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:msup>
+                        <m:mi>V</m:mi>
+                        <m:mi>H</m:mi>
+                      </m:msup>
+                      <m:mi>V</m:mi>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                    <m:mrow>
+                      <m:mo>-</m:mo>
+                      <m:mn>1</m:mn>
+                    </m:mrow>
+                  </m:msup>
+                  <m:msup>
+                    <m:mi>V</m:mi>
+                    <m:mi>H</m:mi>
+                  </m:msup>
+                </m:mrow>
+              </m:mtd>
+            </m:mtr>
+            <m:mtr>
+              <m:mtd/>
+              <m:mtd columnalign="left">
+                <m:mrow>
+                  <m:mo>=</m:mo>
+                  <m:mi>V</m:mi>
+                  <m:msup>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:msup>
+                        <m:mi>V</m:mi>
+                        <m:mi>H</m:mi>
+                      </m:msup>
+                      <m:mi>V</m:mi>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                    <m:mrow>
+                      <m:mo>-</m:mo>
+                      <m:mn>1</m:mn>
+                    </m:mrow>
+                  </m:msup>
+                  <m:msup>
+                    <m:mi>V</m:mi>
+                    <m:mi>H</m:mi>
+                  </m:msup>
+                </m:mrow>
+              </m:mtd>
+            </m:mtr>
+            <m:mtr>
+              <m:mtd/>
+              <m:mtd columnalign="left">
+                <m:mrow>
+                  <m:mo>=</m:mo>
+                  <m:mi>V</m:mi>
+                  <m:msup>
+                    <m:mi>V</m:mi>
+                    <m:mo>†</m:mo>
+                  </m:msup>
+                </m:mrow>
+              </m:mtd>
+            </m:mtr>
+          </m:mtable>
+        </m:math>
+      </equation>
+      <para id="id242926">
+Thus, given a set of <m:math overflow="scroll"><m:mi>N</m:mi></m:math> linearly independent vectors in <m:math overflow="scroll"><m:msup><m:mi mathvariant="double-struck">R</m:mi><m:mi>M</m:mi></m:msup></m:math> or <m:math overflow="scroll"><m:msup><m:mi mathvariant="double-struck">C</m:mi><m:mi>M</m:mi></m:msup></m:math> (<m:math overflow="scroll"><m:mrow><m:mi>N</m:mi><m:mo>&lt;</m:mo><m:mi>M</m:mi></m:mrow></m:math>), we can use the pseudo-inverse to project any vector onto the subspace
+defined by those vectors. This can be useful any time we have a problem of the form:</para>
+      <equation id="id242984">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:mi>x</m:mi>
+            <m:mo>=</m:mo>
+            <m:mi>V</m:mi>
+            <m:mi>c</m:mi>
+            <m:mo>+</m:mo>
+            <m:mi>e</m:mi>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id243006">where <m:math overflow="scroll"><m:mi>x</m:mi></m:math> denotes a set of known “observations”, <m:math overflow="scroll"><m:mi>V</m:mi></m:math> is a set of known “expansion vectors”, <m:math overflow="scroll"><m:mi>c</m:mi></m:math> are the unknown coefficients, and <m:math overflow="scroll"><m:mi>e</m:mi></m:math> represents an unknown “noise” vector. In this case, the least-squares estimate is given by</para>
+      <equation id="id243046">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:mi>c</m:mi>
+            <m:mo>=</m:mo>
+            <m:msup>
+              <m:mi>V</m:mi>
+              <m:mo>†</m:mo>
+            </m:msup>
+            <m:mi>x</m:mi>
+            <m:mo>,</m:mo>
+            <m:mspace width="1.em"/>
+            <m:mspace width="1.em"/>
+            <m:mover accent="true">
+              <m:mi>x</m:mi>
+              <m:mo>^</m:mo>
+            </m:mover>
+            <m:mo>=</m:mo>
+            <m:mi>V</m:mi>
+            <m:msup>
+              <m:mi>V</m:mi>
+              <m:mo>†</m:mo>
+            </m:msup>
+            <m:mi>x</m:mi>
+            <m:mo>.</m:mo>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <!--empty paragraphs get left behind.-->
+  </content>
+</document>

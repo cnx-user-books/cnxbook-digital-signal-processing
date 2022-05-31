@@ -1,0 +1,631 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+
+<title>Normalized DTFT as an Operator</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m34816</md:content-id>
+  <md:title>Normalized DTFT as an Operator</md:title>
+  <md:abstract/>
+  <md:uuid>4fdb234b-f967-4360-9cb9-ad76aadf32ba</md:uuid>
+</metadata>
+
+<content>
+ <section id="id63498">
+      <title>Normalized DTFT as an operator</title>
+      <para id="id63504">Note that by taking the DTFT of a sequence we get a function defined on <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mo>-</m:mo><m:mi>π</m:mi><m:mo>,</m:mo><m:mi>π</m:mi><m:mo>]</m:mo></m:mrow></m:math>.
+In vector space notation we can view the DTFT as an operator (transformation). In this context it is useful to consider the normalized
+DTFT</para>
+      <equation id="id63529"><m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:mi mathvariant="script">F</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>x</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>:</m:mo>
+            <m:mo>=</m:mo>
+            <m:mi>X</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:msup>
+                <m:mi>e</m:mi>
+                <m:mrow>
+                  <m:mi>j</m:mi>
+                  <m:mi>ω</m:mi>
+                </m:mrow>
+              </m:msup>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>=</m:mo>
+            <m:mfrac>
+              <m:mn>1</m:mn>
+              <m:msqrt>
+                <m:mrow>
+                  <m:mn>2</m:mn>
+                  <m:mi>π</m:mi>
+                </m:mrow>
+              </m:msqrt>
+            </m:mfrac>
+            <m:munderover>
+              <m:mrow><m:mo>∑</m:mo></m:mrow>
+              <m:mrow>
+                <m:mi>n</m:mi>
+                <m:mo>=</m:mo>
+                <m:mo>-</m:mo>
+                <m:mi>∞</m:mi>
+              </m:mrow>
+              <m:mi>∞</m:mi>
+            </m:munderover>
+            <m:mi>x</m:mi>
+            <m:mrow>
+              <m:mo>[</m:mo>
+              <m:mi>n</m:mi>
+              <m:mo>]</m:mo>
+            </m:mrow>
+            <m:msup>
+              <m:mi>e</m:mi>
+              <m:mrow>
+                <m:mo>-</m:mo>
+                <m:mi>j</m:mi>
+                <m:mi>ω</m:mi>
+                <m:mi>n</m:mi>
+              </m:mrow>
+            </m:msup>
+            <m:mo>.</m:mo>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id63629">One can show that the summation converges for any <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:msub><m:mi>ℓ</m:mi><m:mn>2</m:mn></m:msub><m:mrow><m:mo>(</m:mo><m:mi>π</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math>, and
+yields a function <m:math overflow="scroll"><m:mrow><m:mi>X</m:mi><m:mrow><m:mo>(</m:mo><m:msup><m:mi>e</m:mi><m:mrow><m:mi>j</m:mi><m:mi>ω</m:mi></m:mrow></m:msup><m:mo>)</m:mo></m:mrow><m:mo>∈</m:mo><m:msub><m:mi>L</m:mi><m:mn>2</m:mn></m:msub><m:mrow><m:mo>[</m:mo><m:mo>-</m:mo><m:mi>π</m:mi><m:mo>,</m:mo><m:mi>π</m:mi><m:mo>]</m:mo></m:mrow></m:mrow></m:math>. Thus,</para>
+      <equation id="id63709">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:mi mathvariant="script">F</m:mi>
+            <m:mo>:</m:mo>
+            <m:msub>
+              <m:mi>ℓ</m:mi>
+              <m:mn>2</m:mn>
+            </m:msub>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi mathvariant="double-struck">Z</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>→</m:mo>
+            <m:msub>
+              <m:mi>L</m:mi>
+              <m:mn>2</m:mn>
+            </m:msub>
+            <m:mrow>
+              <m:mo>[</m:mo>
+              <m:mo>-</m:mo>
+              <m:mi>π</m:mi>
+              <m:mo>,</m:mo>
+              <m:mi>π</m:mi>
+              <m:mo>]</m:mo>
+            </m:mrow>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id63765">can be viewed as a linear operator!</para>
+      <para id="id63770"><emphasis effect="bold">Note:</emphasis> It is not at all obvious that <m:math overflow="scroll"><m:mi mathvariant="script">F</m:mi></m:math> can be defined for all <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:msub><m:mi>ℓ</m:mi><m:mn>2</m:mn></m:msub><m:mrow><m:mo>(</m:mo><m:mi mathvariant="double-struck">Z</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math>.
+To show this, one can first argue that if <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:msub><m:mi>ℓ</m:mi><m:mn>1</m:mn></m:msub><m:mrow><m:mo>(</m:mo><m:mi mathvariant="double-struck">Z</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math>, then</para>
+      <equation id="uid8">
+        <m:math overflow="scroll" mode="display">
+          <m:mtable displaystyle="true">
+            <m:mtr>
+              <m:mtd columnalign="right">
+                <m:mfenced separators="" open="|" close="|">
+                  <m:mi>X</m:mi>
+                  <m:mo>(</m:mo>
+                  <m:msup>
+                    <m:mi>e</m:mi>
+                    <m:mrow>
+                      <m:mi>j</m:mi>
+                      <m:mi>ω</m:mi>
+                    </m:mrow>
+                  </m:msup>
+                  <m:mo>)</m:mo>
+                </m:mfenced>
+              </m:mtd>
+              <m:mtd columnalign="left">
+                <m:mrow>
+                  <m:mo>≤</m:mo>
+                  <m:mfenced separators="" open="|" close="|">
+                    <m:mfrac>
+                      <m:mn>1</m:mn>
+                      <m:msqrt>
+                        <m:mrow>
+                          <m:mn>2</m:mn>
+                          <m:mi>π</m:mi>
+                        </m:mrow>
+                      </m:msqrt>
+                    </m:mfrac>
+                    <m:munderover>
+                      <m:mo>∑</m:mo>
+                      <m:mrow>
+                        <m:mi>n</m:mi>
+                        <m:mo>=</m:mo>
+                        <m:mo>-</m:mo>
+                        <m:mi>∞</m:mi>
+                      </m:mrow>
+                      <m:mi>∞</m:mi>
+                    </m:munderover>
+                    <m:mi>x</m:mi>
+                    <m:mrow>
+                      <m:mo>[</m:mo>
+                      <m:mi>n</m:mi>
+                      <m:mo>]</m:mo>
+                    </m:mrow>
+                    <m:msup>
+                      <m:mi>e</m:mi>
+                      <m:mrow>
+                        <m:mo>-</m:mo>
+                        <m:mi>j</m:mi>
+                        <m:mi>ω</m:mi>
+                        <m:mi>n</m:mi>
+                      </m:mrow>
+                    </m:msup>
+                  </m:mfenced>
+                </m:mrow>
+              </m:mtd>
+            </m:mtr>
+            <m:mtr>
+              <m:mtd/>
+              <m:mtd columnalign="left">
+                <m:mrow>
+                  <m:mo>≤</m:mo>
+                  <m:mfrac>
+                    <m:mn>1</m:mn>
+                    <m:msqrt>
+                      <m:mrow>
+                        <m:mn>2</m:mn>
+                        <m:mi>π</m:mi>
+                      </m:mrow>
+                    </m:msqrt>
+                  </m:mfrac>
+                  <m:munderover>
+                    <m:mo>∑</m:mo>
+                    <m:mrow>
+                      <m:mi>n</m:mi>
+                      <m:mo>=</m:mo>
+                      <m:mo>-</m:mo>
+                      <m:mi>∞</m:mi>
+                    </m:mrow>
+                    <m:mi>∞</m:mi>
+                  </m:munderover>
+                  <m:mfenced separators="" open="|" close="|">
+                    <m:mi>x</m:mi>
+                    <m:mo>[</m:mo>
+                    <m:mi>n</m:mi>
+                    <m:mo>]</m:mo>
+                  </m:mfenced>
+                  <m:mfenced separators="" open="|" close="|">
+                    <m:msup>
+                      <m:mi>e</m:mi>
+                      <m:mrow>
+                        <m:mo>-</m:mo>
+                        <m:mi>j</m:mi>
+                        <m:mi>w</m:mi>
+                        <m:mi>n</m:mi>
+                      </m:mrow>
+                    </m:msup>
+                  </m:mfenced>
+                </m:mrow>
+              </m:mtd>
+            </m:mtr>
+            <m:mtr>
+              <m:mtd/>
+              <m:mtd columnalign="left">
+                <m:mrow>
+                  <m:mo>=</m:mo>
+                  <m:mfrac>
+                    <m:mn>1</m:mn>
+                    <m:msqrt>
+                      <m:mrow>
+                        <m:mn>2</m:mn>
+                        <m:mi>π</m:mi>
+                      </m:mrow>
+                    </m:msqrt>
+                  </m:mfrac>
+                  <m:munderover>
+                    <m:mo>∑</m:mo>
+                    <m:mrow>
+                      <m:mi>n</m:mi>
+                      <m:mo>=</m:mo>
+                      <m:mo>-</m:mo>
+                      <m:mi>∞</m:mi>
+                    </m:mrow>
+                    <m:mi>∞</m:mi>
+                  </m:munderover>
+                  <m:mfenced separators="" open="|" close="|">
+                    <m:mi>x</m:mi>
+                    <m:mo>[</m:mo>
+                    <m:mi>n</m:mi>
+                    <m:mo>]</m:mo>
+                  </m:mfenced>
+                  <m:mo>&lt;</m:mo>
+                  <m:mi>∞</m:mi>
+                </m:mrow>
+              </m:mtd>
+            </m:mtr>
+          </m:mtable>
+        </m:math>
+      </equation>
+      <para id="id64089">
+For an <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:msub><m:mi>ℓ</m:mi><m:mn>2</m:mn></m:msub><m:mrow><m:mrow><m:mo>(</m:mo><m:mi mathvariant="double-struck">Z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>∖</m:mo></m:mrow><m:msub><m:mi>ℓ</m:mi><m:mn>1</m:mn></m:msub><m:mrow><m:mo>(</m:mo><m:mi mathvariant="double-struck">Z</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math>, one must show that it is always possible to construct a sequence
+<m:math overflow="scroll"><m:mrow><m:msub><m:mi>x</m:mi><m:mi>k</m:mi></m:msub><m:mo>∈</m:mo><m:msub><m:mi>ℓ</m:mi><m:mn>2</m:mn></m:msub><m:mrow><m:mo>(</m:mo><m:mi mathvariant="double-struck">Z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>∩</m:mo><m:msub><m:mi>ℓ</m:mi><m:mn>1</m:mn></m:msub><m:mrow><m:mo>(</m:mo><m:mi mathvariant="double-struck">Z</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> such that</para>
+      <equation id="id64194"><m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:munder>
+              <m:mrow><m:mo movablelimits="true" form="prefix">lim</m:mo></m:mrow>
+              <m:mrow>
+                <m:mi>k</m:mi>
+                <m:mo>→</m:mo>
+                <m:mi>∞</m:mi>
+              </m:mrow>
+            </m:munder>
+            <m:msub>
+              <m:mrow>
+                <m:mo>∥</m:mo>
+                <m:msub>
+                  <m:mi>x</m:mi>
+                  <m:mi>k</m:mi>
+                </m:msub>
+                <m:mo>-</m:mo>
+                <m:mi>x</m:mi>
+                <m:mo>∥</m:mo>
+              </m:mrow>
+              <m:mn>2</m:mn>
+            </m:msub>
+            <m:mo>=</m:mo>
+            <m:mn>0</m:mn>
+            <m:mo>.</m:mo>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id64248">This means <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>x</m:mi><m:mi>k</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> is a Cauchy sequence, so that since <m:math overflow="scroll"><m:mrow><m:msub><m:mi>ℓ</m:mi><m:mn>2</m:mn></m:msub><m:mrow><m:mo>(</m:mo><m:mi mathvariant="double-struck">Z</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> is a Hilbert space, the limit exists (and is <m:math overflow="scroll"><m:mi>x</m:mi></m:math>). In this case</para>
+      <equation id="id64303"><m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:mi>X</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:msup>
+                <m:mi>e</m:mi>
+                <m:mrow>
+                  <m:mi>j</m:mi>
+                  <m:mi>ω</m:mi>
+                </m:mrow>
+              </m:msup>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>=</m:mo>
+            <m:munder>
+              <m:mrow><m:mo movablelimits="true" form="prefix">lim</m:mo></m:mrow>
+              <m:mrow>
+                <m:mi>k</m:mi>
+                <m:mo>→</m:mo>
+                <m:mi>∞</m:mi>
+              </m:mrow>
+            </m:munder>
+            <m:msub>
+              <m:mi>X</m:mi>
+              <m:mi>k</m:mi>
+            </m:msub>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:msup>
+                <m:mi>e</m:mi>
+                <m:mrow>
+                  <m:mi>j</m:mi>
+                  <m:mi>ω</m:mi>
+                </m:mrow>
+              </m:msup>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>.</m:mo>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id64375">So for any <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:msub><m:mi>ℓ</m:mi><m:mn>2</m:mn></m:msub><m:mrow><m:mo>(</m:mo><m:mi mathvariant="double-struck">Z</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math>, we can define <m:math overflow="scroll"><m:mrow><m:mi mathvariant="script">F</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>X</m:mi><m:mrow><m:mo>(</m:mo><m:msup><m:mi>e</m:mi><m:mrow><m:mi>j</m:mi><m:mi>ω</m:mi></m:mrow></m:msup><m:mo>)</m:mo></m:mrow></m:mrow></m:math>, where <m:math overflow="scroll"><m:mrow><m:mi>X</m:mi><m:mrow><m:mo>(</m:mo><m:msup><m:mi>e</m:mi><m:mrow><m:mi>j</m:mi><m:mi>ω</m:mi></m:mrow></m:msup><m:mo>)</m:mo></m:mrow><m:mo>∈</m:mo><m:msub><m:mi>L</m:mi><m:mn>2</m:mn></m:msub><m:mrow><m:mo>[</m:mo><m:mo>-</m:mo><m:mi>π</m:mi><m:mo>,</m:mo><m:mi>π</m:mi><m:mo>]</m:mo></m:mrow></m:mrow></m:math>.</para>
+      <para id="id64495">Can we always get the original <m:math overflow="scroll"><m:mi>x</m:mi></m:math> back? Yes, the DTFT is invertible</para>
+      <equation id="id64506">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:msup>
+              <m:mi mathvariant="script">F</m:mi>
+              <m:mrow>
+                <m:mo>-</m:mo>
+                <m:mn>1</m:mn>
+              </m:mrow>
+            </m:msup>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>X</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>=</m:mo>
+            <m:mfrac>
+              <m:mn>1</m:mn>
+              <m:msqrt>
+                <m:mrow>
+                  <m:mn>2</m:mn>
+                  <m:mi>π</m:mi>
+                </m:mrow>
+              </m:msqrt>
+            </m:mfrac>
+            <m:msubsup>
+              <m:mo>∫</m:mo>
+              <m:mrow>
+                <m:mo>-</m:mo>
+                <m:mi>π</m:mi>
+              </m:mrow>
+              <m:mi>π</m:mi>
+            </m:msubsup>
+            <m:mi>X</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:msup>
+                <m:mi>e</m:mi>
+                <m:mrow>
+                  <m:mi>j</m:mi>
+                  <m:mi>ω</m:mi>
+                </m:mrow>
+              </m:msup>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>·</m:mo>
+            <m:msup>
+              <m:mi>e</m:mi>
+              <m:mrow>
+                <m:mi>j</m:mi>
+                <m:mi>ω</m:mi>
+                <m:mi>n</m:mi>
+              </m:mrow>
+            </m:msup>
+            <m:mi>d</m:mi>
+            <m:mi>ω</m:mi>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id64600">To verify that <m:math overflow="scroll"><m:mrow><m:msup><m:mi mathvariant="script">F</m:mi><m:mrow><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msup><m:mrow><m:mo>(</m:mo><m:mi mathvariant="script">F</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>x</m:mi></m:mrow></m:math>, observe that</para>
+      <equation id="uid9">
+        <m:math overflow="scroll" mode="display">
+          <m:mtable displaystyle="true">
+            <m:mtr>
+              <m:mtd columnalign="right">
+                <m:mrow>
+                  <m:mfrac>
+                    <m:mn>1</m:mn>
+                    <m:msqrt>
+                      <m:mrow>
+                        <m:mn>2</m:mn>
+                        <m:mi>π</m:mi>
+                      </m:mrow>
+                    </m:msqrt>
+                  </m:mfrac>
+                  <m:msubsup>
+                    <m:mo>∫</m:mo>
+                    <m:mrow>
+                      <m:mo>-</m:mo>
+                      <m:mi>π</m:mi>
+                    </m:mrow>
+                    <m:mi>π</m:mi>
+                  </m:msubsup>
+                  <m:mfenced separators="" open="(" close=")">
+                    <m:mfrac>
+                      <m:mn>1</m:mn>
+                      <m:msqrt>
+                        <m:mrow>
+                          <m:mn>2</m:mn>
+                          <m:mi>π</m:mi>
+                        </m:mrow>
+                      </m:msqrt>
+                    </m:mfrac>
+                    <m:munderover>
+                      <m:mo>∑</m:mo>
+                      <m:mrow>
+                        <m:mi>k</m:mi>
+                        <m:mo>=</m:mo>
+                        <m:mo>-</m:mo>
+                        <m:mi>∞</m:mi>
+                      </m:mrow>
+                      <m:mi>∞</m:mi>
+                    </m:munderover>
+                    <m:mi>x</m:mi>
+                    <m:mrow>
+                      <m:mo>[</m:mo>
+                      <m:mi>k</m:mi>
+                      <m:mo>]</m:mo>
+                    </m:mrow>
+                    <m:msup>
+                      <m:mi>e</m:mi>
+                      <m:mrow>
+                        <m:mo>-</m:mo>
+                        <m:mi>j</m:mi>
+                        <m:mi>ω</m:mi>
+                        <m:mi>k</m:mi>
+                      </m:mrow>
+                    </m:msup>
+                  </m:mfenced>
+                  <m:msup>
+                    <m:mi>e</m:mi>
+                    <m:mrow>
+                      <m:mi>j</m:mi>
+                      <m:mi>ω</m:mi>
+                      <m:mi>n</m:mi>
+                    </m:mrow>
+                  </m:msup>
+                  <m:mi>d</m:mi>
+                  <m:mi>ω</m:mi>
+                </m:mrow>
+              </m:mtd>
+              <m:mtd columnalign="left">
+                <m:mrow>
+                  <m:mo>=</m:mo>
+                  <m:mfrac>
+                    <m:mn>1</m:mn>
+                    <m:mrow>
+                      <m:mn>2</m:mn>
+                      <m:mi>π</m:mi>
+                    </m:mrow>
+                  </m:mfrac>
+                  <m:munderover>
+                    <m:mo>∑</m:mo>
+                    <m:mrow>
+                      <m:mi>k</m:mi>
+                      <m:mo>=</m:mo>
+                      <m:mo>-</m:mo>
+                      <m:mi>∞</m:mi>
+                    </m:mrow>
+                    <m:mi>∞</m:mi>
+                  </m:munderover>
+                  <m:mi>x</m:mi>
+                  <m:mrow>
+                    <m:mo>[</m:mo>
+                    <m:mi>k</m:mi>
+                    <m:mo>]</m:mo>
+                  </m:mrow>
+                  <m:msubsup>
+                    <m:mo>∫</m:mo>
+                    <m:mrow>
+                      <m:mo>-</m:mo>
+                      <m:mi>π</m:mi>
+                    </m:mrow>
+                    <m:mi>π</m:mi>
+                  </m:msubsup>
+                  <m:msup>
+                    <m:mi>e</m:mi>
+                    <m:mrow>
+                      <m:mo>-</m:mo>
+                      <m:mi>j</m:mi>
+                      <m:mi>ω</m:mi>
+                      <m:mo>(</m:mo>
+                      <m:mi>k</m:mi>
+                      <m:mo>-</m:mo>
+                      <m:mi>n</m:mi>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                  </m:msup>
+                  <m:mi>d</m:mi>
+                  <m:mi>ω</m:mi>
+                </m:mrow>
+              </m:mtd>
+            </m:mtr>
+            <m:mtr>
+              <m:mtd/>
+              <m:mtd columnalign="left">
+                <m:mrow>
+                  <m:mo>=</m:mo>
+                  <m:mfrac>
+                    <m:mn>1</m:mn>
+                    <m:mrow>
+                      <m:mn>2</m:mn>
+                      <m:mi>π</m:mi>
+                    </m:mrow>
+                  </m:mfrac>
+                  <m:munderover>
+                    <m:mo>∑</m:mo>
+                    <m:mrow>
+                      <m:mi>k</m:mi>
+                      <m:mo>=</m:mo>
+                      <m:mo>-</m:mo>
+                      <m:mi>∞</m:mi>
+                    </m:mrow>
+                    <m:mi>∞</m:mi>
+                  </m:munderover>
+                  <m:mi>x</m:mi>
+                  <m:mrow>
+                    <m:mo>[</m:mo>
+                    <m:mi>k</m:mi>
+                    <m:mo>]</m:mo>
+                  </m:mrow>
+                  <m:mo>·</m:mo>
+                  <m:mn>2</m:mn>
+                  <m:mi>π</m:mi>
+                  <m:mi>δ</m:mi>
+                  <m:mrow>
+                    <m:mo>[</m:mo>
+                    <m:mi>n</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mi>k</m:mi>
+                    <m:mo>]</m:mo>
+                  </m:mrow>
+                </m:mrow>
+              </m:mtd>
+            </m:mtr>
+            <m:mtr>
+              <m:mtd/>
+              <m:mtd columnalign="left">
+                <m:mrow>
+                  <m:mo>=</m:mo>
+                  <m:mi>x</m:mi>
+                  <m:mo>[</m:mo>
+                  <m:mi>n</m:mi>
+                  <m:mo>]</m:mo>
+                </m:mrow>
+              </m:mtd>
+            </m:mtr>
+          </m:mtable>
+        </m:math>
+      </equation>
+      <para id="id64946">
+One can also show that for any <m:math overflow="scroll"><m:mrow><m:mi>X</m:mi><m:mo>∈</m:mo><m:msub><m:mi>L</m:mi><m:mn>2</m:mn></m:msub><m:mrow><m:mo>[</m:mo><m:mo>-</m:mo><m:mi>π</m:mi><m:mo>,</m:mo><m:mi>π</m:mi><m:mo>]</m:mo></m:mrow></m:mrow></m:math>, <m:math overflow="scroll"><m:mrow><m:mi mathvariant="script">F</m:mi><m:mo>(</m:mo><m:msup><m:mi mathvariant="script">F</m:mi><m:mrow><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msup><m:mrow><m:mo>(</m:mo><m:mi>X</m:mi><m:mo>)</m:mo></m:mrow><m:mo>)</m:mo><m:mo>=</m:mo><m:mi>X</m:mi></m:mrow></m:math>.</para>
+      <para id="id65027">Operators that satisfy this property are called <emphasis effect="italics">unitary operators</emphasis> or <emphasis effect="italics">unitary
+transformations</emphasis>. Unitary operators are nice! In fact, if <m:math overflow="scroll"><m:mrow><m:mi>A</m:mi><m:mo>=</m:mo><m:mi>X</m:mi><m:mo>→</m:mo><m:mi>Y</m:mi></m:mrow></m:math> is a unitary
+operator between two Hilbert spaces, then one can show that</para>
+      <equation id="id65062">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:mrow>
+              <m:mo>〈</m:mo>
+              <m:msub>
+                <m:mi>x</m:mi>
+                <m:mn>1</m:mn>
+              </m:msub>
+              <m:mo>,</m:mo>
+              <m:msub>
+                <m:mi>x</m:mi>
+                <m:mn>2</m:mn>
+              </m:msub>
+              <m:mo>〉</m:mo>
+            </m:mrow>
+            <m:mo>=</m:mo>
+            <m:mrow>
+              <m:mo>〈</m:mo>
+              <m:mi>A</m:mi>
+              <m:msub>
+                <m:mi>x</m:mi>
+                <m:mn>1</m:mn>
+              </m:msub>
+              <m:mo>,</m:mo>
+              <m:mi>A</m:mi>
+              <m:msub>
+                <m:mi>x</m:mi>
+                <m:mn>2</m:mn>
+              </m:msub>
+              <m:mo>〉</m:mo>
+            </m:mrow>
+            <m:mspace width="1.em"/>
+            <m:mo>∀</m:mo>
+            <m:mspace width="4pt"/>
+            <m:msub>
+              <m:mi>x</m:mi>
+              <m:mn>1</m:mn>
+            </m:msub>
+            <m:mo>,</m:mo>
+            <m:msub>
+              <m:mi>x</m:mi>
+              <m:mn>2</m:mn>
+            </m:msub>
+            <m:mo>∈</m:mo>
+            <m:mi>X</m:mi>
+            <m:mo>,</m:mo>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id65156">i.e., unitary operators obey Plancherel's and Parseval's theorems!</para>
+    </section>
+</content>
+
+</document>

@@ -1,0 +1,93 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+  <title>Normed Vector Spaces</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m33561</md:content-id>
+  <md:title>Normed Vector Spaces</md:title>
+  <md:abstract/>
+  <md:uuid>45da16ac-29d3-4c51-9e49-1409d609ce31</md:uuid>
+</metadata>
+
+<content>
+      <!--empty paragraphs get left behind.-->
+      <para id="id240687">While vector spaces have additional structure compared to a metric space, a
+general vector space has no notion of “length” or “distance.”</para>
+      <para id="id240693"><title>Definition 1</title>Let <m:math overflow="scroll"><m:mi>V</m:mi></m:math> be a vector space over <m:math overflow="scroll"><m:mi>K</m:mi></m:math>. A <emphasis effect="italics">norm</emphasis> is a function <m:math overflow="scroll"><m:mrow><m:mfenced open="∥" close="∥"><m:mo>·</m:mo></m:mfenced><m:mo>:</m:mo><m:mi>V</m:mi><m:mo>→</m:mo><m:mi mathvariant="double-struck">R</m:mi></m:mrow></m:math> such that</para>
+      <list id="id241089" display="block" list-type="labeled-item" mark-suffix="">
+        <item id="uid3">
+          <label>N1.</label>
+          <m:math overflow="scroll">
+            <m:mrow>
+              <m:mfenced open="∥" close="∥">
+                <m:mi>x</m:mi>
+              </m:mfenced>
+              <m:mo>≥</m:mo>
+              <m:mn>0</m:mn>
+              <m:mo>∀</m:mo>
+              <m:mi>x</m:mi>
+              <m:mo>∈</m:mo>
+              <m:mi>V</m:mi>
+            </m:mrow>
+          </m:math>
+        </item>
+        <item id="uid4"><label>N2.</label><m:math overflow="scroll"><m:mrow><m:mfenced open="∥" close="∥"><m:mi>x</m:mi></m:mfenced><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> iff <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math></item>
+        <item id="uid5"><label>N3.</label><m:math overflow="scroll"><m:mrow><m:mfenced separators="" open="∥" close="∥"><m:mi>α</m:mi><m:mi>x</m:mi></m:mfenced><m:mo>=</m:mo><m:mrow><m:mo>|</m:mo><m:mi>α</m:mi><m:mo>|</m:mo></m:mrow><m:mfenced open="∥" close="∥"><m:mi>x</m:mi></m:mfenced><m:mo>∀</m:mo><m:mi>x</m:mi><m:mo>∈</m:mo><m:mi>V</m:mi></m:mrow></m:math>, <m:math overflow="scroll"><m:mrow><m:mi>α</m:mi><m:mo>∈</m:mo><m:mi>K</m:mi></m:mrow></m:math></item>
+        <item id="uid6">
+          <label>N4.</label>
+          <m:math overflow="scroll">
+            <m:mrow>
+              <m:mfenced separators="" open="∥" close="∥">
+                <m:mi>x</m:mi>
+                <m:mo>+</m:mo>
+                <m:mi>y</m:mi>
+              </m:mfenced>
+              <m:mo>≤</m:mo>
+              <m:mfenced open="∥" close="∥">
+                <m:mi>x</m:mi>
+              </m:mfenced>
+              <m:mo>+</m:mo>
+              <m:mfenced open="∥" close="∥">
+                <m:mi>y</m:mi>
+              </m:mfenced>
+              <m:mo>∀</m:mo>
+              <m:mi>x</m:mi>
+              <m:mo>,</m:mo>
+              <m:mi>y</m:mi>
+              <m:mo>∈</m:mo>
+              <m:mi>V</m:mi>
+            </m:mrow>
+          </m:math>
+        </item>
+      </list>
+      <para id="id241308">A vector space together with a norm is called a <emphasis effect="italics">normed vector space</emphasis> (or
+<emphasis effect="italics">normed linear space</emphasis>).</para>
+      <!--empty paragraphs get left behind.-->
+<example id="fs-id8747260">
+      <list id="id241333" display="block" list-type="bulleted"><item id="uid7"><m:math overflow="scroll"><m:mrow><m:mi>V</m:mi><m:mo>=</m:mo><m:msup><m:mi mathvariant="double-struck">R</m:mi><m:mi>N</m:mi></m:msup></m:mrow></m:math>: <m:math overflow="scroll"><m:mrow><m:msub><m:mfenced open="∥" close="∥"><m:mi>x</m:mi></m:mfenced><m:mn>2</m:mn></m:msub><m:mo>=</m:mo><m:msqrt><m:mrow><m:msubsup><m:mo>∑</m:mo><m:mrow><m:mi>i</m:mi><m:mo>=</m:mo><m:mn>1</m:mn></m:mrow><m:mi>N</m:mi></m:msubsup><m:msup><m:mrow><m:mo>|</m:mo><m:msub><m:mi>x</m:mi><m:mi>i</m:mi></m:msub><m:mo>|</m:mo></m:mrow><m:mn>2</m:mn></m:msup></m:mrow></m:msqrt></m:mrow></m:math><figure id="uid8"><media id="uid8_media" alt="An illustration showing a point x in R2 and it's ell_2 (Euclidian) norm.  The norm is equal to the length of a straight line connecting x to the origin."><image mime-type="image/png" src="../../media/03_1.png" id="uid8_onlineimage" width="206"><!-- NOTE: attribute width changes image size online (pixels). original width is 206. --></image><image mime-type="application/postscript" for="pdf" src="../../media/03_1-c93e.eps" id="uid8_printimage" print-width="7.5cm"><!--NOTE: attribute width changes image size in printed PDF (if specified in .tex file)--></image></media></figure></item>
+        <item id="uid9"><m:math overflow="scroll"><m:mrow><m:mi>V</m:mi><m:mo>=</m:mo><m:msup><m:mi mathvariant="double-struck">R</m:mi><m:mi>N</m:mi></m:msup></m:mrow></m:math>: <m:math overflow="scroll"><m:mrow><m:msub><m:mfenced open="∥" close="∥"><m:mi>x</m:mi></m:mfenced><m:mn>1</m:mn></m:msub><m:mo>=</m:mo><m:msubsup><m:mo>∑</m:mo><m:mrow><m:mi>i</m:mi><m:mo>=</m:mo><m:mn>1</m:mn></m:mrow><m:mi>N</m:mi></m:msubsup><m:mrow><m:mo>|</m:mo><m:msub><m:mi>x</m:mi><m:mi>i</m:mi></m:msub><m:mo>|</m:mo></m:mrow></m:mrow></m:math> (“Taxicab”/“Manhattan” norm)
+<figure id="uid10"><media id="uid10_media" alt=""><image mime-type="image/png" src="../../media/03_2.png" id="uid10_onlineimage" width="206"><!-- NOTE: attribute width changes image size online (pixels). original width is 206. --></image><image mime-type="application/postscript" for="pdf" src="../../media/03_2-cff4.eps" id="uid10_printimage" print-width="7.5cm"><!--NOTE: attribute width changes image size in printed PDF (if specified in .tex file)--></image></media></figure></item>
+        <item id="uid11"><m:math overflow="scroll"><m:mrow><m:mi>V</m:mi><m:mo>=</m:mo><m:msup><m:mi mathvariant="double-struck">R</m:mi><m:mi>N</m:mi></m:msup></m:mrow></m:math>: <m:math overflow="scroll"><m:mrow><m:msub><m:mfenced open="∥" close="∥"><m:mi>x</m:mi></m:mfenced><m:mi>∞</m:mi></m:msub><m:mo>=</m:mo><m:munder><m:mrow><m:mo movablelimits="true" form="prefix">max</m:mo></m:mrow><m:mrow><m:mi>i</m:mi><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:mo>.</m:mo><m:mo>.</m:mo><m:mo>.</m:mo><m:mo>,</m:mo><m:mi>N</m:mi></m:mrow></m:munder><m:mrow><m:mo>|</m:mo><m:msub><m:mi>x</m:mi><m:mi>i</m:mi></m:msub><m:mo>|</m:mo></m:mrow></m:mrow></m:math><figure id="uid12"><media id="uid12_media" alt="An illustration showing a point x in R2 and it's ell_infinity norm.  The norm is equal to the length of the longer of the two (orthogonal) paths that connect x to the x- and y-axes."><image mime-type="image/png" src="../../media/03_3.png" id="uid12_onlineimage" width="206"><!-- NOTE: attribute width changes image size online (pixels). original width is 206. --></image><image mime-type="application/postscript" for="pdf" src="../../media/03_3-e272.eps" id="uid12_printimage" print-width="7.5cm"><!--NOTE: attribute width changes image size in printed PDF (if specified in .tex file)--></image></media></figure></item>
+        <item id="uid13"><m:math overflow="scroll"><m:mrow><m:mi>V</m:mi><m:mo>=</m:mo><m:msub><m:mi>L</m:mi><m:mi>p</m:mi></m:msub><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow></m:mrow></m:math>, <m:math overflow="scroll"><m:mrow><m:mi>p</m:mi><m:mo>∈</m:mo><m:mo>[</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:mi>∞</m:mi><m:mo>)</m:mo></m:mrow></m:math>: <m:math overflow="scroll"><m:mrow><m:msub><m:mfenced separators="" open="∥" close="∥"><m:mi>x</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mfenced><m:mi>p</m:mi></m:msub><m:mo>=</m:mo><m:msup><m:mfenced separators="" open="(" close=")"><m:msubsup><m:mo>∫</m:mo><m:mi>a</m:mi><m:mi>b</m:mi></m:msubsup><m:msup><m:mrow><m:mo>|</m:mo><m:mi>x</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>|</m:mo></m:mrow><m:mi>p</m:mi></m:msup><m:mi>d</m:mi><m:mi>t</m:mi></m:mfenced><m:mrow><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>p</m:mi></m:mrow></m:msup></m:mrow></m:math> (The notation <m:math overflow="scroll"><m:mrow><m:msub><m:mi>L</m:mi><m:mi>p</m:mi></m:msub><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow></m:mrow></m:math> denotes the set of all functions defined on the interval <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow></m:math> such that this norm exists, i.e., <m:math overflow="scroll"><m:mrow><m:msub><m:mrow><m:mo>∥</m:mo><m:mi>x</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>∥</m:mo></m:mrow><m:mi>p</m:mi></m:msub><m:mo>&lt;</m:mo><m:mi>∞</m:mi></m:mrow></m:math>.)
+</item>
+      </list>
+</example>   
+   <para id="id242031">Note that any normed vector space is a metric space with induced metric <m:math overflow="scroll"><m:mrow><m:mi>d</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>,</m:mo><m:mi>y</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfenced separators="" open="∥" close="∥"><m:mi>x</m:mi><m:mo>-</m:mo><m:mi>y</m:mi></m:mfenced></m:mrow></m:math>. (This follows since <m:math overflow="scroll"><m:mrow><m:mfenced separators="" open="∥" close="∥"><m:mi>x</m:mi><m:mo>-</m:mo><m:mi>y</m:mi></m:mfenced><m:mo>=</m:mo><m:mfenced separators="" open="∥" close="∥"><m:mi>x</m:mi><m:mo>-</m:mo><m:mi>z</m:mi><m:mo>+</m:mo><m:mi>z</m:mi><m:mo>-</m:mo><m:mi>y</m:mi></m:mfenced><m:mo>∈</m:mo><m:mfenced separators="" open="∥" close="∥"><m:mi>x</m:mi><m:mo>-</m:mo><m:mi>z</m:mi></m:mfenced><m:mo>+</m:mo><m:mfenced separators="" open="∥" close="∥"><m:mi>y</m:mi><m:mo>-</m:mo><m:mi>z</m:mi></m:mfenced></m:mrow></m:math>.) While a normed vector space “feels like” a metric space, it is important to remember that it actually satisfies a great deal of additional structure.</para>
+      <para id="id242156"><emphasis effect="bold">Technical Note:</emphasis> In a normed vector space we must have (from N2) that <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mi>y</m:mi></m:mrow></m:math> if <m:math overflow="scroll"><m:mrow><m:mfenced separators="" open="∥" close="∥"><m:mi>x</m:mi><m:mo>-</m:mo><m:mi>y</m:mi></m:mfenced><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math>. This can lead to a curious phenomenon when dealing with continuous-time functions. For example, in <m:math overflow="scroll"><m:mrow><m:msub><m:mi>L</m:mi><m:mn>2</m:mn></m:msub><m:mrow><m:mo>(</m:mo><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math>, we can consider a pair of functions like <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>y</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:math> illustrated below. These functions differ only at a single point, and thus <m:math overflow="scroll"><m:mrow><m:msub><m:mrow><m:mo>∥</m:mo><m:mi>x</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>-</m:mo><m:mi>y</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>∥</m:mo></m:mrow><m:mn>2</m:mn></m:msub><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> (since a single point cannot contribute anything to the value of the integral.) Thus, in order for our norm to be consistent with the axioms of a norm, we must say that <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mi>y</m:mi></m:mrow></m:math> whenever <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>y</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:math> differ only on a set of measure zero. To reiterate <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mi>y</m:mi><m:mo>⇎</m:mo><m:mi>x</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mi>y</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo><m:mo>∀</m:mo><m:mi>t</m:mi><m:mo>∈</m:mo><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow></m:math>, i.e., when we treat functions as vectors, we will <emphasis effect="italics">not</emphasis> interpret <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mi>y</m:mi></m:mrow></m:math> as pointwise equality, but rather as equality <emphasis effect="italics">almost everywhere</emphasis>.</para>
+      <figure id="uid14" orient="vertical"><subfigure id="id242447">
+          <media id="id242447_media" alt="A smooth function defined on the interval [-1,1].">
+            <image mime-type="image/png" src="../../media/03_4.png" id="id242447_onlineimage" width="404"><!-- NOTE: attribute width changes image size online (pixels). original width is 404. --></image>
+            <image mime-type="application/postscript" for="pdf" src="../../media/03_4-8a35.eps" id="id242447_printimage" print-width="12.75cm">
+              <!--NOTE: attribute width changes image size in printed PDF (if specified in .tex file)-->
+            </image>
+          </media>
+        </subfigure>
+        <subfigure id="id242459">
+          <media id="id242459_media" alt="A function that is identical to the previous function, except for a point discontinuity where it takes a different value.">
+            <image mime-type="image/png" src="../../media/03_5.png" id="id242459_onlineimage" width="404"><!-- NOTE: attribute width changes image size online (pixels). original width is 404. --></image>
+            <image mime-type="application/postscript" for="pdf" src="../../media/03_5-dc83.eps" id="id242459_printimage" print-width="12.75cm">
+              <!--NOTE: attribute width changes image size in printed PDF (if specified in .tex file)-->
+            </image>
+          </media>
+        </subfigure>
+      </figure>
+  </content>
+</document>

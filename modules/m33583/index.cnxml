@@ -1,0 +1,45 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+  <title>Vector Spaces</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m33583</md:content-id>
+  <md:title>Vector Spaces</md:title>
+  <md:abstract/>
+  <md:uuid>d0c4ef08-5c62-4249-a901-4a5ece1b4b0e</md:uuid>
+</metadata>
+
+<content>
+      <!--empty paragraphs get left behind.-->
+      <para id="id167369">Metric spaces impose no requirements on the structure of the set <m:math overflow="scroll"><m:mi>M</m:mi></m:math>. We will
+now consider more structured <m:math overflow="scroll"><m:mi>M</m:mi></m:math>, beginning by generalizing the familiar
+concept of a vector.</para>
+      <para id="id167388"><title>Definition 1</title>Let <m:math overflow="scroll"><m:mi>K</m:mi></m:math> be a field of <emphasis effect="italics">scalars</emphasis>, i.e., <m:math overflow="scroll"><m:mrow><m:mi>K</m:mi><m:mo>=</m:mo><m:mi mathvariant="double-struck">R</m:mi></m:mrow></m:math> or <m:math overflow="scroll"><m:mi mathvariant="double-struck">C</m:mi></m:math>. Let <m:math overflow="scroll"><m:mi>V</m:mi></m:math> be a set of <emphasis effect="italics">vectors</emphasis> equipped with two binary operations:</para>
+      <list id="id167789" display="block" list-type="enumerated">
+        <item id="uid2">vector addition: <m:math overflow="scroll"><m:mrow><m:mo>+</m:mo><m:mo>:</m:mo><m:mi>V</m:mi><m:mo>×</m:mo><m:mi>V</m:mi><m:mo>→</m:mo><m:mi>V</m:mi></m:mrow></m:math></item>
+        <item id="uid3">scalar multiplication: <m:math overflow="scroll"><m:mrow><m:mo>·</m:mo><m:mo>:</m:mo><m:mi>K</m:mi><m:mo>×</m:mo><m:mi>V</m:mi><m:mo>→</m:mo><m:mi>V</m:mi></m:mrow></m:math></item>
+      </list>
+      <para id="id167857">We say that <m:math overflow="scroll"><m:mi>V</m:mi></m:math> is a <emphasis effect="italics">vector space</emphasis> (or <emphasis effect="italics">linear space</emphasis>) over <m:math overflow="scroll"><m:mi>K</m:mi></m:math> if</para>
+      <list id="id167887" display="block" list-type="labeled-item" mark-suffix="">
+        <item id="uid4"><label>VS1:</label><m:math overflow="scroll"><m:mi>V</m:mi></m:math> forms a group under addition, i.e.,
+<list id="id167910" display="block" list-type="bulleted"><item id="uid5"><m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>+</m:mo><m:mi>y</m:mi><m:mo>)</m:mo><m:mo>+</m:mo><m:mi>z</m:mi><m:mo>=</m:mo><m:mi>x</m:mi><m:mo>+</m:mo><m:mo>(</m:mo><m:mi>y</m:mi><m:mo>+</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow></m:math> (associativity)
+</item><item id="uid6"><m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>+</m:mo><m:mi>y</m:mi><m:mo>=</m:mo><m:mi>y</m:mi><m:mo>+</m:mo><m:mi>x</m:mi></m:mrow></m:math> (commutativity)
+</item><item id="uid7"><m:math overflow="scroll"><m:mrow><m:mo>∃</m:mo><m:mspace width="4pt"/><m:mn>0</m:mn><m:mo>∈</m:mo><m:mi>V</m:mi></m:mrow></m:math> such that <m:math overflow="scroll"><m:mrow><m:mo>∀</m:mo><m:mspace width="4pt"/><m:mi>x</m:mi><m:mo>∈</m:mo><m:mi>V</m:mi></m:mrow></m:math>, <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>0</m:mn><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>+</m:mo><m:mi>x</m:mi><m:mo>=</m:mo><m:mi>x</m:mi></m:mrow></m:math></item><item id="uid8"><m:math overflow="scroll"><m:mrow><m:mo>∀</m:mo><m:mi>x</m:mi><m:mo>∈</m:mo><m:mi>V</m:mi></m:mrow></m:math>, <m:math overflow="scroll"><m:mrow><m:mo>∃</m:mo><m:mspace width="4pt"/><m:mi>y</m:mi></m:mrow></m:math> such that <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>+</m:mo><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math></item></list></item>
+        <item id="uid9"><label>VS2:</label>For any <m:math overflow="scroll"><m:mrow><m:mi>α</m:mi><m:mo>,</m:mo><m:mi>β</m:mi><m:mo>∈</m:mo><m:mi>K</m:mi></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>,</m:mo><m:mi>y</m:mi><m:mo>∈</m:mo><m:mi>V</m:mi></m:mrow></m:math><list id="id168173" display="block" list-type="bulleted"><item id="uid10"><m:math overflow="scroll"><m:mrow><m:mi>α</m:mi><m:mo>(</m:mo><m:mi>β</m:mi><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mo>(</m:mo><m:mi>α</m:mi><m:mi>β</m:mi><m:mo>)</m:mo><m:mi>x</m:mi></m:mrow></m:math> (compatibility)
+</item><item id="uid11"><m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>α</m:mi><m:mo>+</m:mo><m:mi>β</m:mi><m:mo>)</m:mo><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>+</m:mo><m:mi>y</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mi>α</m:mi><m:mi>x</m:mi><m:mo>+</m:mo><m:mi>α</m:mi><m:mi>y</m:mi><m:mo>+</m:mo><m:mi>β</m:mi><m:mi>x</m:mi><m:mo>+</m:mo><m:mi>β</m:mi><m:mi>y</m:mi></m:mrow></m:math> (distributivity)
+</item><item id="uid12"><m:math overflow="scroll"><m:mrow><m:mo>∃</m:mo><m:mn>1</m:mn><m:mo>∈</m:mo><m:mi>K</m:mi></m:mrow></m:math> such that <m:math overflow="scroll"><m:mrow><m:mn>1</m:mn><m:mi>x</m:mi><m:mo>=</m:mo><m:mi>x</m:mi></m:mrow></m:math></item></list></item>
+      </list>
+      <!--empty paragraphs get left behind.-->
+<example id="fs-id2308905">    
+      <list id="id168334" display="block" list-type="bulleted">
+        <item id="uid13"><m:math overflow="scroll"><m:msup><m:mi mathvariant="double-struck">R</m:mi><m:mi>N</m:mi></m:msup></m:math> over <m:math overflow="scroll"><m:mi mathvariant="double-struck">R</m:mi></m:math> (not <m:math overflow="scroll"><m:msup><m:mi mathvariant="double-struck">R</m:mi><m:mi>N</m:mi></m:msup></m:math> over <m:math overflow="scroll"><m:mi mathvariant="double-struck">C</m:mi></m:math>)
+</item>
+        <item id="uid14"><m:math overflow="scroll"><m:msup><m:mi mathvariant="double-struck">C</m:mi><m:mi>N</m:mi></m:msup></m:math> over <m:math overflow="scroll"><m:mi mathvariant="double-struck">C</m:mi></m:math> or <m:math overflow="scroll"><m:msup><m:mi mathvariant="double-struck">C</m:mi><m:mi>N</m:mi></m:msup></m:math> over <m:math overflow="scroll"><m:mi mathvariant="double-struck">R</m:mi></m:math></item>
+        <item id="uid15">Set of polynomials of degree <m:math overflow="scroll"><m:mi>N</m:mi></m:math> with rational coefficients over <m:math overflow="scroll"><m:mi mathvariant="double-struck">Q</m:mi></m:math></item>
+        <item id="uid16">The set of all infinitely-long sequences of real numbers over <m:math overflow="scroll"><m:mi mathvariant="double-struck">R</m:mi></m:math></item>
+        <item id="uid17"><m:math overflow="scroll"><m:mrow><m:mi>G</m:mi><m:mi>F</m:mi><m:msup><m:mrow><m:mo>(</m:mo><m:mn>2</m:mn><m:mo>)</m:mo></m:mrow><m:mi>N</m:mi></m:msup><m:mo>:</m:mo><m:msup><m:mrow><m:mo>{</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>1</m:mn><m:mo>}</m:mo></m:mrow><m:mi>N</m:mi></m:msup></m:mrow></m:math> over <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>1</m:mn><m:mo>}</m:mo></m:mrow></m:math> with mod 2 arithmetic (Galois field)
+</item>
+        <item id="uid18"><m:math overflow="scroll"><m:mrow><m:mi>C</m:mi><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow></m:math> over <m:math overflow="scroll"><m:mi mathvariant="double-struck">R</m:mi></m:math></item>
+      </list>
+</example>
+      
+  </content>
+</document>

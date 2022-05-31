@@ -1,0 +1,35 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+  <title>Hilbert Spaces in Signal Processing</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m34036</md:content-id>
+  <md:title>Hilbert Spaces in Signal Processing</md:title>
+  <md:abstract/>
+  <md:uuid>d59b9075-cf01-4228-b469-b1c6b7f862c9</md:uuid>
+</metadata>
+
+<content>
+    
+      <para id="id268404">What makes Hilbert spaces so useful in signal processing? In modern signal processing, we often represent a signal as a point in
+high-dimensional space. Hilbert spaces are spaces in which our geometry intuition from <m:math overflow="scroll"><m:msup><m:mi mathvariant="double-struck">R</m:mi><m:mn>3</m:mn></m:msup></m:math> is most trustworthy. As an example, we will consider the approximation problem.</para>
+      <para id="id268426"><title>Definition 1.</title>A subset <m:math overflow="scroll"><m:mi>W</m:mi></m:math> of a vector space <m:math overflow="scroll"><m:mi>V</m:mi></m:math> is <emphasis effect="italics">convex</emphasis> if for all <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>,</m:mo><m:mi>y</m:mi><m:mo>∈</m:mo><m:mi>W</m:mi></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>λ</m:mi><m:mo>∈</m:mo><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>1</m:mn><m:mo>)</m:mo></m:mrow></m:math>, <m:math overflow="scroll"><m:mrow><m:mi>λ</m:mi><m:mi>x</m:mi><m:mo>+</m:mo><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>-</m:mo><m:mi>λ</m:mi><m:mo>)</m:mo><m:mi>y</m:mi><m:mo>∈</m:mo><m:mi>W</m:mi></m:mrow></m:math>.</para>
+    <rule id="approximation" type="theorem">
+<title>The Fundamental Theorem of Approximation</title> 
+<statement id="eip-id1165147069746">
+<para id="eip-id1165145305172">
+Let <m:math overflow="scroll"><m:mi>A</m:mi></m:math> be a nonempty, closed (complete), convex set in a Hilbert
+space <m:math overflow="scroll"><m:mi>H</m:mi></m:math>. For any <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mi>H</m:mi></m:mrow></m:math> there is a unique point in <m:math overflow="scroll"><m:mi>A</m:mi></m:math> that is closest to
+<m:math overflow="scroll"><m:mi>x</m:mi></m:math>, i.e., <m:math overflow="scroll"><m:mi>x</m:mi></m:math> has a unique “best approximation” in <m:math overflow="scroll"><m:mi>A</m:mi></m:math>.</para>
+</statement>
+</rule>
+
+      <figure id="uid3"><media id="uid3_media" alt="An illustration showing a convex set A and a point x that lies outside this set.  The closest point to x in A is x_hat.">
+          <image mime-type="image/png" src="../../media/05_1.png" id="uid3_onlineimage" width="96"><!-- NOTE: attribute width changes image size online (pixels). original width is 96. --></image>
+          <image mime-type="application/postscript" for="pdf" src="../../media/05_1-7874.eps" id="uid3_printimage" print-width="5.25cm">
+            <!--NOTE: attribute width changes image size in printed PDF (if specified in .tex file)-->
+          </image>
+        </media>
+        
+      <caption>The best approximation to <m:math overflow="scroll"><m:mi>x</m:mi></m:math> in convex set <m:math overflow="scroll"><m:mi>A</m:mi></m:math>.</caption></figure>
+      <para id="id268809">Note that in non-Hilbert spaces, this may not be true! The proof is rather technical. See <cite>Young Chapter 3</cite> or <cite>Moon and Stirling Chapter 2</cite>. Also known as the “closest point property”, this is very useful in compression and denoising.</para>
+  </content>
+</document>

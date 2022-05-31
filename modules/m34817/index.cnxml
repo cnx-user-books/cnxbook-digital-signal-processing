@@ -1,0 +1,116 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+  <title>Poles and Zeros</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m34817</md:content-id>
+  <md:title>Poles and Zeros</md:title>
+  <md:abstract/>
+  <md:uuid>0d583fd4-de83-49a7-946d-ec4812fe1543</md:uuid>
+</metadata>
+
+<content>
+    <section id="id65777">
+      <title>Poles and zeros</title>
+      <para id="id65783">Suppose that <m:math overflow="scroll"><m:mrow><m:mi>X</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow></m:math> is a rational function, i.e.,</para>
+      <equation id="id65802">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:mi>X</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>z</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>=</m:mo>
+            <m:mfrac>
+              <m:mrow>
+                <m:mi>P</m:mi>
+                <m:mo>(</m:mo>
+                <m:mi>z</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mrow>
+                <m:mi>Q</m:mi>
+                <m:mo>(</m:mo>
+                <m:mi>z</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+            </m:mfrac>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id66183">where <m:math overflow="scroll"><m:mrow><m:mi>P</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>Q</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow></m:math> are both <emphasis effect="italics">polynomials</emphasis> in <m:math overflow="scroll"><m:mi>z</m:mi></m:math>. The roots of <m:math overflow="scroll"><m:mrow><m:mi>P</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow></m:math> and
+<m:math overflow="scroll"><m:mrow><m:mi>Q</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow></m:math> are very important.</para>
+      <para id="id66261"><definition id="eip-id1171256905295">
+<term>zero</term>
+<meaning id="eip-id1955372">
+A <emphasis effect="italics">zero</emphasis> of <m:math overflow="scroll"><m:mrow><m:mi>X</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow></m:math> is a value of <m:math overflow="scroll"><m:mi>z</m:mi></m:math> for which <m:math overflow="scroll"><m:mrow><m:mi>X</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> (or <m:math overflow="scroll"><m:mrow><m:mi>P</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math>). A <emphasis effect="italics">pole</emphasis> of <m:math overflow="scroll"><m:mrow><m:mi>X</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow></m:math> is a value of <m:math overflow="scroll"><m:mi>z</m:mi></m:math> for which <m:math overflow="scroll"><m:mrow><m:mi>X</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mi>∞</m:mi></m:mrow></m:math> (or <m:math overflow="scroll"><m:mrow><m:mi>Q</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math>).</meaning>
+</definition></para>
+      <para id="id66399">For finite values of <m:math overflow="scroll"><m:mi>z</m:mi></m:math>, poles are the roots of <m:math overflow="scroll"><m:mrow><m:mi>Q</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow></m:math>, but poles can also
+occur at <m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>=</m:mo><m:mi>∞</m:mi></m:mrow></m:math>. We denote poles in a <m:math overflow="scroll"><m:mi>z</m:mi></m:math>-plane plot by “<m:math overflow="scroll"><m:mo>×</m:mo></m:math>” we denote zeros by “<m:math overflow="scroll"><m:mo>∘</m:mo></m:math>”. Note that the ROC clearly cannot contain any poles since by definition the ROC only contains <m:math overflow="scroll"><m:mi>z</m:mi></m:math> for which the <m:math overflow="scroll"><m:mi>z</m:mi></m:math>-transform converges, and it does not converge at poles.</para>
+      
+      <example id="fs-id1165003474584">
+        <para id="fs-id1164998866242">Consider</para>
+<equation id="id66497"><m:math overflow="scroll" mode="display"><m:mrow><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mrow><m:mo>[</m:mo><m:mi>n</m:mi><m:mo>]</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>α</m:mi><m:mi>n</m:mi></m:msup><m:mi>u</m:mi><m:mrow><m:mo>[</m:mo><m:mi>n</m:mi><m:mo>]</m:mo></m:mrow><m:mover><m:mo>⟷</m:mo><m:mi>Z</m:mi></m:mover><m:msub><m:mi>X</m:mi><m:mn>1</m:mn></m:msub><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac><m:mi>z</m:mi><m:mrow><m:mi>z</m:mi><m:mo>-</m:mo><m:mi>α</m:mi></m:mrow></m:mfrac><m:mo>,</m:mo><m:mspace width="1.em"/><m:mfenced open="|" close="|"><m:mi>z</m:mi></m:mfenced><m:mo>&gt;</m:mo><m:mfenced open="|" close="|"><m:mi>α</m:mi></m:mfenced></m:mrow></m:math></equation>
+<para id="fs-id1165003496469">and</para>
+<equation id="id66784"><m:math overflow="scroll" mode="display"><m:mrow><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:mrow><m:mo>[</m:mo><m:mi>n</m:mi><m:mo>]</m:mo></m:mrow><m:mo>=</m:mo><m:mo>-</m:mo><m:msup><m:mi>α</m:mi><m:mi>n</m:mi></m:msup><m:mi>u</m:mi><m:mrow><m:mo>[</m:mo><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>-</m:mo><m:mi>n</m:mi><m:mo>]</m:mo></m:mrow><m:mover><m:mo>⟷</m:mo><m:mi>Z</m:mi></m:mover><m:msub><m:mi>X</m:mi><m:mn>2</m:mn></m:msub><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac><m:mi>z</m:mi><m:mrow><m:mi>z</m:mi><m:mo>-</m:mo><m:mi>α</m:mi></m:mrow></m:mfrac><m:mo>,</m:mo><m:mspace width="1.em"/><m:mfenced open="|" close="|"><m:mi>z</m:mi></m:mfenced><m:mo>&lt;</m:mo><m:mfenced open="|" close="|"><m:mi>α</m:mi></m:mfenced></m:mrow></m:math></equation>
+<figure id="uid2"><media id="uid2_media" alt="Graph with horizontal axis Re[z] and vertical axis Im[z]. There is a blue circle centered at the origin with its rightmost intersection with the horizontal axis marked α."><image mime-type="image/png" src="../../media/14_1.png" id="uid2_onlineimage" width="252"><!-- NOTE: attribute width changes image size online (pixels). original width is 252. --></image><image mime-type="application/postscript" for="pdf" src="../../media/14_1.eps" id="uid2_printimage"/></media></figure>
+<para id="fs-id1165019461279">
+Note that the poles and zeros of <m:math overflow="scroll"><m:mrow><m:msub><m:mi>X</m:mi><m:mn>1</m:mn></m:msub><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:msub><m:mi>X</m:mi><m:mn>2</m:mn></m:msub><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> are identical, but with opposite ROCs. Note also that neither ROC contains the point <m:math overflow="scroll"><m:mi>α</m:mi></m:math>.</para></example>
+
+<example id="fs-id1164994971732">
+<para id="fs-id1165021864300">
+Consider
+</para>
+<equation id="id66966"><m:math overflow="scroll" mode="display"><m:mrow><m:msub><m:mi>x</m:mi><m:mn>3</m:mn></m:msub><m:mrow><m:mo>[</m:mo><m:mi>n</m:mi><m:mo>]</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mfenced separators="" open="(" close=")"><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac></m:mfenced><m:mi>n</m:mi></m:msup><m:mi>u</m:mi><m:mrow><m:mo>[</m:mo><m:mi>n</m:mi><m:mo>]</m:mo></m:mrow><m:mo>+</m:mo><m:msup><m:mfenced separators="" open="(" close=")"><m:mo>-</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>3</m:mn></m:mfrac></m:mfenced><m:mi>n</m:mi></m:msup><m:mi>u</m:mi><m:mrow><m:mo>[</m:mo><m:mi>n</m:mi><m:mo>]</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></equation>
+
+<figure id="uid4"><media id="uid4_media" alt="Graph with horizontal axis n and vertical axis x_3[n]. There are ten evenly-spaced vertical lines, each with lowest point at the horizontal axis, and each of a different length."><image mime-type="image/png" src="../../media/14_2.png" id="uid4_onlineimage" width="245"><!-- NOTE: attribute width changes image size online (pixels). original width is 245. --></image><image mime-type="application/postscript" for="pdf" src="../../media/14_2.eps" id="uid4_printimage"/></media></figure>
+
+<para id="fs-id6243911">
+We can compute the <m:math overflow="scroll"><m:mi>z</m:mi></m:math>-transform of <m:math overflow="scroll"><m:mrow><m:msub><m:mi>x</m:mi><m:mn>3</m:mn></m:msub><m:mrow><m:mo>[</m:mo><m:mi>n</m:mi><m:mo>]</m:mo></m:mrow></m:mrow></m:math> by simply adding the <m:math overflow="scroll"><m:mi>z</m:mi></m:math>-transforms of the two different terms in the sum, which are given by</para>
+
+<equation id="id67107"><m:math overflow="scroll" mode="display"><m:mrow><m:msup><m:mfenced separators="" open="(" close=")"><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac></m:mfenced><m:mi>n</m:mi></m:msup><m:mi>u</m:mi><m:mrow><m:mo>[</m:mo><m:mi>n</m:mi><m:mo>]</m:mo></m:mrow><m:mover><m:mo>⟷</m:mo><m:mi>Z</m:mi></m:mover><m:mfrac><m:mi>z</m:mi><m:mrow><m:mi>z</m:mi><m:mo>-</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac></m:mrow></m:mfrac><m:mspace width="1.em"/><m:mtext>ROC:</m:mtext><m:mspace width="4pt"/><m:mfenced open="|" close="|"><m:mi>z</m:mi></m:mfenced><m:mo>&gt;</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac></m:mrow></m:math></equation>
+
+<para id="fs-id1165010594040">and</para>
+
+<equation id="id67197"><m:math overflow="scroll" mode="display"><m:mrow><m:msup><m:mfenced separators="" open="(" close=")"><m:mo>-</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>3</m:mn></m:mfrac></m:mfenced><m:mi>n</m:mi></m:msup><m:mi>u</m:mi><m:mrow><m:mo>[</m:mo><m:mi>n</m:mi><m:mo>]</m:mo></m:mrow><m:mover><m:mo>⟷</m:mo><m:mi>Z</m:mi></m:mover><m:mfrac><m:mi>z</m:mi><m:mrow><m:mi>z</m:mi><m:mo>+</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>3</m:mn></m:mfrac></m:mrow></m:mfrac><m:mspace width="1.em"/><m:mtext>ROC:</m:mtext><m:mspace width="4pt"/><m:mfenced open="|" close="|"><m:mi>z</m:mi></m:mfenced><m:mo>&gt;</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>3</m:mn></m:mfrac><m:mo>.</m:mo></m:mrow></m:math></equation>
+
+<para id="fs-id1165006933250">The poles and zeros for these <m:math overflow="scroll"><m:mi>z</m:mi></m:math>-transforms are illustrated below.</para>
+
+<figure id="uid5"><media id="uid5_media" alt="Graph with horizontal axis Re[z] and vertical axis Im[z]. There is a blue circle centered at the origin with its rightmost intersection with the horizontal axis marked 1/2. The graph is titled, ROC."><image mime-type="image/png" src="../../media/14_3.png" id="uid5_onlineimage" width="252"><!-- NOTE: attribute width changes image size online (pixels). original width is 252. --></image><image mime-type="application/postscript" for="pdf" src="../../media/14_3.eps" id="uid5_printimage"/></media></figure>
+
+<figure id="uid6"><media id="uid6_media" alt="Graph with horizontal axis Re[z] and vertical axis Im[z]. There is a blue circle centered at the origin with its leftmost intersection with the horizontal axis marked -1/3. The graph is titled, ROC."><image mime-type="image/png" src="../../media/14_4.png" id="uid6_onlineimage" width="252"><!-- NOTE: attribute width changes image size online (pixels). original width is 252. --></image><image mime-type="application/postscript" for="pdf" src="../../media/14_4.eps" id="uid6_printimage"/></media></figure>
+
+<para id="fs-id1165005122056"><m:math overflow="scroll"><m:mrow><m:msub><m:mi>X</m:mi><m:mn>3</m:mn></m:msub><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> is given by</para>
+
+<equation id="uid7"><m:math overflow="scroll" mode="display"><m:mtable displaystyle="true"><m:mtr><m:mtd columnalign="right"><m:mrow><m:msub><m:mi>X</m:mi><m:mn>3</m:mn></m:msub><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:mtd><m:mtd columnalign="left"><m:mrow><m:mo>=</m:mo><m:mfrac><m:mi>z</m:mi><m:mrow><m:mi>z</m:mi><m:mo>-</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac></m:mrow></m:mfrac><m:mo>+</m:mo><m:mfrac><m:mi>z</m:mi><m:mrow><m:mi>z</m:mi><m:mo>+</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>3</m:mn></m:mfrac></m:mrow></m:mfrac></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mrow><m:mo>=</m:mo><m:mfrac><m:mrow><m:mi>z</m:mi><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>+</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>3</m:mn></m:mfrac><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mi>z</m:mi><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>-</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>+</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>3</m:mn></m:mfrac><m:mo>)</m:mo></m:mrow><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>-</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:mo>)</m:mo></m:mrow></m:mrow></m:mfrac></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mrow><m:mo>=</m:mo><m:mfrac><m:mrow><m:mi>z</m:mi><m:mo>(</m:mo><m:mn>2</m:mn><m:mi>z</m:mi><m:mo>-</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>6</m:mn></m:mfrac><m:mo>)</m:mo></m:mrow><m:mrow><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>+</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>3</m:mn></m:mfrac><m:mo>)</m:mo></m:mrow><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>-</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:mo>)</m:mo></m:mrow></m:mrow></m:mfrac><m:mspace width="1.em"/><m:mtext>ROC:</m:mtext><m:mspace width="4pt"/><m:mfenced open="|" close="|"><m:mi>z</m:mi></m:mfenced><m:mo>&gt;</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac></m:mrow></m:mtd></m:mtr></m:mtable></m:math></equation>
+
+<figure id="uid8"><media id="uid8_media" alt="Graph with horizontal axis Re[z] and vertical axis Im[z]. There is a blue circle centered at the origin with its rightmost intersection with the horizontal axis marked 1/2 with an X. The spots of vertical value 0 and horizontal value -1/3 and 1/3 are marked with an X and an O respectively. The graph is titled, ROC."><image mime-type="image/png" src="../../media/14_5.png" id="uid8_onlineimage" width="252"><!-- NOTE: attribute width changes image size online (pixels). original width is 252. --></image><image mime-type="application/postscript" for="pdf" src="../../media/14_5.eps" id="uid8_printimage"/></media></figure>
+
+<para id="fs-id1165019010906">Note that the poles do not change, but the zeros do, as illustrated above.</para>
+</example>
+        <example id="fs-id1164996564953">
+<para id="fs-id1164997400648">Now consider the finite-length sequence</para>
+
+<equation id="id67608"><m:math overflow="scroll" mode="display"><m:mrow><m:msub><m:mi>x</m:mi><m:mn>4</m:mn></m:msub><m:mrow><m:mo>[</m:mo><m:mi>n</m:mi><m:mo>]</m:mo></m:mrow><m:mo>=</m:mo><m:mfenced separators="" open="{" close=""><m:mtable><m:mtr><m:mtd columnalign="left"><m:msup><m:mi>α</m:mi><m:mi>n</m:mi></m:msup></m:mtd><m:mtd columnalign="left"><m:mrow><m:mn>0</m:mn><m:mo>≤</m:mo><m:mi>n</m:mi><m:mo>≤</m:mo><m:mi>N</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd columnalign="left"><m:mn>0</m:mn></m:mtd><m:mtd columnalign="left"><m:mtext>otherwise.</m:mtext></m:mtd></m:mtr></m:mtable></m:mfenced></m:mrow></m:math></equation>
+
+<figure id="uid10"><media id="uid10_media" alt="Graph with horizontal axis n and vertical axis x_3[n]. There are ten evenly-spaced vertical lines, each with lowest point at the horizontal axis, and each of a different, decreasing length."><image mime-type="image/png" src="../../media/14_6.png" id="uid10_onlineimage" width="245"><!-- NOTE: attribute width changes image size online (pixels). original width is 245. --></image><image mime-type="application/postscript" for="pdf" src="../../media/14_6.eps" id="uid10_printimage"/></media></figure>
+
+<para id="fs-id1164994928360">The <m:math overflow="scroll"><m:mi>z</m:mi></m:math>-transform for this sequence is</para>
+
+<equation id="uid11"><m:math overflow="scroll" mode="display"><m:mtable displaystyle="true"><m:mtr><m:mtd columnalign="right"><m:mrow><m:msub><m:mi>X</m:mi><m:mn>4</m:mn></m:msub><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:mtd><m:mtd columnalign="left"><m:mrow><m:mo>=</m:mo><m:mover><m:munder><m:mo>∑</m:mo><m:mrow><m:mi>n</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:munder><m:mrow><m:mi>N</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:mover><m:msub><m:mi>x</m:mi><m:mn>4</m:mn></m:msub><m:mrow><m:mo>[</m:mo><m:mi>n</m:mi><m:mo>]</m:mo></m:mrow><m:msup><m:mi>z</m:mi><m:mrow><m:mo>-</m:mo><m:mi>n</m:mi></m:mrow></m:msup><m:mo>=</m:mo><m:mover><m:munder><m:mo>∑</m:mo><m:mrow><m:mi>n</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:munder><m:mrow><m:mi>N</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:mover><m:msup><m:mi>α</m:mi><m:mi>n</m:mi></m:msup><m:msup><m:mi>z</m:mi><m:mrow><m:mo>-</m:mo><m:mi>n</m:mi></m:mrow></m:msup></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mrow><m:mo>=</m:mo><m:mfrac><m:mrow><m:mn>1</m:mn><m:mo>-</m:mo><m:msup><m:mrow><m:mo>(</m:mo><m:mfrac><m:mi>α</m:mi><m:mi>z</m:mi></m:mfrac><m:mo>)</m:mo></m:mrow><m:mi>N</m:mi></m:msup></m:mrow><m:mrow><m:mn>1</m:mn><m:mo>-</m:mo><m:mfrac><m:mi>α</m:mi><m:mi>z</m:mi></m:mfrac></m:mrow></m:mfrac></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mrow><m:mo>=</m:mo><m:mfrac><m:mrow><m:msup><m:mi>z</m:mi><m:mi>N</m:mi></m:msup><m:mo>-</m:mo><m:msup><m:mi>α</m:mi><m:mi>N</m:mi></m:msup></m:mrow><m:mrow><m:msup><m:mi>z</m:mi><m:mrow><m:mi>N</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msup><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>-</m:mo><m:mi>α</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:mfrac><m:mspace width="1.em"/><m:mtext>ROC:</m:mtext><m:mspace width="4pt"/><m:mi>z</m:mi><m:mo>≠</m:mo><m:mn>0</m:mn></m:mrow></m:mtd></m:mtr></m:mtable></m:math></equation>
+
+<para id="fs-id1165010995246">We can immediately see that the zeros of <m:math overflow="scroll"><m:mrow><m:msub><m:mi>X</m:mi><m:mn>4</m:mn></m:msub><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> occur when <m:math overflow="scroll"><m:mrow><m:msup><m:mi>z</m:mi><m:mi>N</m:mi></m:msup><m:mo>=</m:mo><m:msup><m:mi>α</m:mi><m:mi>N</m:mi></m:msup></m:mrow></m:math>. Recalling the “N<sup>th</sup> roots of unity”, we see that the zeros are given by</para>
+
+<equation id="id68004"><m:math overflow="scroll" mode="display"><m:mrow><m:msub><m:mi>z</m:mi><m:mi>k</m:mi></m:msub><m:mo>=</m:mo><m:mi>α</m:mi><m:msup><m:mi>e</m:mi><m:mrow><m:mi>j</m:mi><m:mfrac><m:mrow><m:mn>2</m:mn><m:mi>π</m:mi></m:mrow><m:mi>N</m:mi></m:mfrac><m:mi>k</m:mi></m:mrow></m:msup><m:mo>,</m:mo><m:mspace width="4pt"/><m:mi>k</m:mi><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:mo>...</m:mo><m:mo>,</m:mo><m:mi>N</m:mi><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>.</m:mo></m:mrow></m:math></equation>
+
+<para id="fs-id1165014258428">At first glance, it might appear that there are <m:math overflow="scroll"><m:mrow><m:mi>N</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:math> poles at zero and 1 pole at <m:math overflow="scroll"><m:mi>α</m:mi></m:math>, but the pole at <m:math overflow="scroll"><m:mi>α</m:mi></m:math> is cancelled by the zero (<m:math overflow="scroll"><m:msub><m:mi>z</m:mi><m:mn>0</m:mn></m:msub></m:math>) at <m:math overflow="scroll"><m:mi>α</m:mi></m:math>. Thus, <m:math overflow="scroll"><m:mrow><m:msub><m:mi>X</m:mi><m:mn>4</m:mn></m:msub><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> actually has only <m:math overflow="scroll"><m:mrow><m:mi>N</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:math> poles at zero and <m:math overflow="scroll"><m:mrow><m:mi>N</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:math> zeros around a circle of radius <m:math overflow="scroll"><m:mi>α</m:mi></m:math> as illustrated below.</para>
+
+<figure id="uid12"><media id="uid12_media" alt="Graph with horizontal axis Re[z] and vertical axis Im[z]. There are red circles spaced out in a circular pattern around the origin, with an X at the origin labeled N-1. The graph is labeled ROC."><image mime-type="image/png" src="../../media/14_7.png" id="uid12_onlineimage" width="252"><!-- NOTE: attribute width changes image size online (pixels). original width is 252. --></image><image mime-type="application/postscript" for="pdf" src="../../media/14_7.eps" id="uid12_printimage"/></media></figure>
+
+<para id="fs-id1164994940259">So, provided that <m:math overflow="scroll"><m:mrow><m:mfenced open="|" close="|"><m:mi>α</m:mi></m:mfenced><m:mo>&lt;</m:mo><m:mi>∞</m:mi></m:mrow></m:math>, the ROC is the entire <m:math overflow="scroll"><m:mi>z</m:mi></m:math>-plane
+except for the origin. This actually holds for all finite-length sequences.
+</para>
+      </example>
+    </section>
+  </content>
+</document>

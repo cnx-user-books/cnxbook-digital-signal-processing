@@ -1,0 +1,297 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+  <title>Stability, Causality, and the z-Transform</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m34818</md:content-id>
+  <md:title>Stability, Causality, and the z-Transform</md:title>
+  <md:abstract/>
+  <md:uuid>e4f2d99d-5b29-4698-b122-934ef2589195</md:uuid>
+</metadata>
+
+<content>
+    <section id="id62159">
+      <title>Stability, causality, and the <m:math overflow="scroll"><m:mi>z</m:mi></m:math>-transform</title>
+      <para id="id62173">In going from</para>
+      <equation id="id62176"><m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:munderover>
+              <m:mrow><m:mo>∑</m:mo></m:mrow>
+              <m:mrow>
+                <m:mi>k</m:mi>
+                <m:mo>=</m:mo>
+                <m:mn>0</m:mn>
+              </m:mrow>
+              <m:mi>N</m:mi>
+            </m:munderover>
+            <m:msub>
+              <m:mi>a</m:mi>
+              <m:mi>k</m:mi>
+            </m:msub>
+            <m:mi>y</m:mi>
+            <m:mrow>
+              <m:mo>[</m:mo>
+              <m:mi>n</m:mi>
+              <m:mo>-</m:mo>
+              <m:mi>k</m:mi>
+              <m:mo>]</m:mo>
+            </m:mrow>
+            <m:mo>=</m:mo>
+            <m:munderover>
+              <m:mrow><m:mo>∑</m:mo></m:mrow>
+              <m:mrow>
+                <m:mi>k</m:mi>
+                <m:mo>=</m:mo>
+                <m:mn>0</m:mn>
+              </m:mrow>
+              <m:mi>m</m:mi>
+            </m:munderover>
+            <m:msub>
+              <m:mi>b</m:mi>
+              <m:mi>k</m:mi>
+            </m:msub>
+            <m:mi>x</m:mi>
+            <m:mrow>
+              <m:mo>[</m:mo>
+              <m:mi>n</m:mi>
+              <m:mo>-</m:mo>
+              <m:mi>k</m:mi>
+              <m:mo>]</m:mo>
+            </m:mrow>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id62601">to</para>
+      <equation id="id62605">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:mi>H</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>z</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>=</m:mo>
+            <m:mfrac>
+              <m:mrow>
+                <m:mi>Y</m:mi>
+                <m:mo>(</m:mo>
+                <m:mi>z</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mrow>
+                <m:mi>X</m:mi>
+                <m:mo>(</m:mo>
+                <m:mi>z</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+            </m:mfrac>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id62127">we did not specify an ROC. If we factor <m:math overflow="scroll"><m:mrow><m:mi>H</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow></m:math>, we can plot the poles and zeros in the <m:math overflow="scroll"><m:mi>z</m:mi></m:math>-plane as below.</para>
+      <figure id="uid1"><media id="uid1_media" alt="Graph with horizontal axis Re[z] and vertical axis Im[z]. There are three X marks and four circle marks on the graph.">
+          <image mime-type="image/png" src="../../media/15_1.png" id="uid1_onlineimage" width="252"><!-- NOTE: attribute width changes image size online (pixels). original width is 252. --></image>
+          <image mime-type="application/postscript" for="pdf" src="../../media/15_1.eps" id="uid1_printimage"/>
+        </media>
+      </figure>
+      <para id="id62863">Several ROCs may be possible. Each ROC corresponds to a different impulse
+response, so which one should we choose? In general, there is no “right”
+choice, however, there are some choices that make sense in practice.</para>
+      <para id="id62870">In particular, if <m:math overflow="scroll"><m:mrow><m:mi>h</m:mi><m:mo>[</m:mo><m:mi>n</m:mi><m:mo>]</m:mo></m:mrow></m:math> is <emphasis effect="italics">causal</emphasis>, i.e., if <m:math overflow="scroll"><m:mrow><m:mi>h</m:mi><m:mo>[</m:mo><m:mi>n</m:mi><m:mo>]</m:mo><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math>, <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>&lt;</m:mo><m:mn>0</m:mn></m:mrow></m:math>, then the ROC extends
+<emphasis effect="italics">outward from the outermost pole</emphasis>. This can be seen in the examples up to this point. Moreover, recall
+that a system is <emphasis effect="italics">BIBO stable</emphasis> if the impulse response <m:math overflow="scroll"><m:mrow><m:mi>h</m:mi><m:mo>∈</m:mo><m:msub><m:mi>ℓ</m:mi><m:mn>1</m:mn></m:msub><m:mrow><m:mo>(</m:mo><m:mi mathvariant="double-struck">Z</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math>. In this case,</para>
+      <equation id="uid2">
+        <m:math overflow="scroll" mode="display">
+          <m:mtable displaystyle="true">
+            <m:mtr>
+              <m:mtd columnalign="right">
+                <m:mfenced separators="" open="|" close="|">
+                  <m:mi>H</m:mi>
+                  <m:mo>(</m:mo>
+                  <m:mi>z</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mfenced>
+              </m:mtd>
+              <m:mtd columnalign="left">
+                <m:mrow>
+                  <m:mo>=</m:mo>
+                  <m:mfenced separators="" open="|" close="|">
+                    <m:munderover>
+                      <m:mo>∑</m:mo>
+                      <m:mrow>
+                        <m:mi>n</m:mi>
+                        <m:mo>=</m:mo>
+                        <m:mo>-</m:mo>
+                        <m:mi>∞</m:mi>
+                      </m:mrow>
+                      <m:mi>∞</m:mi>
+                    </m:munderover>
+                    <m:mi>h</m:mi>
+                    <m:mrow>
+                      <m:mo>[</m:mo>
+                      <m:mi>n</m:mi>
+                      <m:mo>]</m:mo>
+                    </m:mrow>
+                    <m:msup>
+                      <m:mi>z</m:mi>
+                      <m:mrow>
+                        <m:mo>-</m:mo>
+                        <m:mi>n</m:mi>
+                      </m:mrow>
+                    </m:msup>
+                  </m:mfenced>
+                </m:mrow>
+              </m:mtd>
+            </m:mtr>
+            <m:mtr>
+              <m:mtd/>
+              <m:mtd columnalign="left">
+                <m:mrow>
+                  <m:mo>≤</m:mo>
+                  <m:munderover>
+                    <m:mo>∑</m:mo>
+                    <m:mrow>
+                      <m:mi>n</m:mi>
+                      <m:mo>=</m:mo>
+                      <m:mo>-</m:mo>
+                      <m:mi>∞</m:mi>
+                    </m:mrow>
+                    <m:mi>∞</m:mi>
+                  </m:munderover>
+                  <m:mfenced separators="" open="|" close="|">
+                    <m:mi>h</m:mi>
+                    <m:mo>[</m:mo>
+                    <m:mi>n</m:mi>
+                    <m:mo>]</m:mo>
+                  </m:mfenced>
+                  <m:mfenced separators="" open="|" close="|">
+                    <m:msup>
+                      <m:mi>z</m:mi>
+                      <m:mrow>
+                        <m:mo>-</m:mo>
+                        <m:mi>n</m:mi>
+                      </m:mrow>
+                    </m:msup>
+                  </m:mfenced>
+                </m:mrow>
+              </m:mtd>
+            </m:mtr>
+          </m:mtable>
+        </m:math>
+      </equation>
+      <para id="id63117">
+Consider the unit circle <m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>=</m:mo><m:msup><m:mi>e</m:mi><m:mrow><m:mi>j</m:mi><m:mi>ω</m:mi></m:mrow></m:msup></m:mrow></m:math>. In this case we have <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msup><m:mi>z</m:mi><m:mrow><m:mo>-</m:mo><m:mi>n</m:mi></m:mrow></m:msup><m:mrow><m:mo>|</m:mo><m:mo>=</m:mo><m:mo>|</m:mo></m:mrow><m:msup><m:mi>e</m:mi><m:mrow><m:mo>-</m:mo><m:mi>j</m:mi><m:mi>ω</m:mi><m:mi>n</m:mi></m:mrow></m:msup><m:mrow><m:mo>|</m:mo><m:mo>=</m:mo><m:mn>1</m:mn></m:mrow></m:mrow></m:math>, so that</para>
+      <equation id="id63194"><m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:mfenced separators="" open="|" close="|">
+              <m:mi>H</m:mi>
+              <m:mo>(</m:mo>
+              <m:msup>
+                <m:mi>e</m:mi>
+                <m:mrow>
+                  <m:mi>j</m:mi>
+                  <m:mi>ω</m:mi>
+                </m:mrow>
+              </m:msup>
+              <m:mo>)</m:mo>
+            </m:mfenced>
+            <m:mo>≤</m:mo>
+            <m:munderover>
+              <m:mrow><m:mo>∑</m:mo></m:mrow>
+              <m:mrow>
+                <m:mi>n</m:mi>
+                <m:mo>=</m:mo>
+                <m:mo>-</m:mo>
+                <m:mi>∞</m:mi>
+              </m:mrow>
+              <m:mi>∞</m:mi>
+            </m:munderover>
+            <m:mfenced separators="" open="|" close="|">
+              <m:mi>h</m:mi>
+              <m:mo>[</m:mo>
+              <m:mi>n</m:mi>
+              <m:mo>]</m:mo>
+            </m:mfenced>
+            <m:mo>&lt;</m:mo>
+            <m:mi>∞</m:mi>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id63268">for all <m:math overflow="scroll"><m:mi>ω</m:mi></m:math>. Thus, if a system is BIBO stable, the ROC of <m:math overflow="scroll"><m:mrow><m:mi>H</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow></m:math> must include the unit
+circle. In general, <emphasis effect="italics">any ROC containing the unit circle will be BIBO stable.</emphasis></para>
+      <para id="id63300">This leads to a key question – are stability and causality always compatible? The answer is <emphasis effect="italics">no</emphasis>. For example,
+consider</para>
+      <equation id="id63310">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:mi>H</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>z</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>=</m:mo>
+            <m:mfrac>
+              <m:msup>
+                <m:mi>z</m:mi>
+                <m:mn>2</m:mn>
+              </m:msup>
+              <m:mrow>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>z</m:mi>
+                  <m:mo>-</m:mo>
+                  <m:mn>2</m:mn>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>z</m:mi>
+                  <m:mo>+</m:mo>
+                  <m:mfrac>
+                    <m:mn>1</m:mn>
+                    <m:mn>2</m:mn>
+                  </m:mfrac>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mfrac>
+            <m:mo>=</m:mo>
+            <m:mfrac>
+              <m:mrow>
+                <m:mfrac>
+                  <m:mn>4</m:mn>
+                  <m:mn>5</m:mn>
+                </m:mfrac>
+                <m:mi>z</m:mi>
+              </m:mrow>
+              <m:mrow>
+                <m:mi>z</m:mi>
+                <m:mo>-</m:mo>
+                <m:mn>2</m:mn>
+              </m:mrow>
+            </m:mfrac>
+            <m:mo>+</m:mo>
+            <m:mfrac>
+              <m:mrow>
+                <m:mfrac>
+                  <m:mn>1</m:mn>
+                  <m:mn>5</m:mn>
+                </m:mfrac>
+                <m:mi>z</m:mi>
+              </m:mrow>
+              <m:mrow>
+                <m:mi>z</m:mi>
+                <m:mo>+</m:mo>
+                <m:mfrac>
+                  <m:mn>1</m:mn>
+                  <m:mn>2</m:mn>
+                </m:mfrac>
+              </m:mrow>
+            </m:mfrac>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id63416">and its various ROC's and corresponding inverses. If the ROC contains the unit-circle (so that the corresponding system is stable) and is not to contain any poles, then it must extend inward towards the origin, and hence it cannot be causal. Alternatively, if the ROC is to extend outward, it will not contain the unit-circle so that the corresponding system will not be BIBO stable.</para>
+    </section>  
+  </content>
+</document>

@@ -1,0 +1,217 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+  <title>Linear Systems</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m34053</md:content-id>
+  <md:title>Linear Systems</md:title>
+  <md:abstract/>
+  <md:uuid>e78a6d8e-2ba8-44ea-8752-b9efd92c83d1</md:uuid>
+</metadata>
+
+<content>
+    
+    <para id="id2253844">In this course we will focus much of our attention on <emphasis effect="italics">linear</emphasis> systems. When
+our input and output signals are vectors, then the system is a <emphasis effect="italics">linear
+operator</emphasis>.</para>
+    <para id="id2253861">Suppose that <m:math overflow="scroll"><m:mrow><m:mi>L</m:mi><m:mo>:</m:mo><m:mi>X</m:mi><m:mo>→</m:mo><m:mi>Y</m:mi></m:mrow></m:math> is a linear operator from a vector space <m:math overflow="scroll"><m:mi>X</m:mi></m:math>
+to a vector space <m:math overflow="scroll"><m:mi>Y</m:mi></m:math>. If <m:math overflow="scroll"><m:mi>X</m:mi></m:math> and <m:math overflow="scroll"><m:mi>Y</m:mi></m:math> are normed vector spaces, then we can also define a norm on <m:math overflow="scroll"><m:mi>L</m:mi></m:math>. Specifically, we can let</para>
+    <equation id="uid1">
+      <m:math overflow="scroll" mode="display">
+        <m:mtable displaystyle="true">
+          <m:mtr>
+            <m:mtd columnalign="right">
+              <m:msub>
+                <m:mfenced open="∥" close="∥">
+                  <m:mi>L</m:mi>
+                </m:mfenced>
+                <m:mrow>
+                  <m:mi mathvariant="script">L</m:mi>
+                  <m:mo>(</m:mo>
+                  <m:mi>X</m:mi>
+                  <m:mo>,</m:mo>
+                  <m:mi>Y</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+              </m:msub>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mo>=</m:mo>
+                <m:munder>
+                  <m:mo movablelimits="true" form="prefix">max</m:mo>
+                  <m:mrow>
+                    <m:mi>x</m:mi>
+                    <m:mo>∈</m:mo>
+                    <m:mi>X</m:mi>
+                  </m:mrow>
+                </m:munder>
+                <m:mfrac>
+                  <m:msub>
+                    <m:mfenced separators="" open="∥" close="∥">
+                      <m:msub>
+                        <m:mi>L</m:mi>
+                        <m:mi>x</m:mi>
+                      </m:msub>
+                    </m:mfenced>
+                    <m:mi>Y</m:mi>
+                  </m:msub>
+                  <m:msub>
+                    <m:mfenced open="∥" close="∥">
+                      <m:mi>x</m:mi>
+                    </m:mfenced>
+                    <m:mi>X</m:mi>
+                  </m:msub>
+                </m:mfrac>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mo>=</m:mo>
+                <m:munder>
+                  <m:mo movablelimits="true" form="prefix">max</m:mo>
+                  <m:mrow>
+                    <m:mi>x</m:mi>
+                    <m:mo>∈</m:mo>
+                    <m:mi>X</m:mi>
+                    <m:mo>:</m:mo>
+                    <m:msub>
+                      <m:mfenced open="∥" close="∥">
+                        <m:mi>x</m:mi>
+                      </m:mfenced>
+                      <m:mi>X</m:mi>
+                    </m:msub>
+                    <m:mo>=</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                </m:munder>
+                <m:msub>
+                  <m:mfenced separators="" open="∥" close="∥">
+                    <m:msub>
+                      <m:mi>L</m:mi>
+                      <m:mi>x</m:mi>
+                    </m:msub>
+                  </m:mfenced>
+                  <m:mi>Y</m:mi>
+                </m:msub>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+        </m:mtable>
+      </m:math>
+    </equation>
+    <para id="id2254343">
+An operator for which <m:math overflow="scroll"><m:mrow><m:msub><m:mfenced open="∥" close="∥"><m:mi>L</m:mi></m:mfenced><m:mrow><m:mi mathvariant="script">L</m:mi><m:mo>(</m:mo><m:mi>X</m:mi><m:mo>,</m:mo><m:mi>Y</m:mi><m:mo>)</m:mo></m:mrow></m:msub><m:mo>&lt;</m:mo><m:mi>∞</m:mi></m:mrow></m:math> is called a <emphasis effect="italics">bounded operator</emphasis>.</para>
+    <example id="eip-121"><para id="eip-id3962400">BIBO (bounded-input, bounded-output) stable systems are systems for which</para><equation id="eip-643"><m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:msub>
+            <m:mfenced open="∥" close="∥">
+              <m:mi>x</m:mi>
+            </m:mfenced>
+            <m:mi>∞</m:mi>
+          </m:msub>
+          <m:mo>&lt;</m:mo>
+          <m:mi>A</m:mi>
+          <m:mo>⟹</m:mo>
+          <m:msub>
+            <m:mfenced separators="" open="∥" close="∥">
+              <m:mi>L</m:mi>
+              <m:mi>x</m:mi>
+            </m:mfenced>
+            <m:mi>∞</m:mi>
+          </m:msub>
+          <m:mo>&lt;</m:mo>
+          <m:mi>B</m:mi>
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation><para id="eip-908">Such a system satisfies <m:math overflow="scroll"><m:mrow><m:msub><m:mfenced open="∥" close="∥"><m:mi>L</m:mi></m:mfenced><m:mi>∞</m:mi></m:msub><m:mo>&lt;</m:mo><m:mfrac><m:mi>B</m:mi><m:mi>A</m:mi></m:mfrac></m:mrow></m:math>.</para></example>
+    
+    
+    <para id="id2254486">One can show that <m:math overflow="scroll"><m:msub><m:mfenced open="∥" close="∥"><m:mo>·</m:mo></m:mfenced><m:mrow><m:mi mathvariant="script">L</m:mi><m:mo>(</m:mo><m:mi>X</m:mi><m:mo>,</m:mo><m:mi>Y</m:mi><m:mo>)</m:mo></m:mrow></m:msub></m:math>
+satisfies the requirements of a valid norm. In fact <m:math overflow="scroll"><m:mrow><m:mi mathvariant="script">L</m:mi><m:mo>(</m:mo><m:mi>X</m:mi><m:mo>,</m:mo><m:mi>Y</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mo>{</m:mo><m:mtext> bounded linear operators from </m:mtext><m:mspace width="4pt"/><m:mi>X</m:mi><m:mspace width="4pt"/><m:mi> to </m:mi><m:mspace width="4pt"/><m:mi>Y</m:mi><m:mo>}</m:mo></m:mrow></m:math> is itself a normed vector
+space! If <m:math overflow="scroll"><m:mi>Y</m:mi></m:math> is a Banach space, then so is <m:math overflow="scroll"><m:mrow><m:mi mathvariant="script">L</m:mi><m:mo>(</m:mo><m:mi>X</m:mi><m:mo>,</m:mo><m:mi>Y</m:mi><m:mo>)</m:mo></m:mrow></m:math>!</para>
+    <para id="id2254602">Bounded linear operators are common in DSP—they are “safe” in that
+“normal” inputs are guaranteed to not make your system explode.</para>
+    <para id="id2254610">Are there any common systems that are unbounded? Not in finite dimensions, but in infinite dimensions there are plenty of examples!</para>
+    <example id="eip-197"><para id="eip-321">Consider <m:math overflow="scroll"><m:mrow><m:msub><m:mi>L</m:mi><m:mn>2</m:mn></m:msub><m:mfenced separators="" open="[" close="]"><m:mo>-</m:mo><m:mi>π</m:mi><m:mo>,</m:mo><m:mi>π</m:mi></m:mfenced></m:mrow></m:math>. For any <m:math overflow="scroll"><m:mi>k</m:mi></m:math>, <m:math overflow="scroll"><m:mrow><m:msub><m:mi>f</m:mi><m:mi>k</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:msqrt><m:mrow><m:mn>2</m:mn><m:mi>π</m:mi></m:mrow></m:msqrt></m:mfrac><m:msup><m:mi>e</m:mi><m:mrow><m:mo>-</m:mo><m:mi>j</m:mi><m:mi>k</m:mi><m:mi>t</m:mi></m:mrow></m:msup></m:mrow></m:math> is an element of <m:math overflow="scroll"><m:mrow><m:msub><m:mi>L</m:mi><m:mn>2</m:mn></m:msub><m:mfenced separators="" open="[" close="]"><m:mo>-</m:mo><m:mi>π</m:mi><m:mo>,</m:mo><m:mi>π</m:mi></m:mfenced></m:mrow></m:math> with <m:math overflow="scroll"><m:mrow><m:msub><m:mfenced separators="" open="∥" close="∥"><m:msub><m:mi>f</m:mi><m:mi>k</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:mfenced><m:mn>2</m:mn></m:msub><m:mo>=</m:mo><m:mn>1</m:mn></m:mrow></m:math>. Consider the system <m:math overflow="scroll"><m:mrow><m:mi>D</m:mi><m:mo>=</m:mo><m:mfrac><m:mi>d</m:mi><m:mrow><m:mi>d</m:mi><m:mi>t</m:mi></m:mrow></m:mfrac></m:mrow></m:math>, and note that</para><equation id="eip-301"><m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mfrac>
+            <m:mi>d</m:mi>
+            <m:mrow>
+              <m:mi>d</m:mi>
+              <m:mi>t</m:mi>
+            </m:mrow>
+          </m:mfrac>
+          <m:msub>
+            <m:mi>f</m:mi>
+            <m:mi>k</m:mi>
+          </m:msub>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>t</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>=</m:mo>
+          <m:mfrac>
+            <m:mrow>
+              <m:mo>-</m:mo>
+              <m:mi>j</m:mi>
+              <m:mi>k</m:mi>
+            </m:mrow>
+            <m:msqrt>
+              <m:mrow>
+                <m:mn>2</m:mn>
+                <m:mi>π</m:mi>
+              </m:mrow>
+            </m:msqrt>
+          </m:mfrac>
+          <m:msup>
+            <m:mi>e</m:mi>
+            <m:mrow>
+              <m:mo>-</m:mo>
+              <m:mi>j</m:mi>
+              <m:mi>k</m:mi>
+              <m:mi>t</m:mi>
+            </m:mrow>
+          </m:msup>
+          <m:mo>⟹</m:mo>
+          <m:msub>
+            <m:mfenced separators="" open="∥" close="∥">
+              <m:mi>D</m:mi>
+              <m:msub>
+                <m:mi>f</m:mi>
+                <m:mi>k</m:mi>
+              </m:msub>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>t</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+            </m:mfenced>
+            <m:mn>2</m:mn>
+          </m:msub>
+          <m:mo>=</m:mo>
+          <m:mfenced open="|" close="|">
+            <m:mi>k</m:mi>
+          </m:mfenced>
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation><para id="eip-510">Since <m:math overflow="scroll"><m:mrow><m:msub><m:mi>f</m:mi><m:mi>k</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>∈</m:mo><m:msub><m:mi>L</m:mi><m:mn>2</m:mn></m:msub><m:mfenced separators="" open="[" close="]"><m:mo>-</m:mo><m:mi>π</m:mi><m:mo>,</m:mo><m:mi>π</m:mi></m:mfenced></m:mrow></m:math> for all <m:math overflow="scroll"><m:mi>k</m:mi></m:math>, we can set <m:math overflow="scroll"><m:mi>k</m:mi></m:math> to be as large as we want, so <m:math overflow="scroll"><m:mi>D</m:mi></m:math> cannot be bounded.</para>
+</example>
+    
+    
+    <para id="id2254997">A very important class of linear operators are those for which <m:math overflow="scroll"><m:mrow><m:mi>X</m:mi><m:mo>=</m:mo><m:mi>Y</m:mi></m:mrow></m:math>. In
+this case we have the following important definition.</para>
+    <para id="id2255017"><title>Definition 1</title>Suppose that <m:math overflow="scroll"><m:mrow><m:mi>L</m:mi><m:mo>=</m:mo><m:mi>X</m:mi><m:mo>→</m:mo><m:mi>X</m:mi></m:mrow></m:math> is a linear operator. An <emphasis effect="italics">eigenvector</emphasis> is
+a vector <m:math overflow="scroll"><m:mi>x</m:mi></m:math> for which <m:math overflow="scroll"><m:mrow><m:mi>L</m:mi><m:mi>x</m:mi><m:mo>=</m:mo><m:mi>α</m:mi><m:mi>x</m:mi></m:mrow></m:math> for some <m:math overflow="scroll"><m:mrow><m:mi>α</m:mi><m:mo>∈</m:mo><m:mi>K</m:mi></m:mrow></m:math> (i.e. <m:math overflow="scroll"><m:mrow><m:mi>α</m:mi><m:mo>∈</m:mo><m:mi mathvariant="double-struck">R</m:mi></m:mrow></m:math>
+or <m:math overflow="scroll"><m:mrow><m:mi>α</m:mi><m:mo>∈</m:mo><m:mi mathvariant="double-struck">C</m:mi></m:mrow></m:math>). In this case, <m:math overflow="scroll"><m:mi>α</m:mi></m:math> is called the corresponding
+<emphasis effect="italics">eigenvalue</emphasis>.</para>
+    <para id="id2255142">Eigenvalues and eigenvectors tell you a lot about a system (more on this
+later!). While they can sometimes be tricky to calculate (unless you know
+the eig command in Matlab), we will see that as engineers we can usually get
+away with the time-honored method of “guess and check”.</para>
+  </content>
+</document>

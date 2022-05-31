@@ -1,0 +1,89 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+
+<title>Inverse Systems</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m34814</md:content-id>
+  <md:title>Inverse Systems</md:title>
+  <md:abstract/>
+  <md:uuid>12ab1622-c7ce-487b-bd75-98f466572359</md:uuid>
+</metadata>
+
+<content>
+    <section id="id63426">
+      <title>Inverse systems</title>
+      <para id="id63432">Many signal processing problems can be interpreted as trying to undo the
+action of some system. For example, echo cancellation, channel obvolution,
+etc. The problem is illustrated below.</para>
+      <figure id="uid3"><media id="uid3_media" alt="flow chart showing movement form x[n] to H to y[n] to H sub I, to x-hat[n].">
+          <image mime-type="image/png" src="../../media/15_2.png" id="uid3_onlineimage" width="576"><!-- NOTE: attribute width changes image size online (pixels). original width is 576. --></image>
+          <image mime-type="application/postscript" for="pdf" src="15_2.eps" id="uid3_printimage"/>
+        </media>
+      </figure>
+      <para id="id63445">If our goal is to design a system <m:math overflow="scroll"><m:msub><m:mi>H</m:mi><m:mi>I</m:mi></m:msub></m:math> that reverses the action of <m:math overflow="scroll"><m:mi>H</m:mi></m:math>, then we clearly need <m:math overflow="scroll"><m:mrow><m:mi>H</m:mi><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:msub><m:mi>H</m:mi><m:mi>I</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>1</m:mn></m:mrow></m:math>. In the case where</para>
+      <equation id="id63505">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:mi>H</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>z</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>=</m:mo>
+            <m:mfrac>
+              <m:mrow>
+                <m:mi>P</m:mi>
+                <m:mo>(</m:mo>
+                <m:mi>z</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mrow>
+                <m:mi>Q</m:mi>
+                <m:mo>(</m:mo>
+                <m:mi>z</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+            </m:mfrac>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id63547">then this can be achieved via</para>
+      <equation id="id63552">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:msub>
+              <m:mi>H</m:mi>
+              <m:mi>I</m:mi>
+            </m:msub>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>z</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>=</m:mo>
+            <m:mfrac>
+              <m:mrow>
+                <m:mi>Q</m:mi>
+                <m:mo>(</m:mo>
+                <m:mi>z</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mrow>
+                <m:mi>P</m:mi>
+                <m:mo>(</m:mo>
+                <m:mi>z</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+            </m:mfrac>
+            <m:mo>.</m:mo>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id63601">Thus, the zeros of <m:math overflow="scroll"><m:mrow><m:mi>H</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow></m:math> become poles of <m:math overflow="scroll"><m:mrow><m:msub><m:mi>H</m:mi><m:mi>I</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math>, and the poles of <m:math overflow="scroll"><m:mrow><m:mi>H</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow></m:math>
+become zeros of <m:math overflow="scroll"><m:mrow><m:msub><m:mi>H</m:mi><m:mi>I</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math>. Recall that <m:math overflow="scroll"><m:mrow><m:mi>H</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow></m:math> being stable and causal implies that all poles are inside
+the unit circle. If we want <m:math overflow="scroll"><m:mrow><m:mi>H</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow></m:math> to have a stable, causal inverse <m:math overflow="scroll"><m:mrow><m:msub><m:mi>H</m:mi><m:mi>I</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math>, then we must
+have all zeros inside the unit circle, (since they become the poles of <m:math overflow="scroll"><m:mrow><m:msub><m:mi>H</m:mi><m:mi>I</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math>.) Combining these, <m:math overflow="scroll"><m:mrow><m:mi>H</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow></m:math> is stable and causal with a stable and causal inverse if and only if all poles and zeros of <m:math overflow="scroll"><m:mrow><m:mi>H</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow></m:math> are inside the unit circle. This type of system is called a <emphasis effect="italics">minimum phase</emphasis> system.</para>
+    </section>
+</content>
+
+</document>

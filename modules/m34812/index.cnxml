@@ -1,0 +1,107 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+
+<title>Fourier Transforms as Unitary Operators</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m34812</md:content-id>
+  <md:title>Fourier Transforms as Unitary Operators</md:title>
+  <md:abstract/>
+  <md:uuid>8fada6c6-9e76-4068-9d03-9f51e848c580</md:uuid>
+</metadata>
+
+<content>
+   <section id="id65163">
+      <title>Fourier transforms as unitary operators</title>
+      <para id="id65170">We have just seen that the DTFT can be viewed as a unitary operator between <m:math overflow="scroll"><m:mrow><m:msub><m:mi>ℓ</m:mi><m:mn>2</m:mn></m:msub><m:mrow><m:mo>(</m:mo><m:mi mathvariant="double-struck">Z</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:msub><m:mi>L</m:mi><m:mn>2</m:mn></m:msub><m:mrow><m:mo>[</m:mo><m:mo>-</m:mo><m:mi>π</m:mi><m:mo>,</m:mo><m:mi>π</m:mi><m:mo>]</m:mo></m:mrow></m:mrow></m:math>.
+One can repeat this process for each Fourier transform pair. In fact due to
+the symmetry between the DTFT and the CTFS, we have already established this
+for CTFS, i.e.,</para>
+      <equation id="id65231">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:mtext>CTFS:</m:mtext>
+            <m:mspace width="1.em"/>
+            <m:msub>
+              <m:mi>L</m:mi>
+              <m:mn>2</m:mn>
+            </m:msub>
+            <m:mrow>
+              <m:mo>[</m:mo>
+              <m:mo>-</m:mo>
+              <m:mi>π</m:mi>
+              <m:mo>,</m:mo>
+              <m:mi>π</m:mi>
+              <m:mo>]</m:mo>
+            </m:mrow>
+            <m:mo>→</m:mo>
+            <m:msub>
+              <m:mi>ℓ</m:mi>
+              <m:mn>2</m:mn>
+            </m:msub>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi mathvariant="double-struck">Z</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id65288">is a unitary operator. Similarly, we have</para>
+      <equation id="id65294">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:mtext>CTFS:</m:mtext>
+            <m:mspace width="1.em"/>
+            <m:msub>
+              <m:mi>L</m:mi>
+              <m:mn>2</m:mn>
+            </m:msub>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi mathvariant="double-struck">R</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>→</m:mo>
+            <m:msub>
+              <m:mi>L</m:mi>
+              <m:mn>2</m:mn>
+            </m:msub>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi mathvariant="double-struck">R</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id65346">is a unitary operator as well. The proof of this fact closely mirrors the
+proof for the DTFT. Finally, we also have</para>
+      <equation id="id65353">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:mtext>DFT:</m:mtext>
+            <m:mspace width="1.em"/>
+            <m:msup>
+              <m:mi mathvariant="double-struck">C</m:mi>
+              <m:mi>N</m:mi>
+            </m:msup>
+            <m:mo>→</m:mo>
+            <m:msup>
+              <m:mi mathvariant="double-struck">C</m:mi>
+              <m:mi>N</m:mi>
+            </m:msup>
+            <m:mo>.</m:mo>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id65392">This operator is also unitary, which can be easily verified by showing that
+the DFT matrix is actually a unitary matrix: <m:math overflow="scroll"><m:mrow><m:msup><m:mi>U</m:mi><m:mi>H</m:mi></m:msup><m:mi>U</m:mi><m:mo>=</m:mo><m:mi>U</m:mi><m:msup><m:mi>U</m:mi><m:mi>H</m:mi></m:msup><m:mo>=</m:mo><m:mi>I</m:mi></m:mrow></m:math>.</para>
+      <para id="id65433">Note that this discussion <emphasis effect="italics">only</emphasis> applies to finite-energy (<m:math overflow="scroll"><m:mrow><m:msub><m:mi>ℓ</m:mi><m:mn>2</m:mn></m:msub><m:mo>/</m:mo><m:msub><m:mi>L</m:mi><m:mn>2</m:mn></m:msub></m:mrow></m:math>)
+signals. Whenever we talk about infinite-energy functions (things like the
+unit step, delta functions, the all-constant signal) having a Fourier
+transform, we need to be very careful about whether we are talking about a
+truly convergent Fourier representation or whether we are merely using an
+engineering “trick” or convention.</para>
+    </section>
+</content>
+
+</document>

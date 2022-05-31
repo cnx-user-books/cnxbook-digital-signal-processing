@@ -1,0 +1,43 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+  <title>Fourier Representations</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m34811</md:content-id>
+  <md:title>Fourier Representations</md:title>
+  <md:abstract/>
+  <md:uuid>7e983351-97af-4508-a4ec-fae6b7e79394</md:uuid>
+</metadata>
+
+<content>
+    <section id="id62159">
+      <title>Fourier Representations</title>
+      <para id="id62165">Throughout the course we have been alluding to various Fourier
+representations. We first recall the appropriate transforms:</para>
+      <list id="id62169" display="block" list-type="labeled-item">
+        <item id="uid1"><label>Fourier Series (CTFS)</label><m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:math>: continuous-time, finite/periodic on <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mo>-</m:mo><m:mi>π</m:mi><m:mo>,</m:mo><m:mi>π</m:mi><m:mo>]</m:mo></m:mrow></m:math><equation id="id62557"><m:math overflow="scroll" mode="display"><m:mrow><m:mi>X</m:mi><m:mrow><m:mo>[</m:mo><m:mi>k</m:mi><m:mo>]</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:msqrt><m:mrow><m:mn>2</m:mn><m:mi>π</m:mi></m:mrow></m:msqrt></m:mfrac><m:msubsup><m:mo>∫</m:mo><m:mrow><m:mo>-</m:mo><m:mi>π</m:mi></m:mrow><m:mi>π</m:mi></m:msubsup><m:mi>x</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:msup><m:mi>e</m:mi><m:mrow><m:mo>-</m:mo><m:mi>j</m:mi><m:mi>k</m:mi><m:mi>t</m:mi></m:mrow></m:msup><m:mi>d</m:mi><m:mi>t</m:mi></m:mrow></m:math></equation><equation id="id62813"><m:math overflow="scroll" mode="display"><m:mrow><m:mi>x</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:msqrt><m:mrow><m:mn>2</m:mn><m:mi>π</m:mi></m:mrow></m:msqrt></m:mfrac><m:munderover><m:mrow><m:mo>∑</m:mo></m:mrow><m:mrow><m:mi>k</m:mi><m:mo>=</m:mo><m:mo>-</m:mo><m:mi>∞</m:mi></m:mrow><m:mi>∞</m:mi></m:munderover><m:mi>X</m:mi><m:mrow><m:mo>[</m:mo><m:mi>k</m:mi><m:mo>]</m:mo></m:mrow><m:msup><m:mi>e</m:mi><m:mrow><m:mi>j</m:mi><m:mi>k</m:mi><m:mi>t</m:mi></m:mrow></m:msup></m:mrow></m:math></equation></item>
+        <item id="uid2"><label>Discrete-Time Fourier Transform (DTFT)</label><m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>[</m:mo><m:mi>n</m:mi><m:mo>]</m:mo></m:mrow></m:math>: infinite, discrete-time
+<equation id="id62912"><m:math overflow="scroll" mode="display"><m:mrow><m:mi>X</m:mi><m:mrow><m:mo>(</m:mo><m:msup><m:mi>e</m:mi><m:mrow><m:mi>j</m:mi><m:mi>ω</m:mi></m:mrow></m:msup><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:msqrt><m:mrow><m:mn>2</m:mn><m:mi>π</m:mi></m:mrow></m:msqrt></m:mfrac><m:munderover><m:mo>∑</m:mo><m:mrow><m:mi>n</m:mi><m:mo>=</m:mo><m:mo>-</m:mo><m:mi>∞</m:mi></m:mrow><m:mi>∞</m:mi></m:munderover><m:mi>x</m:mi><m:mrow><m:mo>[</m:mo><m:mi>n</m:mi><m:mo>]</m:mo></m:mrow><m:msup><m:mi>e</m:mi><m:mrow><m:mo>-</m:mo><m:mi>j</m:mi><m:mi>ω</m:mi><m:mi>n</m:mi></m:mrow></m:msup></m:mrow></m:math></equation><equation id="id62994"><m:math overflow="scroll" mode="display"><m:mrow><m:mi>x</m:mi><m:mrow><m:mo>[</m:mo><m:mi>n</m:mi><m:mo>]</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:msqrt><m:mrow><m:mn>2</m:mn><m:mi>π</m:mi></m:mrow></m:msqrt></m:mfrac><m:msubsup><m:mo>∫</m:mo><m:mrow><m:mo>-</m:mo><m:mi>π</m:mi></m:mrow><m:mi>π</m:mi></m:msubsup><m:mi>X</m:mi><m:mrow><m:mo>(</m:mo><m:msup><m:mi>e</m:mi><m:mrow><m:mi>j</m:mi><m:mi>ω</m:mi></m:mrow></m:msup><m:mo>)</m:mo></m:mrow><m:msup><m:mi>e</m:mi><m:mrow><m:mi>j</m:mi><m:mi>ω</m:mi><m:mi>n</m:mi></m:mrow></m:msup><m:mi>d</m:mi><m:mi>ω</m:mi></m:mrow></m:math></equation></item>
+        <item id="uid3"><label>Discrete Fourier Transform (DFT)</label><m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>[</m:mo><m:mi>n</m:mi><m:mo>]</m:mo></m:mrow></m:math>: finite, discrete-time
+<equation id="id63102"><m:math overflow="scroll" mode="display"><m:mrow><m:mi>X</m:mi><m:mrow><m:mo>[</m:mo><m:mi>k</m:mi><m:mo>]</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:msqrt><m:mi>N</m:mi></m:msqrt></m:mfrac><m:munderover><m:mrow><m:mo>∑</m:mo></m:mrow><m:mrow><m:mi>n</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow><m:mrow><m:mi>N</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:munderover><m:mi>x</m:mi><m:mrow><m:mo>[</m:mo><m:mi>n</m:mi><m:mo>]</m:mo></m:mrow><m:msup><m:mi>e</m:mi><m:mrow><m:mo>-</m:mo><m:mi>j</m:mi><m:mfrac><m:mrow><m:mn>2</m:mn><m:mi>π</m:mi></m:mrow><m:mi>N</m:mi></m:mfrac><m:mi>k</m:mi><m:mi>n</m:mi></m:mrow></m:msup></m:mrow></m:math></equation><equation id="id63185"><m:math overflow="scroll" mode="display"><m:mrow><m:mi>x</m:mi><m:mrow><m:mo>[</m:mo><m:mi>n</m:mi><m:mo>]</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:msqrt><m:mi>N</m:mi></m:msqrt></m:mfrac><m:munderover><m:mrow><m:mo>∑</m:mo></m:mrow><m:mrow><m:mi>k</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow><m:mrow><m:mi>N</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:munderover><m:mi>X</m:mi><m:mrow><m:mo>[</m:mo><m:mi>k</m:mi><m:mo>]</m:mo></m:mrow><m:msup><m:mi>e</m:mi><m:mrow><m:mi>j</m:mi><m:mfrac><m:mrow><m:mn>2</m:mn><m:mi>π</m:mi></m:mrow><m:mi>N</m:mi></m:mfrac><m:mi>k</m:mi><m:mi>n</m:mi></m:mrow></m:msup></m:mrow></m:math></equation></item>
+        <item id="uid4"><label>Continuous-Time Fourier Transform (CTFT)</label><m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:math>: infinite, continuous-time
+<equation id="id63295"><m:math overflow="scroll" mode="display"><m:mrow><m:mi>X</m:mi><m:mrow><m:mo>(</m:mo><m:mi>Ω</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:msqrt><m:mrow><m:mn>2</m:mn><m:mi>π</m:mi></m:mrow></m:msqrt></m:mfrac><m:msubsup><m:mo>∫</m:mo><m:mrow><m:mo>-</m:mo><m:mi>∞</m:mi></m:mrow><m:mi>∞</m:mi></m:msubsup><m:mi>x</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:msup><m:mi>e</m:mi><m:mrow><m:mo>-</m:mo><m:mi>j</m:mi><m:mi>Ω</m:mi><m:mi>t</m:mi></m:mrow></m:msup><m:mi>d</m:mi><m:mi>t</m:mi></m:mrow></m:math></equation><equation id="id63369"><m:math overflow="scroll" mode="display"><m:mrow><m:mi>x</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:msqrt><m:mrow><m:mn>2</m:mn><m:mi>π</m:mi></m:mrow></m:msqrt></m:mfrac><m:msubsup><m:mo>∫</m:mo><m:mrow><m:mo>-</m:mo><m:mi>∞</m:mi></m:mrow><m:mi>∞</m:mi></m:msubsup><m:mi>X</m:mi><m:mrow><m:mo>(</m:mo><m:mi>Ω</m:mi><m:mo>)</m:mo></m:mrow><m:msup><m:mi>e</m:mi><m:mrow><m:mi>j</m:mi><m:mi>Ω</m:mi><m:mi>t</m:mi></m:mrow></m:msup><m:mi>d</m:mi><m:mi>Ω</m:mi></m:mrow></m:math></equation></item>
+      </list>
+      <para id="id63441">We will think of Fourier representations in two complimentary senses:</para>
+      <list id="id63445" display="block" list-type="enumerated">
+        <item id="uid5"><emphasis effect="bold">“Eigenbasis” representations:</emphasis> Each Fourier transform pair is very naturally related to an appropriate
+class of LTI systems. In some cases we can think of a Fourier transform as
+a change of basis.
+</item>
+        <item id="uid6"><emphasis effect="bold">Unitary operators:</emphasis> While we often use Fourier transforms to <emphasis effect="italics">analyze</emphasis> certain operators, we can
+also think of a Fourier transform as itself being an operator.
+</item>
+      </list>
+      <figure id="uid7"><media id="uid7_media" alt="Various venn diagrams showing the relationship between finite and infinite discrete time, infinite continuous time, DFT, IDFT, CTFS, ICTFS, and others.">
+          <image mime-type="image/png" src="../../media/16_1.png" id="uid7_onlineimage" width="271"><!-- NOTE: attribute width changes image size online (pixels). original width is 271. --></image>
+          <image mime-type="application/postscript" for="pdf" src="../../media/16_1.eps" id="uid7_printimage"/>
+        </media>
+      </figure>
+    </section>
+    
+    
+  </content>
+</document>

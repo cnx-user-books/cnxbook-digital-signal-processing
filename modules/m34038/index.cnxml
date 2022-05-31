@@ -1,0 +1,25 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+  <title>Error of the Best Approximation in an Orthobasis</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m34038</md:content-id>
+  <md:title>Error of the Best Approximation in an Orthobasis</md:title>
+  <md:abstract/>
+  <md:uuid>7c0f0664-6b38-4274-a346-29147ccafff4</md:uuid>
+</metadata>
+
+<content>
+      <para id="id231540">As an application of Parseval's Theorem, say <m:math overflow="scroll"><m:msubsup><m:mfenced separators="" open="{" close="}"><m:msub><m:mi>v</m:mi><m:mi>k</m:mi></m:msub></m:mfenced><m:mrow><m:mi>k</m:mi><m:mo>=</m:mo><m:mn>1</m:mn></m:mrow><m:mi>∞</m:mi></m:msubsup></m:math> is an orthobasis for an
+inner product space of <m:math overflow="scroll"><m:mi>V</m:mi></m:math>.</para>
+      <para id="id231586">Let <m:math overflow="scroll"><m:mi>A</m:mi></m:math> be the subspace spanned by the first 10 elements of <m:math overflow="scroll"><m:mfenced separators="" open="{" close="}"><m:msub><m:mi>v</m:mi><m:mi>k</m:mi></m:msub></m:mfenced></m:math>, i.e., <m:math overflow="scroll"><m:mrow><m:mi>A</m:mi><m:mo>=</m:mo><m:mi> span </m:mi><m:mfenced separators="" open="(" close=")"><m:mfenced separators="" open="{" close="}"><m:msub><m:mi>v</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo><m:mo>.</m:mo><m:mo>.</m:mo><m:mo>.</m:mo><m:mo>,</m:mo><m:msub><m:mi>v</m:mi><m:mn>10</m:mn></m:msub></m:mfenced></m:mfenced></m:mrow></m:math></para>
+      <list id="id231671" display="block" list-type="enumerated">
+        <item id="uid1">Given <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mi>v</m:mi></m:mrow></m:math>, what is the closest point in <m:math overflow="scroll"><m:mi>A</m:mi></m:math> (call it <m:math overflow="scroll"><m:mover accent="true"><m:mi>x</m:mi><m:mo>^</m:mo></m:mover></m:math>) to
+<m:math overflow="scroll"><m:mi>x</m:mi></m:math>? We have seen that it is <m:math overflow="scroll"><m:mrow><m:mover accent="true"><m:mi>x</m:mi><m:mo>^</m:mo></m:mover><m:mo>=</m:mo><m:msubsup><m:mo>∑</m:mo><m:mrow><m:mi>k</m:mi><m:mo>=</m:mo><m:mn>1</m:mn></m:mrow><m:mn>10</m:mn></m:msubsup><m:mfenced separators="" open="〈" close="〉"><m:mi>x</m:mi><m:mo>,</m:mo><m:msub><m:mi>v</m:mi><m:mi>k</m:mi></m:msub></m:mfenced><m:msub><m:mi>v</m:mi><m:mi>k</m:mi></m:msub></m:mrow></m:math></item>
+        <item id="uid2">How good of an approximation is <m:math overflow="scroll"><m:mover accent="true"><m:mi>x</m:mi><m:mo>^</m:mo></m:mover></m:math> to <m:math overflow="scroll"><m:mi>x</m:mi></m:math>? Measured with <m:math overflow="scroll"><m:msub><m:mrow><m:mo>∥</m:mo><m:mo>·</m:mo><m:mo>∥</m:mo></m:mrow><m:mi>V</m:mi></m:msub></m:math>:
+<equation id="uid3"><m:math overflow="scroll" mode="display"><m:mtable displaystyle="true"><m:mtr><m:mtd columnalign="right"><m:mrow><m:mrow><m:mo>∥</m:mo><m:mi>x</m:mi><m:mo>-</m:mo></m:mrow><m:mover accent="true"><m:mi>x</m:mi><m:mo>^</m:mo></m:mover><m:msubsup><m:mrow><m:mo>∥</m:mo></m:mrow><m:mrow><m:mi>V</m:mi></m:mrow><m:mn>2</m:mn></m:msubsup></m:mrow></m:mtd><m:mtd columnalign="left"><m:mrow><m:mo>=</m:mo><m:msubsup><m:mfenced separators="" open="∥" close="∥"><m:munder><m:mo>∑</m:mo><m:mrow><m:mi>k</m:mi><m:mo>&gt;</m:mo><m:mn>10</m:mn></m:mrow></m:munder><m:mrow><m:mo>〈</m:mo><m:mi>x</m:mi><m:mo>,</m:mo><m:msub><m:mi>v</m:mi><m:mi>k</m:mi></m:msub><m:mo>〉</m:mo></m:mrow><m:msub><m:mi>v</m:mi><m:mi>k</m:mi></m:msub></m:mfenced><m:mrow><m:mi>V</m:mi></m:mrow><m:mn>2</m:mn></m:msubsup></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mrow><m:mo>=</m:mo><m:munder><m:mo>∑</m:mo><m:mrow><m:mi>k</m:mi><m:mo>&gt;</m:mo><m:mn>10</m:mn></m:mrow></m:munder><m:msup><m:mrow><m:mo>|</m:mo><m:mrow><m:mo>〈</m:mo><m:mi>x</m:mi><m:mo>,</m:mo><m:msub><m:mi>v</m:mi><m:mi>k</m:mi></m:msub><m:mo>〉</m:mo></m:mrow><m:mo>|</m:mo></m:mrow><m:mn>2</m:mn></m:msup></m:mrow></m:mtd></m:mtr></m:mtable></m:math></equation></item>
+      </list>
+      <para id="id232180">Since we also have that <m:math overflow="scroll"><m:mrow><m:msubsup><m:mrow><m:mo>∥</m:mo><m:mi>x</m:mi><m:mo>∥</m:mo></m:mrow><m:mrow><m:mi>V</m:mi></m:mrow><m:mn>2</m:mn></m:msubsup><m:mo>=</m:mo><m:msubsup><m:mo>∑</m:mo><m:mrow><m:mi>k</m:mi><m:mo>=</m:mo><m:mn>1</m:mn></m:mrow><m:mi>∞</m:mi></m:msubsup><m:msup><m:mrow><m:mo>|</m:mo><m:mrow><m:mo>〈</m:mo><m:mi>x</m:mi><m:mo>,</m:mo><m:msub><m:mi>v</m:mi><m:mi>k</m:mi></m:msub><m:mo>〉</m:mo></m:mrow><m:mo>|</m:mo></m:mrow><m:mn>2</m:mn></m:msup></m:mrow></m:math>, the approximation <m:math overflow="scroll"><m:mover accent="true"><m:mi>x</m:mi><m:mo>^</m:mo></m:mover></m:math> will be “good” if
+the first 10 transform coefficients contain “most” of the total energy.
+Constructing these types of approximations is exactly what is done in image
+compression.</para>
+  </content>
+</document>

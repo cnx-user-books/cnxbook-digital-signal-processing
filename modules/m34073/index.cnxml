@@ -1,0 +1,56 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+  <title>Vector Subspaces</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m34073</md:content-id>
+  <md:title>Vector Subspaces</md:title>
+  <md:abstract/>
+  <md:uuid>8d4b5494-55f6-454a-9917-4c1cc96d0ebf</md:uuid>
+</metadata>
+
+<content>
+    
+      <para id="id2447107"><title>Defintition 1</title>A (non-empty) subset <m:math overflow="scroll"><m:mi>W</m:mi></m:math> of <m:math overflow="scroll"><m:mi>V</m:mi></m:math> is called a <emphasis effect="italics">supspace</emphasis> of <m:math overflow="scroll"><m:mi>V</m:mi></m:math> if for any <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>,</m:mo><m:mi>y</m:mi><m:mo>∈</m:mo><m:mi>W</m:mi></m:mrow></m:math>,
+<m:math overflow="scroll"><m:mrow><m:mi> span </m:mi><m:mo>(</m:mo><m:mo>{</m:mo><m:mi>x</m:mi><m:mo>,</m:mo><m:mi>y</m:mi><m:mo>}</m:mo><m:mo>)</m:mo><m:mo>⊆</m:mo><m:mi>W</m:mi></m:mrow></m:math>.</para>
+      <para id="id2447203">Note that this definition easily implies that:</para>
+      <list id="id2447207" display="block" list-type="bulleted">
+        <item id="uid2">
+          <m:math overflow="scroll">
+            <m:mrow>
+              <m:mn>0</m:mn>
+              <m:mo>∈</m:mo>
+              <m:mi>W</m:mi>
+            </m:mrow>
+          </m:math>
+        </item>
+        <item id="uid3"><m:math overflow="scroll"><m:mi>W</m:mi></m:math> is itself a vector space
+</item>
+      </list>
+<example id="fs-id1169492147265">
+<title>
+      Which of these are subspaces?</title>
+      <list id="id2447502" display="block" list-type="bulleted"><item id="uid4"> 
+
+<media id="uid5_media" alt="An illustration of an ellipse-shaped set W."><image mime-type="image/png" src="../../media/05_3.png" id="uid5_onlineimage" width="139"><!-- NOTE: attribute width changes image size online (pixels). original width is 139. --></image><image mime-type="application/postscript" for="pdf" src="../../media/05_3-9e3e.eps" id="uid5_printimage" print-width="4.5cm"><!--NOTE: attribute width changes image size in printed PDF (if specified in .tex file)--></image></media>
+ 
+[No] 
+</item>
+        <item id="uid6"> 
+
+<media id="uid7_media" alt="An illustration of a line passing through the origin."><image mime-type="image/png" src="../../media/05_4.png" id="uid7_onlineimage" width="175"><!-- NOTE: attribute width changes image size online (pixels). original width is 175. --></image><image mime-type="application/postscript" for="pdf" src="../../media/05_4-142f.eps" id="uid7_printimage" print-width="6.0cm"><!--NOTE: attribute width changes image size in printed PDF (if specified in .tex file)--></image></media>
+ 
+[Yes]
+</item>
+        <item id="uid8"><m:math overflow="scroll"><m:mrow><m:mi>V</m:mi><m:mo>=</m:mo><m:msup><m:mi mathvariant="double-struck">R</m:mi><m:mn>5</m:mn></m:msup></m:mrow></m:math>, <m:math overflow="scroll"><m:mrow><m:mi>W</m:mi><m:mo>=</m:mo><m:mo>{</m:mo><m:mi>x</m:mi><m:mo>:</m:mo><m:msub><m:mi>x</m:mi><m:mn>4</m:mn></m:msub><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mn>5</m:mn></m:msub><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>}</m:mo></m:mrow></m:math> [Yes]
+</item>
+        <item id="uid9"><m:math overflow="scroll"><m:mrow><m:mi>V</m:mi><m:mo>=</m:mo><m:msup><m:mi mathvariant="double-struck">R</m:mi><m:mn>5</m:mn></m:msup></m:mrow></m:math>, <m:math overflow="scroll"><m:mrow><m:mi>W</m:mi><m:mo>=</m:mo><m:mo>{</m:mo><m:mi>x</m:mi><m:mo>:</m:mo><m:msub><m:mi>x</m:mi><m:mn>4</m:mn></m:msub><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mn>5</m:mn></m:msub><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>}</m:mo></m:mrow></m:math> [No]
+</item>
+        <item id="uid10"><m:math overflow="scroll"><m:mrow><m:mi>V</m:mi><m:mo>=</m:mo><m:mi>C</m:mi><m:mo>[</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>1</m:mn><m:mo>]</m:mo></m:mrow></m:math>, <m:math overflow="scroll"><m:mrow><m:mi>W</m:mi><m:mo>=</m:mo></m:mrow></m:math>{polynomials of degree <m:math overflow="scroll"><m:mi>N</m:mi></m:math>} [Yes]
+</item>
+        <item id="uid11"><m:math overflow="scroll"><m:mrow><m:mi>V</m:mi><m:mo>=</m:mo><m:mi>C</m:mi><m:mo>[</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>1</m:mn><m:mo>]</m:mo></m:mrow></m:math>, <m:math overflow="scroll"><m:mrow><m:mi>W</m:mi><m:mo>=</m:mo><m:mo>{</m:mo><m:mi>f</m:mi><m:mo>:</m:mo><m:mi>f</m:mi></m:mrow></m:math> is bandlimited to <m:math overflow="scroll"><m:mi>B</m:mi></m:math>} [Yes]
+</item>
+        <item id="uid12"><m:math overflow="scroll"><m:mrow><m:mi>V</m:mi><m:mo>=</m:mo><m:msup><m:mi mathvariant="double-struck">R</m:mi><m:mi>N</m:mi></m:msup></m:mrow></m:math>, <m:math overflow="scroll"><m:mrow><m:mi>W</m:mi><m:mo>=</m:mo><m:mo>{</m:mo><m:mi>x</m:mi><m:mo>:</m:mo><m:mi>x</m:mi><m:mspace width="4pt"/><m:mi> hasnomorethan </m:mi><m:mn>5</m:mn><m:mi> nonzerocomponents </m:mi><m:mo>,</m:mo><m:mi mathvariant="normal">i</m:mi><m:mo>.</m:mo><m:mi mathvariant="normal">e</m:mi><m:mo>.</m:mo><m:mo>,</m:mo><m:msub><m:mfenced open="∥" close="∥"><m:mi>x</m:mi></m:mfenced><m:mn>0</m:mn></m:msub><m:mo>≤</m:mo><m:mn>5</m:mn><m:mo>}</m:mo></m:mrow></m:math> [No]
+</item>
+      </list>
+</example>
+  </content>
+</document>

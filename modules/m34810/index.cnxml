@@ -1,0 +1,387 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+
+<title>Eigenbases and LSI Systems</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m34810</md:content-id>
+  <md:title>Eigenbases and LSI Systems</md:title>
+  <md:abstract/>
+  <md:uuid>16f507c9-d1d4-4993-8812-49e12f6e1390</md:uuid>
+</metadata>
+
+<content>
+      
+      <para id="id63700">Why is an eigenbasis so useful? It allows us to greatly simplify the
+computation of the output for a given input. For example, suppose that <m:math overflow="scroll"><m:mi>X</m:mi></m:math> is a vector space and that <m:math overflow="scroll"><m:mrow><m:mi>L</m:mi><m:mo>:</m:mo><m:mi>X</m:mi><m:mo>→</m:mo><m:mi>X</m:mi></m:mrow></m:math>  is a linear
+operator with eigenvectors <m:math overflow="scroll"><m:msub><m:mrow><m:mo>{</m:mo><m:msub><m:mi>v</m:mi><m:mi>k</m:mi></m:msub><m:mo>}</m:mo></m:mrow><m:mrow><m:mi>k</m:mi><m:mo>∈</m:mo><m:mi>Γ</m:mi></m:mrow></m:msub></m:math>. If <m:math overflow="scroll"><m:msub><m:mrow><m:mo>{</m:mo><m:msub><m:mi>v</m:mi><m:mi>k</m:mi></m:msub><m:mo>}</m:mo></m:mrow><m:mrow><m:mi>k</m:mi><m:mo>∈</m:mo><m:mi>Γ</m:mi></m:mrow></m:msub></m:math> form a basis for <m:math overflow="scroll"><m:mi>X</m:mi></m:math>, then for any <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mi>X</m:mi></m:mrow></m:math> we can write <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:msub><m:mo>∑</m:mo><m:mrow><m:mi>k</m:mi><m:mo>∈</m:mo><m:mi>Γ</m:mi></m:mrow></m:msub><m:msub><m:mi>c</m:mi><m:mi>k</m:mi></m:msub><m:msub><m:mi>v</m:mi><m:mi>k</m:mi></m:msub></m:mrow></m:math>. In this case we have that</para>
+      <equation id="uid1">
+        <m:math overflow="scroll" mode="display">
+          <m:mtable displaystyle="true">
+            <m:mtr>
+              <m:mtd columnalign="right">
+                <m:mi>y</m:mi>
+              </m:mtd>
+              <m:mtd columnalign="left">
+                <m:mrow>
+                  <m:mo>=</m:mo>
+                  <m:mi>L</m:mi>
+                  <m:mi>x</m:mi>
+                </m:mrow>
+              </m:mtd>
+            </m:mtr>
+            <m:mtr>
+              <m:mtd/>
+              <m:mtd columnalign="left">
+                <m:mrow>
+                  <m:mo>=</m:mo>
+                  <m:mi>L</m:mi>
+                  <m:mfenced separators="" open="(" close=")">
+                    <m:munder>
+                      <m:mo>∑</m:mo>
+                      <m:mrow>
+                        <m:mi>k</m:mi>
+                        <m:mo>∈</m:mo>
+                        <m:mi>Γ</m:mi>
+                      </m:mrow>
+                    </m:munder>
+                    <m:msub>
+                      <m:mi>c</m:mi>
+                      <m:mi>k</m:mi>
+                    </m:msub>
+                    <m:msub>
+                      <m:mi>v</m:mi>
+                      <m:mi>k</m:mi>
+                    </m:msub>
+                  </m:mfenced>
+                </m:mrow>
+              </m:mtd>
+            </m:mtr>
+            <m:mtr>
+              <m:mtd/>
+              <m:mtd columnalign="left">
+                <m:mrow>
+                  <m:mo>=</m:mo>
+                  <m:munder>
+                    <m:mo>∑</m:mo>
+                    <m:mrow>
+                      <m:mi>k</m:mi>
+                      <m:mo>∈</m:mo>
+                      <m:mi>Γ</m:mi>
+                    </m:mrow>
+                  </m:munder>
+                  <m:msub>
+                    <m:mi>c</m:mi>
+                    <m:mi>k</m:mi>
+                  </m:msub>
+                  <m:mi>L</m:mi>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:msub>
+                      <m:mi>v</m:mi>
+                      <m:mi>k</m:mi>
+                    </m:msub>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                </m:mrow>
+              </m:mtd>
+            </m:mtr>
+            <m:mtr>
+              <m:mtd/>
+              <m:mtd columnalign="left">
+                <m:mrow>
+                  <m:mo>=</m:mo>
+                  <m:munder>
+                    <m:mo>∑</m:mo>
+                    <m:mrow>
+                      <m:mi>k</m:mi>
+                      <m:mo>∈</m:mo>
+                      <m:mi>Γ</m:mi>
+                    </m:mrow>
+                  </m:munder>
+                  <m:msub>
+                    <m:mi>c</m:mi>
+                    <m:mi>k</m:mi>
+                  </m:msub>
+                  <m:msub>
+                    <m:mi>λ</m:mi>
+                    <m:mi>k</m:mi>
+                  </m:msub>
+                  <m:msub>
+                    <m:mi>v</m:mi>
+                    <m:mi>k</m:mi>
+                  </m:msub>
+                </m:mrow>
+              </m:mtd>
+            </m:mtr>
+          </m:mtable>
+        </m:math>
+      </equation>
+      <para id="id64013">In the case of a DT, LSI system <m:math overflow="scroll"><m:mi>H</m:mi></m:math>, we have that <m:math overflow="scroll"><m:mrow><m:mfrac><m:mn>1</m:mn><m:msqrt><m:mrow><m:mn>2</m:mn><m:mi>π</m:mi></m:mrow></m:msqrt></m:mfrac><m:msup><m:mi>e</m:mi><m:mrow><m:mo>-</m:mo><m:mi>j</m:mi><m:mi>ω</m:mi><m:mi>n</m:mi></m:mrow></m:msup></m:mrow></m:math> is an eigenvector of <m:math overflow="scroll"><m:mi>H</m:mi></m:math> and for any <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>[</m:mo><m:mi>n</m:mi><m:mo>]</m:mo></m:mrow></m:math> we can write</para>
+      <equation id="id64079">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:mi>x</m:mi>
+            <m:mrow>
+              <m:mo>[</m:mo>
+              <m:mi>n</m:mi>
+              <m:mo>]</m:mo>
+            </m:mrow>
+            <m:mo>=</m:mo>
+            <m:msubsup>
+              <m:mo>∫</m:mo>
+              <m:mrow>
+                <m:mo>-</m:mo>
+                <m:mi>π</m:mi>
+              </m:mrow>
+              <m:mi>π</m:mi>
+            </m:msubsup>
+            <m:mi>X</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:msup>
+                <m:mi>e</m:mi>
+                <m:mrow>
+                  <m:mi>j</m:mi>
+                  <m:mi>ω</m:mi>
+                </m:mrow>
+              </m:msup>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mfenced separators="" open="(" close=")">
+              <m:mfrac>
+                <m:msup>
+                  <m:mi>e</m:mi>
+                  <m:mrow>
+                    <m:mo>-</m:mo>
+                    <m:mi>j</m:mi>
+                    <m:mi>ω</m:mi>
+                    <m:mi>n</m:mi>
+                  </m:mrow>
+                </m:msup>
+                <m:msqrt>
+                  <m:mrow>
+                    <m:mn>2</m:mn>
+                    <m:mi>π</m:mi>
+                  </m:mrow>
+                </m:msqrt>
+              </m:mfrac>
+            </m:mfenced>
+            <m:mi>d</m:mi>
+            <m:mi>ω</m:mi>
+            <m:mo>.</m:mo>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id64169">From the same line of reasoning as above, we have that</para>
+      <equation id="uid2">
+        <m:math overflow="scroll" mode="display">
+          <m:mtable displaystyle="true">
+            <m:mtr>
+              <m:mtd columnalign="right">
+                <m:mrow>
+                  <m:mi>y</m:mi>
+                  <m:mo>[</m:mo>
+                  <m:mi>n</m:mi>
+                  <m:mo>]</m:mo>
+                </m:mrow>
+              </m:mtd>
+              <m:mtd columnalign="left">
+                <m:mrow>
+                  <m:mo>=</m:mo>
+                  <m:mi>H</m:mi>
+                  <m:mo>(</m:mo>
+                  <m:mi>x</m:mi>
+                  <m:mo>[</m:mo>
+                  <m:mi>n</m:mi>
+                  <m:mo>]</m:mo>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+              </m:mtd>
+            </m:mtr>
+            <m:mtr>
+              <m:mtd/>
+              <m:mtd columnalign="left">
+                <m:mrow>
+                  <m:mo>=</m:mo>
+                  <m:msubsup>
+                    <m:mo>∫</m:mo>
+                    <m:mrow>
+                      <m:mo>-</m:mo>
+                      <m:mi>π</m:mi>
+                    </m:mrow>
+                    <m:mi>π</m:mi>
+                  </m:msubsup>
+                  <m:mi>X</m:mi>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:msup>
+                      <m:mi>e</m:mi>
+                      <m:mrow>
+                        <m:mi>j</m:mi>
+                        <m:mi>ω</m:mi>
+                      </m:mrow>
+                    </m:msup>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mi>H</m:mi>
+                  <m:mfenced separators="" open="(" close=")">
+                    <m:mfrac>
+                      <m:msup>
+                        <m:mi>e</m:mi>
+                        <m:mrow>
+                          <m:mo>-</m:mo>
+                          <m:mi>j</m:mi>
+                          <m:mi>ω</m:mi>
+                          <m:mi>n</m:mi>
+                        </m:mrow>
+                      </m:msup>
+                      <m:msqrt>
+                        <m:mrow>
+                          <m:mn>2</m:mn>
+                          <m:mi>π</m:mi>
+                        </m:mrow>
+                      </m:msqrt>
+                    </m:mfrac>
+                  </m:mfenced>
+                  <m:mi>d</m:mi>
+                  <m:mi>ω</m:mi>
+                </m:mrow>
+              </m:mtd>
+            </m:mtr>
+            <m:mtr>
+              <m:mtd/>
+              <m:mtd columnalign="left">
+                <m:mrow>
+                  <m:mo>=</m:mo>
+                  <m:msubsup>
+                    <m:mo>∫</m:mo>
+                    <m:mrow>
+                      <m:mo>-</m:mo>
+                      <m:mi>π</m:mi>
+                    </m:mrow>
+                    <m:mi>π</m:mi>
+                  </m:msubsup>
+                  <m:mi>X</m:mi>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:msup>
+                      <m:mi>e</m:mi>
+                      <m:mrow>
+                        <m:mi>j</m:mi>
+                        <m:mi>ω</m:mi>
+                      </m:mrow>
+                    </m:msup>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mi>H</m:mi>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:msup>
+                      <m:mi>e</m:mi>
+                      <m:mrow>
+                        <m:mi>j</m:mi>
+                        <m:mi>ω</m:mi>
+                      </m:mrow>
+                    </m:msup>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>·</m:mo>
+                  <m:mfenced separators="" open="(" close=")">
+                    <m:mfrac>
+                      <m:msup>
+                        <m:mi>e</m:mi>
+                        <m:mrow>
+                          <m:mo>-</m:mo>
+                          <m:mi>j</m:mi>
+                          <m:mi>ω</m:mi>
+                          <m:mi>n</m:mi>
+                        </m:mrow>
+                      </m:msup>
+                      <m:msqrt>
+                        <m:mrow>
+                          <m:mn>2</m:mn>
+                          <m:mi>π</m:mi>
+                        </m:mrow>
+                      </m:msqrt>
+                    </m:mfrac>
+                  </m:mfenced>
+                  <m:mi>d</m:mi>
+                  <m:mi>ω</m:mi>
+                </m:mrow>
+              </m:mtd>
+            </m:mtr>
+            <m:mtr>
+              <m:mtd/>
+              <m:mtd columnalign="left">
+                <m:mrow>
+                  <m:mo>=</m:mo>
+                  <m:msubsup>
+                    <m:mo>∫</m:mo>
+                    <m:mrow>
+                      <m:mo>-</m:mo>
+                      <m:mi>π</m:mi>
+                    </m:mrow>
+                    <m:mi>π</m:mi>
+                  </m:msubsup>
+                  <m:mi>Y</m:mi>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:msup>
+                      <m:mi>e</m:mi>
+                      <m:mrow>
+                        <m:mi>j</m:mi>
+                        <m:mi>ω</m:mi>
+                      </m:mrow>
+                    </m:msup>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>·</m:mo>
+                  <m:mfenced separators="" open="(" close=")">
+                    <m:mfrac>
+                      <m:msup>
+                        <m:mi>e</m:mi>
+                        <m:mrow>
+                          <m:mo>-</m:mo>
+                          <m:mi>j</m:mi>
+                          <m:mi>ω</m:mi>
+                          <m:mi>n</m:mi>
+                        </m:mrow>
+                      </m:msup>
+                      <m:msqrt>
+                        <m:mrow>
+                          <m:mn>2</m:mn>
+                          <m:mi>π</m:mi>
+                        </m:mrow>
+                      </m:msqrt>
+                    </m:mfrac>
+                  </m:mfenced>
+                  <m:mi>d</m:mi>
+                  <m:mi>ω</m:mi>
+                </m:mrow>
+              </m:mtd>
+            </m:mtr>
+          </m:mtable>
+        </m:math>
+      </equation>
+      <para id="id64474">Whenever we have an eigenbasis, we can represent our operator as simply a
+diagonal operator when the input and output vectors are represented in the
+eigenbasis. The fact that convolution in time is equivalent to multiplication in the
+Fourier domain is just one instance of this phenomenon. Moreover, while we have been focusing primarily on the DTFT, it should now
+be clear that each Fourier representation forms an eigenbasis for a specific
+class of operators, each of which defines a particular kind of convolution.</para>
+      <list id="id64482" display="block" list-type="labeled-item"><item id="uid3"><label>DTFT</label>discrete-time convolution (infinite)
+</item>
+        <item id="uid4"><label>CTFT</label>continuous-time convolution (infinite)
+<equation id="id64513"><m:math overflow="scroll" mode="display"><m:mrow><m:mrow><m:mo>(</m:mo><m:mi>f</m:mi><m:mo>*</m:mo><m:mi>g</m:mi><m:mo>)</m:mo></m:mrow><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msubsup><m:mo>∫</m:mo><m:mrow><m:mo>-</m:mo><m:mi>∞</m:mi></m:mrow><m:mi>∞</m:mi></m:msubsup><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>τ</m:mi><m:mo>)</m:mo></m:mrow><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>-</m:mo><m:mi>τ</m:mi><m:mo>)</m:mo></m:mrow><m:mi>d</m:mi><m:mi>τ</m:mi></m:mrow></m:math></equation></item>
+        <item id="uid5"><label>DFT</label>discrete-time circular convolution
+<equation id="id64602"><m:math overflow="scroll" mode="display"><m:mrow><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>⊛</m:mo><m:mi>y</m:mi><m:mo>)</m:mo></m:mrow><m:mrow><m:mo>[</m:mo><m:mi>n</m:mi><m:mo>]</m:mo></m:mrow><m:mo>=</m:mo><m:munderover><m:mrow><m:mo>∑</m:mo></m:mrow><m:mrow><m:mi>k</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow><m:mrow><m:mi>N</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:munderover><m:mi>x</m:mi><m:mrow><m:mo>[</m:mo><m:mi>k</m:mi><m:mo>]</m:mo></m:mrow><m:msub><m:mi>y</m:mi><m:mi>N</m:mi></m:msub><m:mrow><m:mo>[</m:mo><m:mi>n</m:mi><m:mo>-</m:mo><m:mi>k</m:mi><m:mo>]</m:mo></m:mrow></m:mrow></m:math></equation></item>
+        <item id="uid6"><label>CTFS</label>continuous-time circular convolution
+<equation id="id64700"><m:math overflow="scroll" mode="display"><m:mrow><m:mrow><m:mo>(</m:mo><m:mi>f</m:mi><m:mo>⊛</m:mo><m:mi>g</m:mi><m:mo>)</m:mo></m:mrow><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msubsup><m:mo>∫</m:mo><m:mrow><m:mn>0</m:mn></m:mrow><m:mi>τ</m:mi></m:msubsup><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:msub><m:mi>g</m:mi><m:mi>T</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>b</m:mi><m:mo>-</m:mo><m:mi>τ</m:mi><m:mo>)</m:mo></m:mrow><m:mi>d</m:mi><m:mi>τ</m:mi></m:mrow></m:math></equation></item>
+      </list>
+      <para id="id64778"><emphasis effect="italics">This</emphasis> is the main reason why we have to care about circular convolution. It is
+something that one would almost never want to do – but if you multiply two
+DFTs together you are doing it implicitly, so <emphasis effect="italics">be careful</emphasis> and remember what
+it is doing.</para>
+
+</content>
+
+</document>

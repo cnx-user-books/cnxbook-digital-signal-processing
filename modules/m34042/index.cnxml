@@ -1,0 +1,134 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+  <title>Linear Independence</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m34042</md:content-id>
+  <md:title>Linear Independence</md:title>
+  <md:abstract/>
+  <md:uuid>67970572-7c98-4c58-944b-d999b62a34d1</md:uuid>
+</metadata>
+
+<content>
+    
+      <para id="id2426306"><title>Definition 1</title>A set of vectors <m:math overflow="scroll"><m:msubsup><m:mrow><m:mo>{</m:mo><m:msub><m:mi>v</m:mi><m:mi>j</m:mi></m:msub><m:mo>}</m:mo></m:mrow><m:mrow><m:mi>j</m:mi><m:mo>=</m:mo><m:mn>1</m:mn></m:mrow><m:mi>N</m:mi></m:msubsup></m:math> is said to be <emphasis effect="italics">linearly dependent</emphasis>
+is there exists a set of scalars <m:math overflow="scroll"><m:mrow><m:msub><m:mi>α</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo><m:mo>.</m:mo><m:mo>.</m:mo><m:mo>.</m:mo><m:mo>,</m:mo><m:msub><m:mi>α</m:mi><m:mi>N</m:mi></m:msub></m:mrow></m:math> (not all 0) such that
+<equation id="eip-id8174310"><m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:munderover>
+<m:mrow>
+              <m:mo>∑</m:mo>
+</m:mrow>        
+      <m:mrow>
+                <m:mi>j</m:mi>
+                <m:mo>=</m:mo>
+                <m:mn>1</m:mn>
+              </m:mrow>
+              <m:mi>N</m:mi>
+            </m:munderover>
+            <m:msub>
+              <m:mi>α</m:mi>
+              <m:mi>j</m:mi>
+            </m:msub>
+            <m:msub>
+              <m:mi>v</m:mi>
+              <m:mi>j</m:mi>
+            </m:msub>
+            <m:mo>=</m:mo>
+            <m:mn>0</m:mn>
+            <m:mo>.</m:mo>
+          </m:mrow>
+        </m:math>
+      </equation></para>
+      
+      <para id="id2426444">Likewise if <m:math overflow="scroll"><m:mrow><m:msubsup><m:mo>∑</m:mo><m:mrow><m:mi>j</m:mi><m:mo>=</m:mo><m:mn>1</m:mn></m:mrow><m:mi>N</m:mi></m:msubsup><m:msub><m:mi>α</m:mi><m:mi>j</m:mi></m:msub><m:msub><m:mi>v</m:mi><m:mi>j</m:mi></m:msub><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> only when <m:math overflow="scroll"><m:mrow><m:msub><m:mi>α</m:mi><m:mi>j</m:mi></m:msub><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math><m:math overflow="scroll"><m:mrow><m:mo>∀</m:mo><m:mi>j</m:mi></m:mrow></m:math>,
+then <m:math overflow="scroll"><m:msubsup><m:mrow><m:mo>{</m:mo><m:msub><m:mi>v</m:mi><m:mi>j</m:mi></m:msub><m:mo>}</m:mo></m:mrow><m:mrow><m:mi>j</m:mi><m:mo>=</m:mo><m:mn>1</m:mn></m:mrow><m:mi>N</m:mi></m:msubsup></m:math> is said to be <emphasis effect="italics">linearly independent</emphasis>.</para>
+      
+      <example id="eip-330"><title><m:math overflow="scroll">           <m:mrow>             <m:mi>V</m:mi>             <m:mo>=</m:mo>             <m:msup>               <m:mi mathvariant="double-struck">R</m:mi>               <m:mn>3</m:mn>             </m:msup>           </m:mrow>         </m:math>       </title><equation id="eip-id8609002">
+<m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:msub>
+              <m:mi>v</m:mi>
+              <m:mn>1</m:mn>
+            </m:msub>
+            <m:mo>=</m:mo>
+            <m:mfenced separators="" open="[" close="]">
+              <m:mtable>
+                <m:mtr>
+                  <m:mtd>
+                    <m:mn>2</m:mn>
+                  </m:mtd>
+                </m:mtr>
+                <m:mtr>
+                  <m:mtd>
+                    <m:mn>1</m:mn>
+                  </m:mtd>
+                </m:mtr>
+                <m:mtr>
+                  <m:mtd>
+                    <m:mn>0</m:mn>
+                  </m:mtd>
+                </m:mtr>
+              </m:mtable>
+            </m:mfenced>
+            <m:mo>,</m:mo>
+            <m:mspace width="1.em"/>
+            <m:msub>
+              <m:mi>v</m:mi>
+              <m:mn>2</m:mn>
+            </m:msub>
+            <m:mo>=</m:mo>
+            <m:mfenced separators="" open="[" close="]">
+              <m:mtable>
+                <m:mtr>
+                  <m:mtd>
+                    <m:mn>1</m:mn>
+                  </m:mtd>
+                </m:mtr>
+                <m:mtr>
+                  <m:mtd>
+                    <m:mn>1</m:mn>
+                  </m:mtd>
+                </m:mtr>
+                <m:mtr>
+                  <m:mtd>
+                    <m:mn>0</m:mn>
+                  </m:mtd>
+                </m:mtr>
+              </m:mtable>
+            </m:mfenced>
+            <m:mo>,</m:mo>
+            <m:mspace width="1.em"/>
+            <m:msub>
+              <m:mi>v</m:mi>
+              <m:mn>3</m:mn>
+            </m:msub>
+            <m:mo>=</m:mo>
+            <m:mfenced separators="" open="[" close="]">
+              <m:mtable>
+                <m:mtr>
+                  <m:mtd>
+                    <m:mn>1</m:mn>
+                  </m:mtd>
+                </m:mtr>
+                <m:mtr>
+                  <m:mtd>
+                    <m:mn>2</m:mn>
+                  </m:mtd>
+                </m:mtr>
+                <m:mtr>
+                  <m:mtd>
+                    <m:mn>0</m:mn>
+                  </m:mtd>
+                </m:mtr>
+              </m:mtable>
+            </m:mfenced>
+            <m:mo>.</m:mo>
+          </m:mrow>
+        </m:math>
+      
+</equation></example>
+      <para id="id2426946">Find <m:math overflow="scroll"><m:mrow><m:msub><m:mi>α</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>α</m:mi><m:mn>2</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>α</m:mi><m:mn>3</m:mn></m:msub></m:mrow></m:math> such that <m:math overflow="scroll"><m:mrow><m:msub><m:mi>α</m:mi><m:mn>1</m:mn></m:msub><m:msub><m:mi>v</m:mi><m:mn>1</m:mn></m:msub><m:mo>+</m:mo><m:msub><m:mi>α</m:mi><m:mn>2</m:mn></m:msub><m:msub><m:mi>v</m:mi><m:mn>2</m:mn></m:msub><m:mo>+</m:mo><m:msub><m:mi>α</m:mi><m:mn>3</m:mn></m:msub><m:msub><m:mi>v</m:mi><m:mn>3</m:mn></m:msub><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math>. [<m:math overflow="scroll"><m:mrow><m:msub><m:mi>α</m:mi><m:mn>1</m:mn></m:msub><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:msub><m:mi>α</m:mi><m:mn>2</m:mn></m:msub><m:mo>=</m:mo><m:mo>-</m:mo><m:mn>3</m:mn><m:mo>,</m:mo><m:msub><m:mi>α</m:mi><m:mn>3</m:mn></m:msub><m:mo>=</m:mo><m:mn>1</m:mn></m:mrow></m:math>.] Note that any two vectors are linearly independent.</para>
+      <para id="id2427095">Note that if a set of vectors <m:math overflow="scroll"><m:msubsup><m:mrow><m:mo>{</m:mo><m:msub><m:mi>v</m:mi><m:mi>j</m:mi></m:msub><m:mo>}</m:mo></m:mrow><m:mrow><m:mi>j</m:mi><m:mo>=</m:mo><m:mn>1</m:mn></m:mrow><m:mi>N</m:mi></m:msubsup></m:math> are linearly dependent
+then we can remove vectors from the set without changing the span of the set.</para>
+    
+  </content>
+</document>

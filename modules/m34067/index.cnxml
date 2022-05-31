@@ -1,0 +1,88 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+  <title>Orthogonal Bases</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m34067</md:content-id>
+  <md:title>Orthogonal Bases</md:title>
+  <md:abstract/>
+  <md:uuid>3095b491-78d8-4ea1-989c-c3c4210988f1</md:uuid>
+</metadata>
+
+<content>
+    
+    
+  <para id="id87755"><title>Definition 1</title>A collection of vectors <m:math overflow="scroll"><m:mi>B</m:mi></m:math> in an inner product space <m:math overflow="scroll"><m:mi>V</m:mi></m:math> is called an
+<emphasis effect="italics">orthogonal basis</emphasis> if</para>
+      <list id="id87787" display="block" list-type="enumerated">
+        <item id="uid2">
+          <m:math overflow="scroll">
+            <m:mrow>
+              <m:mi> span </m:mi>
+              <m:mo>(</m:mo>
+              <m:mi>B</m:mi>
+              <m:mo>)</m:mo>
+              <m:mo>=</m:mo>
+              <m:mi>V</m:mi>
+            </m:mrow>
+          </m:math>
+        </item>
+        <item id="uid3"><m:math overflow="scroll"><m:mrow><m:msub><m:mi>v</m:mi><m:mi>i</m:mi></m:msub><m:mo>⊥</m:mo><m:msub><m:mi>v</m:mi><m:mi>j</m:mi></m:msub></m:mrow></m:math>  (i.e., <m:math overflow="scroll"><m:mrow><m:mo>〈</m:mo><m:msub><m:mi>v</m:mi><m:mi>i</m:mi></m:msub><m:mo>,</m:mo><m:msub><m:mi>v</m:mi><m:mi>j</m:mi></m:msub><m:mo>〉</m:mo><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math>) <m:math overflow="scroll"><m:mrow><m:mo>∀</m:mo><m:mspace width="4pt"/><m:mi>i</m:mi><m:mo>≠</m:mo><m:mi>j</m:mi></m:mrow></m:math></item>
+      </list>
+      <para id="id88083">If, in addition, the vectors are normalized under the induced norm, i.e., <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>∥</m:mo></m:mrow><m:msub><m:mi>v</m:mi><m:mi>i</m:mi></m:msub><m:mrow><m:mo>∥</m:mo><m:mo>=</m:mo><m:mn>1</m:mn><m:mspace width="4pt"/><m:mo>∀</m:mo><m:mspace width="4pt"/><m:mi>i</m:mi></m:mrow></m:mrow></m:math> , then we call <m:math overflow="scroll"><m:mi>V</m:mi></m:math> an <emphasis effect="italics">orthonormal basis</emphasis> (or
+<emphasis effect="italics">“orthobasis”</emphasis>). If <m:math overflow="scroll"><m:mi>V</m:mi></m:math> is infinite dimensional, we need to be a bit more careful
+with 1. Specifically, we really only need the closure of <m:math overflow="scroll"><m:mrow><m:mi> span </m:mi><m:mo>(</m:mo><m:mi>B</m:mi><m:mo>)</m:mo></m:mrow></m:math> to equal
+<m:math overflow="scroll"><m:mi>V</m:mi></m:math>. In this case any <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mi>V</m:mi></m:mrow></m:math> can be written as</para>
+      <equation id="id88186"><m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:mi>x</m:mi>
+            <m:mo>=</m:mo>
+            <m:munderover>
+<m:mrow>
+              <m:mo>∑</m:mo>
+</m:mrow>        
+      <m:mrow>
+                <m:mi>i</m:mi>
+                <m:mo>=</m:mo>
+                <m:mn>1</m:mn>
+              </m:mrow>
+              <m:mi>∞</m:mi>
+            </m:munderover>
+            <m:msub>
+              <m:mi>c</m:mi>
+              <m:mi>i</m:mi>
+            </m:msub>
+            <m:msub>
+              <m:mi>v</m:mi>
+              <m:mi>i</m:mi>
+            </m:msub>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id88230">for some sequence of coefficients <m:math overflow="scroll"><m:mrow><m:msubsup><m:mrow><m:mo>{</m:mo><m:msub><m:mi>c</m:mi><m:mi>i</m:mi></m:msub><m:mo>}</m:mo></m:mrow><m:mrow><m:mi>i</m:mi><m:mo>=</m:mo><m:mn>1</m:mn></m:mrow><m:mi>∞</m:mi></m:msubsup><m:mo>.</m:mo></m:mrow></m:math></para>
+      <para id="id88270">(This last point is a technical one since the span is typically defined as the set of
+linear combinations of a finite number of vectors. See <cite>Young Ch 3 and 4</cite> for the
+details. This won't affect too much so we will gloss over the details.)</para>
+      <!--empty paragraphs get left behind.-->
+    <example id="eip-id1172763691238">
+      <list id="id88287" display="block" list-type="bulleted">
+        <item id="uid4"><m:math overflow="scroll"><m:mrow><m:mi>V</m:mi><m:mo>=</m:mo><m:msup><m:mi mathvariant="double-struck">R</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:math>, standard basis
+<equation id="id88321"><m:math overflow="scroll" mode="display"><m:mrow><m:msub><m:mi>v</m:mi><m:mn>1</m:mn></m:msub><m:mo>=</m:mo><m:mfenced separators="" open="[" close="]"><m:mtable><m:mtr><m:mtd><m:mn>1</m:mn></m:mtd></m:mtr><m:mtr><m:mtd><m:mn>0</m:mn></m:mtd></m:mtr></m:mtable></m:mfenced><m:mspace width="1.em"/><m:msub><m:mi>v</m:mi><m:mn>2</m:mn></m:msub><m:mo>=</m:mo><m:mfenced separators="" open="[" close="]"><m:mtable><m:mtr><m:mtd><m:mn>0</m:mn></m:mtd></m:mtr><m:mtr><m:mtd><m:mn>1</m:mn></m:mtd></m:mtr></m:mtable></m:mfenced></m:mrow></m:math></equation></item>
+      </list>
+    </example>
+<example id="fs-id6447431">    
+    <list id="id2253872" display="block" list-type="bulleted"><item id="uid1">Suppose <m:math overflow="scroll"><m:mrow><m:mi>V</m:mi><m:mo>=</m:mo><m:mo>{</m:mo><m:mtext> piecewise constant functions on </m:mtext><m:mspace width="4pt"/><m:mrow><m:mo>[</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>4</m:mn></m:mfrac><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo><m:mrow><m:mo>[</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>4</m:mn></m:mfrac><m:mo>,</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo><m:mrow><m:mo>[</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:mo>,</m:mo><m:mfrac><m:mn>3</m:mn><m:mn>4</m:mn></m:mfrac><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo><m:mrow><m:mo>[</m:mo><m:mfrac><m:mn>3</m:mn><m:mn>4</m:mn></m:mfrac><m:mo>,</m:mo><m:mn>1</m:mn><m:mo>]</m:mo></m:mrow><m:mo>}</m:mo></m:mrow></m:math>.
+An example of such a function is illustrated below.
+<figure id="uid22"><media id="uid2_media" alt="An example of a piecewise constant function."><image mime-type="image/png" src="../../media/07_1.png" id="uid2_onlineimage" width="406"><!-- NOTE: attribute width changes image size online (pixels). original width is 406. --></image><image mime-type="application/postscript" for="pdf" src="../../media/07_1-46cb.eps" id="uid2_printimage" print-width="6.75cm"><!--NOTE: attribute width changes image size in printed PDF (if specified in .tex file)--></image></media></figure>
+Consider the set
+<figure id="uid33" orient="vertical"><subfigure id="id2254263"><media id="id2254263_media" alt="Illustrations of the Haar basis functions. v_1 is the all constant function, i.e., it is 1 on [0,1]."><image mime-type="image/png" src="../../media/07_2a.png" id="id2254263_onlineimage" width="406"><!-- NOTE: attribute width changes image size online (pixels). original width is 406. --></image><image mime-type="application/postscript" for="pdf" src="../../media/07_2a-4da4.eps" id="id2254263_printimage" print-width="6.75cm"><!--NOTE: attribute width changes image size in printed PDF (if specified in .tex file)--></image></media></subfigure><subfigure id="id2254274"><media id="id2254274_media" alt="Illustrations of the Haar basis functions. v_2 is 1 on [0,0.5) and -1 on [0.5,1]."><image mime-type="image/png" src="../../media/07_2b.png" id="id2254274_onlineimage" width="406"><!-- NOTE: attribute width changes image size online (pixels). original width is 406. --></image><image mime-type="application/postscript" for="pdf" src="../../media/07_2b-810d.eps" id="id2254274_printimage" print-width="6.75cm"><!--NOTE: attribute width changes image size in printed PDF (if specified in .tex file)--></image></media></subfigure><subfigure id="id2254286"><media id="id2254286_media" alt="Illustrations of the Haar basis functions. v_3 is sqrt(2) on [0,0.25), -sqrt(2) on [0.25,0.5), and 0 on [0.5,1]."><image mime-type="image/png" src="../../media/07_2c.png" id="id2254286_onlineimage" width="406"><!-- NOTE: attribute width changes image size online (pixels). original width is 406. --></image><image mime-type="application/postscript" for="pdf" src="../../media/07_2c-1cce.eps" id="id2254286_printimage" print-width="6.75cm"><!--NOTE: attribute width changes image size in printed PDF (if specified in .tex file)--></image></media></subfigure><subfigure id="id2254298"><media id="id2254298_media" alt="Illustrations of the Haar basis functions. v_4 is 0 on [0,0.5), sqrt(2) on [0.5,0.75), and -sqrt(2) on [0.75,1]."><image mime-type="image/png" src="../../media/07_2d.png" id="id2254298_onlineimage" width="406"><!-- NOTE: attribute width changes image size online (pixels). original width is 406. --></image><image mime-type="application/postscript" for="pdf" src="../../media/07_2d-831d.eps" id="id2254298_printimage" print-width="6.75cm"><!--NOTE: attribute width changes image size in printed PDF (if specified in .tex file)--></image></media></subfigure></figure>
+The vectors <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>v</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>v</m:mi><m:mn>2</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>v</m:mi><m:mn>3</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>v</m:mi><m:mn>4</m:mn></m:msub><m:mo>}</m:mo></m:mrow></m:math> form an orthobasis for <m:math overflow="scroll"><m:mi>V</m:mi></m:math>.
+</item>
+      <item id="uid44">Suppose <m:math overflow="scroll"><m:mrow><m:mi>V</m:mi><m:mo>=</m:mo><m:msub><m:mi>L</m:mi><m:mn>2</m:mn></m:msub><m:mrow><m:mo>[</m:mo><m:mo>-</m:mo><m:mi>π</m:mi><m:mo>,</m:mo><m:mi>π</m:mi><m:mo>]</m:mo></m:mrow></m:mrow></m:math>. <m:math overflow="scroll"><m:mrow><m:mi>B</m:mi><m:mo>=</m:mo><m:msubsup><m:mrow><m:mo>{</m:mo><m:mfrac><m:mn>1</m:mn><m:msqrt><m:mrow><m:mn>2</m:mn><m:mi>π</m:mi></m:mrow></m:msqrt></m:mfrac><m:msup><m:mi>e</m:mi><m:mrow><m:mi>j</m:mi><m:mi>k</m:mi><m:mi>t</m:mi></m:mrow></m:msup><m:mo>}</m:mo></m:mrow><m:mrow><m:mi>k</m:mi><m:mo>=</m:mo><m:mo>-</m:mo><m:mi>∞</m:mi></m:mrow><m:mi>∞</m:mi></m:msubsup></m:mrow></m:math>, i.e, the Fourier series basis vectors, form an orthobasis for <m:math overflow="scroll"><m:mi>V</m:mi></m:math>. To verify the orthogonality of the vectors, note that:
+<equation id="uid5"><m:math overflow="scroll" mode="display"><m:mtable displaystyle="true"><m:mtr><m:mtd columnalign="right"><m:mfenced separators="" open="〈" close="〉"><m:mfrac><m:mn>1</m:mn><m:msqrt><m:mrow><m:mn>2</m:mn><m:mi>π</m:mi></m:mrow></m:msqrt></m:mfrac><m:msup><m:mi>e</m:mi><m:mrow><m:mi>j</m:mi><m:mi>k</m:mi><m:mi>t</m:mi></m:mrow></m:msup><m:mo>,</m:mo><m:mfrac><m:mn>1</m:mn><m:msqrt><m:mrow><m:mn>2</m:mn><m:mi>π</m:mi></m:mrow></m:msqrt></m:mfrac><m:msup><m:mi>e</m:mi><m:mrow><m:mi>j</m:mi><m:mi>k</m:mi><m:mi>t</m:mi></m:mrow></m:msup></m:mfenced></m:mtd><m:mtd columnalign="left"><m:mrow><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mrow><m:mn>2</m:mn><m:mi>π</m:mi></m:mrow></m:mfrac><m:msubsup><m:mo>∫</m:mo><m:mrow><m:mo>-</m:mo><m:mi>π</m:mi></m:mrow><m:mi>π</m:mi></m:msubsup><m:msup><m:mi>e</m:mi><m:mrow><m:mi>j</m:mi><m:mo>(</m:mo><m:msub><m:mi>k</m:mi><m:mn>1</m:mn></m:msub><m:mo>-</m:mo><m:msub><m:mi>k</m:mi><m:mn>2</m:mn></m:msub><m:mo>)</m:mo><m:mi>t</m:mi></m:mrow></m:msup></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mrow><m:mo>=</m:mo><m:msubsup><m:mfenced separators="" open="" close="|"><m:mfrac><m:mn>1</m:mn><m:mrow><m:mn>2</m:mn><m:mi>π</m:mi></m:mrow></m:mfrac><m:mfrac><m:msup><m:mi>e</m:mi><m:mrow><m:mi>j</m:mi><m:mo>(</m:mo><m:msub><m:mi>k</m:mi><m:mn>1</m:mn></m:msub><m:mo>-</m:mo><m:msub><m:mi>k</m:mi><m:mn>2</m:mn></m:msub><m:mo>)</m:mo><m:mi>t</m:mi></m:mrow></m:msup><m:mrow><m:mi>j</m:mi><m:mo>(</m:mo><m:msub><m:mi>k</m:mi><m:mn>1</m:mn></m:msub><m:mo>-</m:mo><m:msub><m:mi>k</m:mi><m:mn>2</m:mn></m:msub><m:mo>)</m:mo></m:mrow></m:mfrac></m:mfenced><m:mrow><m:mo>-</m:mo><m:mi>π</m:mi></m:mrow><m:mi>π</m:mi></m:msubsup></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mrow><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mrow><m:mn>2</m:mn><m:mi>π</m:mi></m:mrow></m:mfrac><m:mo>·</m:mo><m:mfrac><m:mrow><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow><m:mrow><m:mi>j</m:mi><m:mo>(</m:mo><m:msub><m:mi>k</m:mi><m:mn>1</m:mn></m:msub><m:mo>-</m:mo><m:msub><m:mi>k</m:mi><m:mn>2</m:mn></m:msub><m:mo>)</m:mo></m:mrow></m:mfrac><m:mo>=</m:mo><m:mn>0</m:mn><m:mspace width="4pt"/><m:mrow><m:mo>(</m:mo><m:msub><m:mi>k</m:mi><m:mn>1</m:mn></m:msub><m:mo>≠</m:mo><m:msub><m:mi>k</m:mi><m:mn>2</m:mn></m:msub><m:mo>)</m:mo></m:mrow></m:mrow></m:mtd></m:mtr></m:mtable></m:math></equation>
+
+See <cite>Young</cite> for proof that the closure of <m:math overflow="scroll"><m:mi>B</m:mi></m:math> is <m:math overflow="scroll"><m:mrow><m:msub><m:mi>L</m:mi><m:mn>2</m:mn></m:msub><m:mrow><m:mo>[</m:mo><m:mo>-</m:mo><m:mi>π</m:mi><m:mo>,</m:mo><m:mi>π</m:mi><m:mo>]</m:mo></m:mrow></m:mrow></m:math>, i.e., the fact that <emphasis effect="italics">any</emphasis><m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>∈</m:mo><m:msub><m:mi>L</m:mi><m:mn>2</m:mn></m:msub><m:mrow><m:mo>[</m:mo><m:mo>-</m:mo><m:mi>π</m:mi><m:mo>,</m:mo><m:mi>π</m:mi><m:mo>]</m:mo></m:mrow></m:mrow></m:math> has a Fourier series representation.
+</item>
+    </list>
+</example>
+
+  </content>
+</document>

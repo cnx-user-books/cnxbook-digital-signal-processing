@@ -1,0 +1,67 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+  <title>Projections</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m34064</md:content-id>
+  <md:title>Projections</md:title>
+  <md:abstract/>
+  <md:uuid>b99c5be4-4a4d-4ceb-baa2-cb76b13736bb</md:uuid>
+</metadata>
+
+<content>
+    
+    <para id="id65329"><title>Definition 1</title>A linear transformation <m:math overflow="scroll"><m:mrow><m:mi>P</m:mi><m:mo>:</m:mo><m:mi>X</m:mi><m:mo>→</m:mo><m:mi>X</m:mi></m:mrow></m:math> is called a <emphasis effect="italics">projection</emphasis> if
+<m:math overflow="scroll"><m:mrow><m:mi>P</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mi>x</m:mi></m:mrow></m:math><m:math overflow="scroll"><m:mrow><m:mo>∀</m:mo><m:mi>x</m:mi><m:mo>∈</m:mo><m:mi mathvariant="script">R</m:mi><m:mo>(</m:mo><m:mi>P</m:mi><m:mo>)</m:mo></m:mrow></m:math>, i.e, <m:math overflow="scroll"><m:mrow><m:mi>P</m:mi><m:mo>(</m:mo><m:mi>P</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>)</m:mo><m:mo>=</m:mo><m:mi>P</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:math><m:math overflow="scroll"><m:mrow><m:mo>∀</m:mo><m:mi>x</m:mi><m:mo>∈</m:mo><m:mi>X</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+
+<example id="eip-id1167132192585">
+      <para id="id65634"><m:math overflow="scroll"><m:mrow><m:mi>P</m:mi><m:mo>:</m:mo><m:msup><m:mi mathvariant="double-struck">R</m:mi><m:mn>3</m:mn></m:msup><m:mo>→</m:mo><m:msup><m:mi mathvariant="double-struck">R</m:mi><m:mn>3</m:mn></m:msup></m:mrow></m:math>, <m:math overflow="scroll"><m:mrow><m:mi>P</m:mi><m:mrow><m:mo>(</m:mo><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mn>3</m:mn></m:msub><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mrow><m:mo>(</m:mo><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:mo>,</m:mo><m:mn>0</m:mn><m:mo>)</m:mo></m:mrow></m:mrow></m:math></para>
+      <figure id="uid2"><media id="uid2_media" alt="An illustration showing the projection operator that maps x to the x_1 x_2 - plane.">
+          <image mime-type="image/png" src="../../media/06_1.png" id="uid2_onlineimage" width="266"><!-- NOTE: attribute width changes image size online (pixels). original width is 266. --></image>
+          <image mime-type="application/postscript" for="pdf" src="../../media/06_1-a26d.eps" id="uid2_printimage" print-width="6.75cm">
+            <!--NOTE: attribute width changes image size in printed PDF (if specified in .tex file)-->
+          </image>
+        </media>
+      </figure>
+</example>
+      <para id="id65752"><title>Definition 2</title>If <m:math overflow="scroll"><m:mi>P</m:mi></m:math> is a projection operator on an inner product space <m:math overflow="scroll"><m:mi>V</m:mi></m:math>, we say that
+<m:math overflow="scroll"><m:mi>P</m:mi></m:math> is an <emphasis effect="italics">orthogonal projection</emphasis> if <m:math overflow="scroll"><m:mrow><m:mi mathvariant="script">R</m:mi><m:mo>(</m:mo><m:mi>P</m:mi><m:mo>)</m:mo><m:mo>⊥</m:mo><m:mi mathvariant="script">N</m:mi><m:mo>(</m:mo><m:mi>P</m:mi><m:mo>)</m:mo></m:mrow></m:math> , i.e., <m:math overflow="scroll"><m:mrow><m:mo>〈</m:mo><m:mi>x</m:mi><m:mo>,</m:mo><m:mi>y</m:mi><m:mo>〉</m:mo><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math><m:math overflow="scroll"><m:mrow><m:mo>∀</m:mo><m:mi>x</m:mi><m:mo>∈</m:mo><m:mi mathvariant="script">R</m:mi><m:mo>(</m:mo><m:mi>P</m:mi><m:mo>)</m:mo><m:mo>,</m:mo><m:mi>y</m:mi><m:mo>∈</m:mo><m:mi mathvariant="script">N</m:mi><m:mo>(</m:mo><m:mi>P</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math></para>
+      <para id="id65886">If <m:math overflow="scroll"><m:mi>P</m:mi></m:math> is an orthogonal projection, then for any <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mi>V</m:mi></m:mrow></m:math> we can write:</para>
+      <equation id="id65911">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:mi>x</m:mi>
+            <m:mo>=</m:mo>
+            <m:mi>P</m:mi>
+            <m:mi>x</m:mi>
+            <m:mo>+</m:mo>
+            <m:mo>(</m:mo>
+            <m:mi>I</m:mi>
+            <m:mo>-</m:mo>
+            <m:mi>P</m:mi>
+            <m:mo>)</m:mo>
+            <m:mi>x</m:mi>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id65943">where <m:math overflow="scroll"><m:mrow><m:mi>P</m:mi><m:mi>x</m:mi><m:mo>∈</m:mo><m:mi mathvariant="script">R</m:mi><m:mo>(</m:mo><m:mi>P</m:mi><m:mo>)</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>I</m:mi><m:mo>-</m:mo><m:mi>P</m:mi><m:mo>)</m:mo><m:mi>x</m:mi><m:mo>∈</m:mo><m:mi mathvariant="script">N</m:mi><m:mo>(</m:mo><m:mi>P</m:mi><m:mo>)</m:mo></m:mrow></m:math> (since <m:math overflow="scroll"><m:mrow><m:mi>P</m:mi><m:mo>(</m:mo><m:mi>I</m:mi><m:mo>-</m:mo><m:mi>P</m:mi><m:mo>)</m:mo><m:mi>x</m:mi><m:mo>=</m:mo><m:mi>P</m:mi><m:mi>x</m:mi><m:mo>-</m:mo><m:mi>P</m:mi><m:mo>(</m:mo><m:mi>P</m:mi><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mi>P</m:mi><m:mi>x</m:mi><m:mo>-</m:mo><m:mi>P</m:mi><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math>.)</para>
+      <para id="id66062">Now we see that the solution to our “best approximation in a linear
+subspace” problem is an orthogonal projection: we wish to find a <m:math overflow="scroll"><m:mi>P</m:mi></m:math> such that <m:math overflow="scroll"><m:mrow><m:mi>R</m:mi><m:mo>(</m:mo><m:mi>P</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mi>A</m:mi></m:mrow></m:math>.</para>
+      <figure id="uid4" orient="horizontal"><subfigure id="id66111">
+          <media id="id66111_media" alt="Illustrations of the projection operator for a 1-D subspace of R2 and a 2-D subspace of R3.  The best approximation to a point from the subspace is given by a projection of the point into that subspace.">
+            <image mime-type="image/png" src="../../media/06_2.png" id="id66111_onlineimage" width="151"><!-- NOTE: attribute width changes image size online (pixels). original width is 151. --></image>
+            <image mime-type="application/postscript" for="pdf" src="../../media/06_2-61cd.eps" id="id66111_printimage" print-width="6.0cm">
+              <!--NOTE: attribute width changes image size in printed PDF (if specified in .tex file)-->
+            </image>
+          </media>
+        </subfigure>
+        <subfigure id="id66122">
+          <media id="id66122_media" alt="">
+            <image mime-type="image/png" src="../../media/06_3.png" id="id66122_onlineimage" width="266"><!-- NOTE: attribute width changes image size online (pixels). original width is 266. --></image>
+            <image mime-type="application/postscript" for="pdf" src="../../media/06_3-92e2.eps" id="id66122_printimage" print-width="6.0cm">
+              <!--NOTE: attribute width changes image size in printed PDF (if specified in .tex file)-->
+            </image>
+          </media>
+        </subfigure>
+      </figure>
+      <para id="id66131">The question is now, how can we design such a projection operator?</para>
+  </content>
+</document>

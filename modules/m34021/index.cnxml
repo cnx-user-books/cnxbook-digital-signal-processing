@@ -1,0 +1,823 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+  <title>Computing the Best Approximation</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m34021</md:content-id>
+  <md:title>Computing the Best Approximation</md:title>
+  <md:abstract/>
+  <md:uuid>755e9f9f-f3d8-4403-951a-36d71534b6d3</md:uuid>
+</metadata>
+
+<content>
+    
+    
+<para id="id173566">Recall that if <m:math overflow="scroll"><m:mi>P</m:mi></m:math> is an orthogonal projection onto a subspace <m:math overflow="scroll"><m:mi>A</m:mi></m:math>, we can write
+any <m:math overflow="scroll"><m:mi>x</m:mi></m:math> as</para>
+      <equation id="id173592">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:mi>x</m:mi>
+            <m:mo>=</m:mo>
+            <m:mi>P</m:mi>
+            <m:mi>x</m:mi>
+            <m:mo>+</m:mo>
+            <m:mo>(</m:mo>
+            <m:mi>I</m:mi>
+            <m:mo>-</m:mo>
+            <m:mi>P</m:mi>
+            <m:mo>)</m:mo>
+            <m:mi>x</m:mi>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id173625">where <m:math overflow="scroll"><m:mrow><m:mi>P</m:mi><m:mi>x</m:mi><m:mo>∈</m:mo><m:mi>A</m:mi></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>I</m:mi><m:mo>-</m:mo><m:mi>P</m:mi><m:mo>)</m:mo><m:mi>x</m:mi><m:mo>⊥</m:mo><m:mi>A</m:mi></m:mrow></m:math>. We now turn to how to actually find <m:math overflow="scroll"><m:mi>P</m:mi></m:math>.</para>
+      <para id="id173677">We begin with the finite-dimensional case, assuming that <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>v</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo><m:mo>.</m:mo><m:mo>.</m:mo><m:mo>.</m:mo><m:mo>,</m:mo><m:msub><m:mi>v</m:mi><m:mi>N</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> is a basis for <m:math overflow="scroll"><m:mi>A</m:mi></m:math>. If <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>I</m:mi><m:mo>-</m:mo><m:mi>P</m:mi><m:mo>)</m:mo><m:mi>x</m:mi><m:mo>⊥</m:mo><m:mi>A</m:mi></m:mrow></m:math> then we have that for any <m:math overflow="scroll"><m:mi>x</m:mi></m:math></para>
+      <equation id="id173935">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:mfenced separators="" open="〈" close="〉">
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>I</m:mi>
+                <m:mo>-</m:mo>
+                <m:mi>P</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mi>x</m:mi>
+              <m:mo>,</m:mo>
+              <m:msub>
+                <m:mi>v</m:mi>
+                <m:mi>j</m:mi>
+              </m:msub>
+            </m:mfenced>
+            <m:mo>=</m:mo>
+            <m:mn>0</m:mn>
+            <m:mspace width="1.em"/>
+            <m:mi> for </m:mi>
+            <m:mspace width="4pt"/>
+            <m:mi>j</m:mi>
+            <m:mo>=</m:mo>
+            <m:mn>1</m:mn>
+            <m:mo>,</m:mo>
+            <m:mo>.</m:mo>
+            <m:mo>.</m:mo>
+            <m:mo>.</m:mo>
+            <m:mo>,</m:mo>
+            <m:mi>N</m:mi>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id174007">We also note that since <m:math overflow="scroll"><m:mrow><m:mi>P</m:mi><m:mi>x</m:mi><m:mo>∈</m:mo><m:mi>A</m:mi></m:mrow></m:math>, we can write <m:math overflow="scroll"><m:mrow><m:mi>P</m:mi><m:mi>x</m:mi><m:mo>=</m:mo><m:msubsup><m:mo>∑</m:mo><m:mrow><m:mi>k</m:mi><m:mo>=</m:mo><m:mn>1</m:mn></m:mrow><m:mi>N</m:mi></m:msubsup><m:msub><m:mi>c</m:mi><m:mi>k</m:mi></m:msub><m:msub><m:mi>v</m:mi><m:mi>k</m:mi></m:msub></m:mrow></m:math>. Thus we obtain</para>
+      <equation id="id174071"><m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:mfenced separators="" open="〈" close="〉">
+              <m:mi>x</m:mi>
+              <m:mo>-</m:mo>
+              <m:mover>
+                <m:munder>
+<m:mrow>
+                  <m:mo>∑</m:mo>
+</m:mrow>        
+          <m:mrow>
+                    <m:mi>k</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                </m:munder>
+                <m:mi>N</m:mi>
+              </m:mover>
+              <m:msub>
+                <m:mi>c</m:mi>
+                <m:mi>k</m:mi>
+              </m:msub>
+              <m:msub>
+                <m:mi>v</m:mi>
+                <m:mi>k</m:mi>
+              </m:msub>
+              <m:mo>,</m:mo>
+              <m:msub>
+                <m:mi>v</m:mi>
+                <m:mi>j</m:mi>
+              </m:msub>
+            </m:mfenced>
+            <m:mo>=</m:mo>
+            <m:mn>0</m:mn>
+            <m:mspace width="1.em"/>
+            <m:mi> for </m:mi>
+            <m:mspace width="4pt"/>
+            <m:mi>j</m:mi>
+            <m:mo>=</m:mo>
+            <m:mn>1</m:mn>
+            <m:mo>,</m:mo>
+            <m:mo>.</m:mo>
+            <m:mo>.</m:mo>
+            <m:mo>.</m:mo>
+            <m:mo>,</m:mo>
+            <m:mi>N</m:mi>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id174165">from which we obtain</para>
+      <equation id="uid1">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:mfenced separators="" open="〈" close="〉">
+              <m:mi>x</m:mi>
+              <m:mo>,</m:mo>
+              <m:msub>
+                <m:mi>v</m:mi>
+                <m:mi>j</m:mi>
+              </m:msub>
+            </m:mfenced>
+            <m:mo>=</m:mo>
+            <m:mover>
+              <m:munder>
+                <m:mo>∑</m:mo>
+                <m:mrow>
+                  <m:mi>k</m:mi>
+                  <m:mo>=</m:mo>
+                  <m:mn>1</m:mn>
+                </m:mrow>
+              </m:munder>
+              <m:mi>N</m:mi>
+            </m:mover>
+            <m:msub>
+              <m:mi>c</m:mi>
+              <m:mi>k</m:mi>
+            </m:msub>
+            <m:mfenced separators="" open="〈" close="〉">
+              <m:msub>
+                <m:mi>v</m:mi>
+                <m:mi>k</m:mi>
+              </m:msub>
+              <m:mo>,</m:mo>
+              <m:msub>
+                <m:mi>v</m:mi>
+                <m:mi>j</m:mi>
+              </m:msub>
+            </m:mfenced>
+            <m:mspace width="1.em"/>
+            <m:mi> for </m:mi>
+            <m:mspace width="4pt"/>
+            <m:mi>j</m:mi>
+            <m:mo>=</m:mo>
+            <m:mn>1</m:mn>
+            <m:mo>,</m:mo>
+            <m:mo>.</m:mo>
+            <m:mo>.</m:mo>
+            <m:mo>.</m:mo>
+            <m:mo>,</m:mo>
+            <m:mi>N</m:mi>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id174280">We know <m:math overflow="scroll"><m:mi>x</m:mi></m:math> and <m:math overflow="scroll"><m:mrow><m:msub><m:mi>v</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo><m:mo>.</m:mo><m:mo>.</m:mo><m:mo>.</m:mo><m:mo>,</m:mo><m:msub><m:mi>v</m:mi><m:mi>N</m:mi></m:msub></m:mrow></m:math>. Our goal is to find <m:math overflow="scroll"><m:mrow><m:msub><m:mi>c</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo><m:mo>.</m:mo><m:mo>.</m:mo><m:mo>.</m:mo><m:mo>,</m:mo><m:msub><m:mi>c</m:mi><m:mi>N</m:mi></m:msub></m:mrow></m:math>. Note that a procedure for calculating <m:math overflow="scroll"><m:mrow><m:msub><m:mi>c</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo><m:mo>.</m:mo><m:mo>.</m:mo><m:mo>.</m:mo><m:mo>,</m:mo><m:msub><m:mi>c</m:mi><m:mi>k</m:mi></m:msub></m:mrow></m:math> for any given <m:math overflow="scroll"><m:mi>x</m:mi></m:math> is
+equivalent to one that computes <m:math overflow="scroll"><m:mrow><m:mi>P</m:mi><m:mi>x</m:mi></m:mrow></m:math>.</para>
+      <para id="id174409">To find <m:math overflow="scroll"><m:mrow><m:msub><m:mi>c</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo><m:mo>.</m:mo><m:mo>.</m:mo><m:mo>.</m:mo><m:mo>,</m:mo><m:msub><m:mi>c</m:mi><m:mi>N</m:mi></m:msub></m:mrow></m:math>, observe that <link target-id="uid1"/> represents a set of <m:math overflow="scroll"><m:mi>N</m:mi></m:math> equations with <m:math overflow="scroll"><m:mi>N</m:mi></m:math> unknowns.</para>
+      <equation id="id174464">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:mfenced separators="" open="[" close="]">
+              <m:mtable>
+                <m:mtr>
+                  <m:mtd>
+                    <m:mrow>
+                      <m:mo>〈</m:mo>
+                      <m:msub>
+                        <m:mi>v</m:mi>
+                        <m:mn>1</m:mn>
+                      </m:msub>
+                      <m:mo>,</m:mo>
+                      <m:msub>
+                        <m:mi>v</m:mi>
+                        <m:mn>1</m:mn>
+                      </m:msub>
+                      <m:mo>〉</m:mo>
+                    </m:mrow>
+                  </m:mtd>
+                  <m:mtd>
+                    <m:mrow>
+                      <m:mo>〈</m:mo>
+                      <m:msub>
+                        <m:mi>v</m:mi>
+                        <m:mn>2</m:mn>
+                      </m:msub>
+                      <m:mo>,</m:mo>
+                      <m:msub>
+                        <m:mi>v</m:mi>
+                        <m:mn>1</m:mn>
+                      </m:msub>
+                      <m:mo>〉</m:mo>
+                    </m:mrow>
+                  </m:mtd>
+                  <m:mtd>
+                    <m:mo>⋯</m:mo>
+                  </m:mtd>
+                  <m:mtd>
+                    <m:mrow>
+                      <m:mo>〈</m:mo>
+                      <m:msub>
+                        <m:mi>v</m:mi>
+                        <m:mi>N</m:mi>
+                      </m:msub>
+                      <m:mo>,</m:mo>
+                      <m:msub>
+                        <m:mi>v</m:mi>
+                        <m:mn>1</m:mn>
+                      </m:msub>
+                      <m:mo>〉</m:mo>
+                    </m:mrow>
+                  </m:mtd>
+                </m:mtr>
+                <m:mtr>
+                  <m:mtd>
+                    <m:mrow>
+                      <m:mo>〈</m:mo>
+                      <m:msub>
+                        <m:mi>v</m:mi>
+                        <m:mn>1</m:mn>
+                      </m:msub>
+                      <m:mo>,</m:mo>
+                      <m:msub>
+                        <m:mi>v</m:mi>
+                        <m:mn>2</m:mn>
+                      </m:msub>
+                      <m:mo>〉</m:mo>
+                    </m:mrow>
+                  </m:mtd>
+                  <m:mtd>
+                    <m:mrow>
+                      <m:mo>〈</m:mo>
+                      <m:msub>
+                        <m:mi>v</m:mi>
+                        <m:mn>2</m:mn>
+                      </m:msub>
+                      <m:mo>,</m:mo>
+                      <m:msub>
+                        <m:mi>v</m:mi>
+                        <m:mn>2</m:mn>
+                      </m:msub>
+                      <m:mo>〉</m:mo>
+                    </m:mrow>
+                  </m:mtd>
+                  <m:mtd/>
+                  <m:mtd>
+                    <m:mrow>
+                      <m:mo>〈</m:mo>
+                      <m:msub>
+                        <m:mi>v</m:mi>
+                        <m:mi>N</m:mi>
+                      </m:msub>
+                      <m:mo>,</m:mo>
+                      <m:msub>
+                        <m:mi>v</m:mi>
+                        <m:mn>2</m:mn>
+                      </m:msub>
+                      <m:mo>〉</m:mo>
+                    </m:mrow>
+                  </m:mtd>
+                </m:mtr>
+                <m:mtr>
+                  <m:mtd>
+                    <m:mo>⋮</m:mo>
+                  </m:mtd>
+                  <m:mtd/>
+                  <m:mtd>
+                    <m:mo>⋱</m:mo>
+                  </m:mtd>
+                  <m:mtd>
+                    <m:mo>⋮</m:mo>
+                  </m:mtd>
+                </m:mtr>
+                <m:mtr>
+                  <m:mtd>
+                    <m:mrow>
+                      <m:mo>〈</m:mo>
+                      <m:msub>
+                        <m:mi>v</m:mi>
+                        <m:mn>1</m:mn>
+                      </m:msub>
+                      <m:mo>,</m:mo>
+                      <m:msub>
+                        <m:mi>v</m:mi>
+                        <m:mi>N</m:mi>
+                      </m:msub>
+                      <m:mo>〉</m:mo>
+                    </m:mrow>
+                  </m:mtd>
+                  <m:mtd>
+                    <m:mrow>
+                      <m:mo>〈</m:mo>
+                      <m:msub>
+                        <m:mi>v</m:mi>
+                        <m:mn>2</m:mn>
+                      </m:msub>
+                      <m:mo>,</m:mo>
+                      <m:msub>
+                        <m:mi>v</m:mi>
+                        <m:mi>N</m:mi>
+                      </m:msub>
+                      <m:mo>〉</m:mo>
+                    </m:mrow>
+                  </m:mtd>
+                  <m:mtd>
+                    <m:mo>⋯</m:mo>
+                  </m:mtd>
+                  <m:mtd>
+                    <m:mrow>
+                      <m:mo>〈</m:mo>
+                      <m:msub>
+                        <m:mi>v</m:mi>
+                        <m:mi>N</m:mi>
+                      </m:msub>
+                      <m:mo>,</m:mo>
+                      <m:msub>
+                        <m:mi>v</m:mi>
+                        <m:mi>N</m:mi>
+                      </m:msub>
+                      <m:mo>〉</m:mo>
+                    </m:mrow>
+                  </m:mtd>
+                </m:mtr>
+              </m:mtable>
+            </m:mfenced>
+            <m:mfenced separators="" open="[" close="]">
+              <m:mtable>
+                <m:mtr>
+                  <m:mtd>
+                    <m:msub>
+                      <m:mi>c</m:mi>
+                      <m:mn>1</m:mn>
+                    </m:msub>
+                  </m:mtd>
+                </m:mtr>
+                <m:mtr>
+                  <m:mtd>
+                    <m:msub>
+                      <m:mi>c</m:mi>
+                      <m:mn>2</m:mn>
+                    </m:msub>
+                  </m:mtd>
+                </m:mtr>
+                <m:mtr>
+                  <m:mtd>
+                    <m:mo>⋮</m:mo>
+                  </m:mtd>
+                </m:mtr>
+                <m:mtr>
+                  <m:mtd>
+                    <m:msub>
+                      <m:mi>c</m:mi>
+                      <m:mi>N</m:mi>
+                    </m:msub>
+                  </m:mtd>
+                </m:mtr>
+              </m:mtable>
+            </m:mfenced>
+            <m:mo>=</m:mo>
+            <m:mfenced separators="" open="[" close="]">
+              <m:mtable>
+                <m:mtr>
+                  <m:mtd>
+                    <m:mrow>
+                      <m:mo>〈</m:mo>
+                      <m:mi>x</m:mi>
+                      <m:mo>,</m:mo>
+                      <m:msub>
+                        <m:mi>v</m:mi>
+                        <m:mn>1</m:mn>
+                      </m:msub>
+                      <m:mo>〉</m:mo>
+                    </m:mrow>
+                  </m:mtd>
+                </m:mtr>
+                <m:mtr>
+                  <m:mtd>
+                    <m:mrow>
+                      <m:mo>〈</m:mo>
+                      <m:mi>x</m:mi>
+                      <m:mo>,</m:mo>
+                      <m:msub>
+                        <m:mi>v</m:mi>
+                        <m:mn>2</m:mn>
+                      </m:msub>
+                      <m:mo>〉</m:mo>
+                    </m:mrow>
+                  </m:mtd>
+                </m:mtr>
+                <m:mtr>
+                  <m:mtd>
+                    <m:mo>⋮</m:mo>
+                  </m:mtd>
+                </m:mtr>
+                <m:mtr>
+                  <m:mtd>
+                    <m:mrow>
+                      <m:mo>〈</m:mo>
+                      <m:mi>x</m:mi>
+                      <m:mo>,</m:mo>
+                      <m:msub>
+                        <m:mi>v</m:mi>
+                        <m:mi>N</m:mi>
+                      </m:msub>
+                      <m:mo>〉</m:mo>
+                    </m:mrow>
+                  </m:mtd>
+                </m:mtr>
+              </m:mtable>
+            </m:mfenced>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id174830">More compactly, we want to find a vector <m:math overflow="scroll"><m:mrow><m:mi>c</m:mi><m:mo>∈</m:mo><m:msup><m:mi mathvariant="double-struck">C</m:mi><m:mi>N</m:mi></m:msup></m:mrow></m:math> such that <m:math overflow="scroll"><m:mrow><m:mi>G</m:mi><m:mi>c</m:mi><m:mo>=</m:mo><m:mi>b</m:mi></m:mrow></m:math> where</para>
+      <equation id="id174871">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:mi>b</m:mi>
+            <m:mo>=</m:mo>
+            <m:mfenced separators="" open="[" close="]">
+              <m:mtable>
+                <m:mtr>
+                  <m:mtd>
+                    <m:mrow>
+                      <m:mo>〈</m:mo>
+                      <m:mi>x</m:mi>
+                      <m:mo>,</m:mo>
+                      <m:msub>
+                        <m:mi>v</m:mi>
+                        <m:mn>1</m:mn>
+                      </m:msub>
+                      <m:mo>〉</m:mo>
+                    </m:mrow>
+                  </m:mtd>
+                </m:mtr>
+                <m:mtr>
+                  <m:mtd>
+                    <m:mrow>
+                      <m:mo>〈</m:mo>
+                      <m:mi>x</m:mi>
+                      <m:mo>,</m:mo>
+                      <m:msub>
+                        <m:mi>v</m:mi>
+                        <m:mn>2</m:mn>
+                      </m:msub>
+                      <m:mo>〉</m:mo>
+                    </m:mrow>
+                  </m:mtd>
+                </m:mtr>
+                <m:mtr>
+                  <m:mtd>
+                    <m:mo>⋮</m:mo>
+                  </m:mtd>
+                </m:mtr>
+                <m:mtr>
+                  <m:mtd>
+                    <m:mrow>
+                      <m:mo>〈</m:mo>
+                      <m:mi>x</m:mi>
+                      <m:mo>,</m:mo>
+                      <m:msub>
+                        <m:mi>v</m:mi>
+                        <m:mi>N</m:mi>
+                      </m:msub>
+                      <m:mo>〉</m:mo>
+                    </m:mrow>
+                  </m:mtd>
+                </m:mtr>
+              </m:mtable>
+            </m:mfenced>
+          </m:mrow>
+        </m:math>
+      </equation>
+      
+      
+      <note id="eip-970"><list id="eip-id11417181"><item id="uid2"><m:math overflow="scroll"><m:mi>G</m:mi></m:math> is called the “Grammian” or “Gram matrix” of <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>v</m:mi><m:mi>j</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math></item>
+        <item id="uid3">One can show since <m:math overflow="scroll"><m:mrow><m:msub><m:mi>v</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo><m:mo>.</m:mo><m:mo>.</m:mo><m:mo>.</m:mo><m:mo>,</m:mo><m:msub><m:mi>v</m:mi><m:mi>N</m:mi></m:msub></m:mrow></m:math> are linearly independent that <m:math overflow="scroll"><m:mi>G</m:mi></m:math> is
+positive definite, and hence invertible.
+</item>
+        <item id="uid4">Also note that by construction, <m:math overflow="scroll"><m:mi>G</m:mi></m:math> is <emphasis effect="italics">conjugate symmetric</emphasis>, or <emphasis effect="italics">“Hermitian”</emphasis>, i.e., <m:math overflow="scroll"><m:mrow><m:mi>G</m:mi><m:mo>=</m:mo><m:msup><m:mi>G</m:mi><m:mi>H</m:mi></m:msup></m:mrow></m:math>, where <m:math overflow="scroll"><m:msup><m:mrow/><m:mi>H</m:mi></m:msup></m:math> denotes the conjugate transpose of <m:math overflow="scroll"><m:mi>G</m:mi></m:math>.
+</item>
+      </list></note><para id="id175118">Thus, since <m:math overflow="scroll"><m:msup><m:mi>G</m:mi><m:mrow><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msup></m:math> exists, we can write <m:math overflow="scroll"><m:mrow><m:mi>c</m:mi><m:mo>=</m:mo><m:msup><m:mi>G</m:mi><m:mrow><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msup><m:mi>b</m:mi></m:mrow></m:math> to calculate <m:math overflow="scroll"><m:mi>c</m:mi></m:math>.</para>
+      <para id="id175170">As a special case, suppose now that <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>v</m:mi><m:mi>j</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> is an orthobasis for <m:math overflow="scroll"><m:mi>A</m:mi></m:math>? What is <m:math overflow="scroll"><m:mi>G</m:mi></m:math>? It is just the identity matrix <m:math overflow="scroll"><m:mi>I</m:mi></m:math>!
+Computing <m:math overflow="scroll"><m:mi>c</m:mi></m:math> just got much easier, since now <m:math overflow="scroll"><m:mrow><m:mi>c</m:mi><m:mo>=</m:mo><m:mi>b</m:mi></m:mrow></m:math>. Plugging this <m:math overflow="scroll"><m:mi>c</m:mi></m:math> back into out formula for <m:math overflow="scroll"><m:mrow><m:mi>P</m:mi><m:mi>x</m:mi></m:mrow></m:math> we obtain</para>
+      <equation id="id175255"><m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:mi>P</m:mi>
+            <m:mi>x</m:mi>
+            <m:mo>=</m:mo>
+            <m:munderover>
+<m:mrow> 
+               <m:mo>∑</m:mo>
+</m:mrow>        
+      <m:mrow>
+                <m:mi>k</m:mi>
+                <m:mo>=</m:mo>
+                <m:mn>1</m:mn>
+              </m:mrow>
+<m:mrow>        
+        <m:mi>N</m:mi>
+</m:mrow>
+            </m:munderover>
+            <m:mfenced separators="" open="〈" close="〉">
+              <m:mi>x</m:mi>
+              <m:mo>,</m:mo>
+              <m:msub>
+                <m:mi>v</m:mi>
+                <m:mi>k</m:mi>
+              </m:msub>
+            </m:mfenced>
+            <m:msub>
+              <m:mi>v</m:mi>
+              <m:mi>k</m:mi>
+            </m:msub>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id175313">Just to verify, note that <m:math overflow="scroll"><m:mi>P</m:mi></m:math> is indeed a projection matrix:</para>
+      <equation id="uid5">
+        <m:math overflow="scroll" mode="display">
+          <m:mtable displaystyle="true">
+            <m:mtr>
+              <m:mtd columnalign="right">
+                <m:mrow>
+                  <m:mi>P</m:mi>
+                  <m:mo>(</m:mo>
+                  <m:mi>P</m:mi>
+                  <m:mi>x</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+              </m:mtd>
+              <m:mtd columnalign="left">
+                <m:mrow>
+                  <m:mo>=</m:mo>
+                  <m:munder>
+                    <m:mover>
+                      <m:mo>∑</m:mo>
+                      <m:mi>N</m:mi>
+                    </m:mover>
+                    <m:mrow>
+                      <m:mi>k</m:mi>
+                      <m:mo>=</m:mo>
+                      <m:mn>1</m:mn>
+                    </m:mrow>
+                  </m:munder>
+                  <m:mfenced separators="" open="〈" close="〉">
+                    <m:munder>
+                      <m:mover>
+                        <m:mo>∑</m:mo>
+                        <m:mi>N</m:mi>
+                      </m:mover>
+                      <m:mrow>
+                        <m:mi>j</m:mi>
+                        <m:mo>=</m:mo>
+                        <m:mn>1</m:mn>
+                      </m:mrow>
+                    </m:munder>
+                    <m:mfenced separators="" open="〈" close="〉">
+                      <m:mi>x</m:mi>
+                      <m:mo>,</m:mo>
+                      <m:msub>
+                        <m:mi>v</m:mi>
+                        <m:mi>j</m:mi>
+                      </m:msub>
+                    </m:mfenced>
+                    <m:msub>
+                      <m:mi>v</m:mi>
+                      <m:mi>j</m:mi>
+                    </m:msub>
+                    <m:mo>,</m:mo>
+                    <m:msub>
+                      <m:mi>v</m:mi>
+                      <m:mi>k</m:mi>
+                    </m:msub>
+                  </m:mfenced>
+                  <m:msub>
+                    <m:mi>v</m:mi>
+                    <m:mi>k</m:mi>
+                  </m:msub>
+                </m:mrow>
+              </m:mtd>
+            </m:mtr>
+            <m:mtr>
+              <m:mtd/>
+              <m:mtd columnalign="left">
+                <m:mrow>
+                  <m:mo>=</m:mo>
+                  <m:munder>
+                    <m:mover>
+                      <m:mo>∑</m:mo>
+                      <m:mi>N</m:mi>
+                    </m:mover>
+                    <m:mrow>
+                      <m:mi>k</m:mi>
+                      <m:mo>=</m:mo>
+                      <m:mn>1</m:mn>
+                    </m:mrow>
+                  </m:munder>
+                  <m:munder>
+                    <m:mover>
+                      <m:mo>∑</m:mo>
+                      <m:mi>N</m:mi>
+                    </m:mover>
+                    <m:mrow>
+                      <m:mi>j</m:mi>
+                      <m:mo>=</m:mo>
+                      <m:mn>1</m:mn>
+                    </m:mrow>
+                  </m:munder>
+                  <m:mfenced separators="" open="〈" close="〉">
+                    <m:mi>x</m:mi>
+                    <m:mo>,</m:mo>
+                    <m:msub>
+                      <m:mi>v</m:mi>
+                      <m:mi>j</m:mi>
+                    </m:msub>
+                  </m:mfenced>
+                  <m:mfenced separators="" open="〈" close="〉">
+                    <m:msub>
+                      <m:mi>v</m:mi>
+                      <m:mi>j</m:mi>
+                    </m:msub>
+                    <m:mo>,</m:mo>
+                    <m:msub>
+                      <m:mi>v</m:mi>
+                      <m:mi>k</m:mi>
+                    </m:msub>
+                  </m:mfenced>
+                  <m:msub>
+                    <m:mi>v</m:mi>
+                    <m:mi>k</m:mi>
+                  </m:msub>
+                </m:mrow>
+              </m:mtd>
+            </m:mtr>
+            <m:mtr>
+              <m:mtd/>
+              <m:mtd columnalign="left">
+                <m:mrow>
+                  <m:mo>=</m:mo>
+                  <m:munder>
+                    <m:mover>
+                      <m:mo>∑</m:mo>
+                      <m:mi>N</m:mi>
+                    </m:mover>
+                    <m:mrow>
+                      <m:mi>j</m:mi>
+                      <m:mo>=</m:mo>
+                      <m:mn>1</m:mn>
+                    </m:mrow>
+                  </m:munder>
+                  <m:mfenced separators="" open="〈" close="〉">
+                    <m:mi>x</m:mi>
+                    <m:mo>,</m:mo>
+                    <m:msub>
+                      <m:mi>v</m:mi>
+                      <m:mi>j</m:mi>
+                    </m:msub>
+                  </m:mfenced>
+                  <m:msub>
+                    <m:mi>v</m:mi>
+                    <m:mi>j</m:mi>
+                  </m:msub>
+                  <m:mo>=</m:mo>
+                  <m:mi>P</m:mi>
+                  <m:mi>x</m:mi>
+                  <m:mo>.</m:mo>
+                </m:mrow>
+              </m:mtd>
+            </m:mtr>
+          </m:mtable>
+        </m:math>
+      </equation>
+      <para id="id175599"><emphasis effect="bold">Example</emphasis> Suppose <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>∈</m:mo><m:msub><m:mi>L</m:mi><m:mn>2</m:mn></m:msub><m:mrow><m:mo>(</m:mo><m:mrow><m:mo>[</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>4</m:mn><m:mo>]</m:mo></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> is given by</para>
+      <example id="eip-940"><para id="eip-950">
+Suppose <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>∈</m:mo><m:msub><m:mi>L</m:mi><m:mn>2</m:mn></m:msub><m:mrow><m:mo>(</m:mo><m:mrow><m:mo>[</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>4</m:mn><m:mo>]</m:mo></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> is given by</para>
+<equation id="eip-id1172757713176">
+<m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:mi>f</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>t</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>=</m:mo>
+            <m:mfenced separators="" open="{" close="">
+              <m:mtable>
+                <m:mtr>
+                  <m:mtd columnalign="left">
+                    <m:mi>t</m:mi>
+                  </m:mtd>
+                  <m:mtd columnalign="left">
+                    <m:mrow>
+                      <m:mi> if </m:mi>
+                      <m:mspace width="4pt"/>
+                      <m:mi>t</m:mi>
+                      <m:mo>∈</m:mo>
+                      <m:mo>[</m:mo>
+                      <m:mn>0</m:mn>
+                      <m:mo>,</m:mo>
+                      <m:mfrac>
+                        <m:mn>1</m:mn>
+                        <m:mn>2</m:mn>
+                      </m:mfrac>
+                      <m:mo>]</m:mo>
+                    </m:mrow>
+                  </m:mtd>
+                </m:mtr>
+                <m:mtr>
+                  <m:mtd columnalign="left">
+                    <m:mrow>
+                      <m:mn>1</m:mn>
+                      <m:mo>-</m:mo>
+                      <m:mi>t</m:mi>
+                    </m:mrow>
+                  </m:mtd>
+                  <m:mtd columnalign="left">
+                    <m:mrow>
+                      <m:mi> if </m:mi>
+                      <m:mspace width="4pt"/>
+                      <m:mi>t</m:mi>
+                      <m:mo>∈</m:mo>
+                      <m:mo>[</m:mo>
+                      <m:mfrac>
+                        <m:mn>1</m:mn>
+                        <m:mn>2</m:mn>
+                      </m:mfrac>
+                      <m:mo>,</m:mo>
+                      <m:mn>1</m:mn>
+                      <m:mo>]</m:mo>
+                      <m:mo>.</m:mo>
+                    </m:mrow>
+                  </m:mtd>
+                </m:mtr>
+              </m:mtable>
+            </m:mfenced>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <figure id="uid6"><media id="uid6_media" alt="Illustration of the function f(t).">
+          <image mime-type="image/png" src="../../media/07_3.png" id="uid6_onlineimage" width="406"><!-- NOTE: attribute width changes image size online (pixels). original width is 406. --></image>
+          <image mime-type="application/postscript" for="pdf" src="../../media/07_3-a177.eps" id="uid6_printimage" print-width="6.75cm">
+            <!--NOTE: attribute width changes image size in printed PDF (if specified in .tex file)-->
+          </image>
+        </media>
+      </figure>
+      <para id="id175761">Let <m:math overflow="scroll"><m:mrow><m:mi>A</m:mi><m:mo>=</m:mo><m:mo>{</m:mo><m:mtext> piecewise constant functions on </m:mtext><m:mspace width="4pt"/><m:mrow><m:mo>[</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>4</m:mn></m:mfrac><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo><m:mrow><m:mo>[</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>4</m:mn></m:mfrac><m:mo>,</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo><m:mrow><m:mo>[</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:mo>,</m:mo><m:mfrac><m:mn>3</m:mn><m:mn>4</m:mn></m:mfrac><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo><m:mrow><m:mo>[</m:mo><m:mfrac><m:mn>3</m:mn><m:mn>4</m:mn></m:mfrac><m:mo>,</m:mo><m:mn>1</m:mn><m:mo>]</m:mo></m:mrow><m:mo>}</m:mo></m:mrow></m:math>.
+Our goal is to find the closest (in <m:math overflow="scroll"><m:msub><m:mi>L</m:mi><m:mn>2</m:mn></m:msub></m:math>) function in <m:math overflow="scroll"><m:mi>A</m:mi></m:math> to <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:math>. Using <m:math overflow="scroll"><m:mrow><m:msub><m:mi>v</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo><m:mo>.</m:mo><m:mo>.</m:mo><m:mo>.</m:mo><m:mo>,</m:mo><m:msub><m:mi>v</m:mi><m:mn>4</m:mn></m:msub></m:mrow></m:math> from before, we can calculate
+<m:math overflow="scroll"><m:mrow><m:msub><m:mi>c</m:mi><m:mn>1</m:mn></m:msub><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>4</m:mn></m:mfrac></m:mrow></m:math>, <m:math overflow="scroll"><m:mrow><m:msub><m:mi>c</m:mi><m:mn>2</m:mn></m:msub><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math>, <m:math overflow="scroll"><m:mrow><m:msub><m:mi>c</m:mi><m:mn>3</m:mn></m:msub><m:mo>=</m:mo><m:mfrac><m:mrow><m:mo>-</m:mo><m:msqrt><m:mn>2</m:mn></m:msqrt></m:mrow><m:mn>16</m:mn></m:mfrac></m:mrow></m:math>, <m:math overflow="scroll"><m:mrow><m:msub><m:mi>c</m:mi><m:mn>4</m:mn></m:msub><m:mo>=</m:mo><m:mfrac><m:msqrt><m:mn>2</m:mn></m:msqrt><m:mn>16</m:mn></m:mfrac></m:mrow></m:math>. Thus, we have that</para>
+      <equation id="id176037">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:mover accent="true">
+              <m:mi>f</m:mi>
+              <m:mo>^</m:mo>
+            </m:mover>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>t</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>=</m:mo>
+            <m:mfrac>
+              <m:mn>1</m:mn>
+              <m:mn>4</m:mn>
+            </m:mfrac>
+            <m:msub>
+              <m:mi>v</m:mi>
+              <m:mn>1</m:mn>
+            </m:msub>
+            <m:mo>-</m:mo>
+            <m:mfrac>
+              <m:msqrt>
+                <m:mn>2</m:mn>
+              </m:msqrt>
+              <m:mn>16</m:mn>
+            </m:mfrac>
+            <m:msub>
+              <m:mi>v</m:mi>
+              <m:mn>3</m:mn>
+            </m:msub>
+            <m:mo>+</m:mo>
+            <m:mfrac>
+              <m:msqrt>
+                <m:mn>2</m:mn>
+              </m:msqrt>
+              <m:mn>16</m:mn>
+            </m:mfrac>
+            <m:msub>
+              <m:mi>v</m:mi>
+              <m:mn>4</m:mn>
+            </m:msub>
+            <m:mo>.</m:mo>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <figure id="uid7"><media id="uid7_media" alt="Illustration of the function f_hat(t), i.e., the best piecewise-constant approximation to f(t).">
+          <image mime-type="image/png" src="../../media/07_4.png" id="uid7_onlineimage" width="406"><!-- NOTE: attribute width changes image size online (pixels). original width is 406. --></image>
+          <image mime-type="application/postscript" for="pdf" src="../../media/07_4-e660.eps" id="uid7_printimage" print-width="6.75cm">
+            <!--NOTE: attribute width changes image size in printed PDF (if specified in .tex file)-->
+          </image>
+        </media>
+      </figure>
+    </example>  </content>
+</document>

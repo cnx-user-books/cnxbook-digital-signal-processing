@@ -1,0 +1,180 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+  <title>Orthobasis Expansions</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m34055</md:content-id>
+  <md:title>Orthobasis Expansions</md:title>
+  <md:abstract/>
+  <md:uuid>9d9345a9-2ce6-4613-97fd-6f501de42f01</md:uuid>
+</metadata>
+
+<content>
+    
+      <para id="id2253871">Suppose that the <m:math overflow="scroll"><m:msubsup><m:mfenced separators="" open="{" close="}"><m:msub><m:mi>v</m:mi><m:mi>j</m:mi></m:msub></m:mfenced><m:mrow><m:mi>j</m:mi><m:mo>=</m:mo><m:mn>1</m:mn></m:mrow><m:mi>N</m:mi></m:msubsup></m:math> are a finite-dimensional
+orthobasis. In this case we have</para>
+      <equation id="id2253914"><m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:mover accent="true">
+              <m:mi>x</m:mi>
+              <m:mo>^</m:mo>
+            </m:mover>
+            <m:mo>=</m:mo>
+              <m:munderover>
+<m:mrow>
+                <m:mo>∑</m:mo>
+</m:mrow>     
+   
+        <m:mrow>
+                  <m:mi>j</m:mi>
+                  <m:mo>=</m:mo>
+                  <m:mn>1</m:mn>
+                </m:mrow>
+<m:mrow>
+<m:mi>N</m:mi>
+</m:mrow>
+              
+            </m:munderover>
+            <m:mfenced separators="" open="〈" close="〉">
+              <m:mi>x</m:mi>
+              <m:mo>,</m:mo>
+              <m:msub>
+                <m:mi>v</m:mi>
+                <m:mi>j</m:mi>
+              </m:msub>
+            </m:mfenced>
+            <m:msub>
+              <m:mi>v</m:mi>
+              <m:mi>j</m:mi>
+            </m:msub>
+            <m:mo>.</m:mo>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id2253982">But what if <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mi> span </m:mi><m:mo>(</m:mo><m:mfenced separators="" open="{" close="}"><m:msub><m:mi>v</m:mi><m:mi>j</m:mi></m:msub></m:mfenced><m:mo>)</m:mo><m:mo>=</m:mo><m:mi>V</m:mi></m:mrow></m:math> already? Then we simply have</para>
+      <equation id="id2253120"><m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:mi>x</m:mi>
+            <m:mo>=</m:mo>
+            <m:munderover>
+<m:mrow>
+              <m:mo>∑</m:mo>
+</m:mrow>        
+      <m:mrow>
+                <m:mi>j</m:mi>
+                <m:mo>=</m:mo>
+                <m:mn>1</m:mn>
+              </m:mrow>
+<m:mrow>         
+     <m:mi>N</m:mi>
+</m:mrow>        
+    </m:munderover>
+            <m:mfenced separators="" open="〈" close="〉">
+              <m:mi>x</m:mi>
+              <m:mo>,</m:mo>
+              <m:msub>
+                <m:mi>v</m:mi>
+                <m:mi>j</m:mi>
+              </m:msub>
+            </m:mfenced>
+            <m:msub>
+              <m:mi>v</m:mi>
+              <m:mi>j</m:mi>
+            </m:msub>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id2254321">for all <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mi>V</m:mi></m:mrow></m:math>. This is often called the “reproducing formula”. In infinite dimensions, if <m:math overflow="scroll"><m:mi>V</m:mi></m:math> has an orthobasis <m:math overflow="scroll"><m:msubsup><m:mfenced separators="" open="{" close="}"><m:msub><m:mi>v</m:mi><m:mi>j</m:mi></m:msub></m:mfenced><m:mrow><m:mi>j</m:mi><m:mo>=</m:mo><m:mn>1</m:mn></m:mrow><m:mi>∞</m:mi></m:msubsup></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mi>V</m:mi></m:mrow></m:math> has</para>
+      <equation id="id2254400"><m:math overflow="scroll" mode="display">
+          <m:mrow>
+           
+              <m:munderover>
+<m:mrow>                
+<m:mo>∑</m:mo>
+</m:mrow>         
+       <m:mrow>
+                  <m:mi>j</m:mi>
+                  <m:mo>=</m:mo>
+                  <m:mn>1</m:mn>
+                </m:mrow>
+<m:mrow>         
+     <m:mi>∞</m:mi>
+</m:mrow>        
+    </m:munderover>
+            <m:msup>
+              <m:mfenced separators="" open="|" close="|">
+                <m:mfenced separators="" open="〈" close="〉">
+                  <m:mi>x</m:mi>
+                  <m:mo>,</m:mo>
+                  <m:msub>
+                    <m:mi>v</m:mi>
+                    <m:mi>j</m:mi>
+                  </m:msub>
+                </m:mfenced>
+              </m:mfenced>
+              <m:mn>2</m:mn>
+            </m:msup>
+            <m:mo>&lt;</m:mo>
+            <m:mi>∞</m:mi>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id2254463">then we can write</para>
+      <equation id="id2254468"><m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:mi>x</m:mi>
+            <m:mo>=</m:mo>
+         
+              <m:munderover>
+<m:mrow>         
+       <m:mo>∑</m:mo>
+</m:mrow>        
+        <m:mrow>
+                  <m:mi>j</m:mi>
+                  <m:mo>=</m:mo>
+                  <m:mn>1</m:mn>
+                </m:mrow>
+<m:mrow>  
+            <m:mi>∞</m:mi>
+</m:mrow>        
+    </m:munderover>
+            <m:mfenced separators="" open="〈" close="〉">
+              <m:mi>x</m:mi>
+              <m:mo>,</m:mo>
+              <m:msub>
+                <m:mi>v</m:mi>
+                <m:mi>j</m:mi>
+              </m:msub>
+            </m:mfenced>
+            <m:msub>
+              <m:mi>v</m:mi>
+              <m:mi>j</m:mi>
+            </m:msub>
+            <m:mo>.</m:mo>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id2254526">In other words, <m:math overflow="scroll"><m:mi>x</m:mi></m:math> is perfectly captured by the list of numbers <m:math overflow="scroll"><m:mrow><m:mfenced separators="" open="〈" close="〉"><m:mi>x</m:mi><m:mo>,</m:mo><m:msub><m:mi>v</m:mi><m:mn>1</m:mn></m:msub></m:mfenced><m:mo>,</m:mo><m:mfenced separators="" open="〈" close="〉"><m:mi>x</m:mi><m:mo>,</m:mo><m:msub><m:mi>v</m:mi><m:mn>2</m:mn></m:msub></m:mfenced><m:mo>,</m:mo><m:mo>...</m:mo></m:mrow></m:math></para>
+      <para id="id2254592">Sound familiar?</para>
+<!--empty paragraphs get left behind.-->
+      
+      
+      <example id="eip-217"><list id="eip-id1682748">
+<item id="uid1"><m:math overflow="scroll"><m:mrow><m:mi>V</m:mi><m:mo>=</m:mo><m:msup><m:mi mathvariant="double-struck">C</m:mi><m:mi>n</m:mi></m:msup></m:mrow></m:math>, <m:math overflow="scroll"><m:mfenced separators="" open="{" close="}"><m:msub><m:mi>v</m:mi><m:mi>k</m:mi></m:msub></m:mfenced></m:math> is the standard basis.
+<equation id="id2254665"><m:math overflow="scroll" mode="display"><m:mrow><m:msub><m:mi>x</m:mi><m:mi>k</m:mi></m:msub><m:mo>=</m:mo><m:mfenced separators="" open="〈" close="〉"><m:mi>x</m:mi><m:mo>,</m:mo><m:msub><m:mi>v</m:mi><m:mi>k</m:mi></m:msub></m:mfenced><m:msub><m:mi>v</m:mi><m:mi>k</m:mi></m:msub><m:mo>.</m:mo></m:mrow></m:math></equation></item>
+        <item id="uid2"><m:math overflow="scroll"><m:mrow><m:mi>V</m:mi><m:mo>=</m:mo><m:msub><m:mi>L</m:mi><m:mn>2</m:mn></m:msub><m:mfenced separators="" open="[" close="]"><m:mo>-</m:mo><m:mi>π</m:mi><m:mo>,</m:mo><m:mi>π</m:mi></m:mfenced></m:mrow></m:math>, <m:math overflow="scroll"><m:mrow><m:msub><m:mi>v</m:mi><m:mi>k</m:mi></m:msub><m:mfenced open="(" close=")"><m:mi>t</m:mi></m:mfenced><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:msqrt><m:mrow><m:mn>2</m:mn><m:mi>π</m:mi></m:mrow></m:msqrt></m:mfrac><m:msup><m:mi>e</m:mi><m:mrow><m:mi>j</m:mi><m:mi>k</m:mi><m:mi>t</m:mi></m:mrow></m:msup></m:mrow></m:math>
+For any <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>∈</m:mo><m:mi>V</m:mi></m:mrow></m:math> we have
+<equation id="id2254826"><m:math overflow="scroll" mode="display"><m:mrow><m:mi>f</m:mi><m:mfenced open="(" close=")"><m:mi>t</m:mi></m:mfenced><m:mo>=</m:mo>
+<m:munderover><m:mrow>
+<m:mo>∑</m:mo>
+</m:mrow>
+<m:mrow><m:mi>k</m:mi><m:mo>=</m:mo><m:mo>-</m:mo><m:mi>∞</m:mi></m:mrow>
+<m:mrow>
+<m:mi>∞</m:mi>
+</m:mrow>
+</m:munderover><m:msub><m:mi>c</m:mi><m:mi>x</m:mi></m:msub><m:msub><m:mi>v</m:mi><m:mi>x</m:mi></m:msub></m:mrow></m:math></equation>
+where
+<equation id="id2254885"><m:math overflow="scroll" mode="display"><m:mrow><m:msub><m:mi>c</m:mi><m:mi>k</m:mi></m:msub><m:mo>=</m:mo><m:mfenced separators="" open="〈" close="〉"><m:mi>f</m:mi><m:mo>,</m:mo><m:msub><m:mi>v</m:mi><m:mi>k</m:mi></m:msub></m:mfenced><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:msqrt><m:mrow><m:mn>2</m:mn><m:mi>π</m:mi></m:mrow></m:msqrt></m:mfrac><m:msubsup><m:mo>∫</m:mo><m:mrow><m:mo>-</m:mo><m:mi>π</m:mi></m:mrow><m:mi>π</m:mi></m:msubsup><m:mi>f</m:mi><m:mfenced open="(" close=")"><m:mi>t</m:mi></m:mfenced><m:msup><m:mi>e</m:mi><m:mrow><m:mo>-</m:mo><m:mi>j</m:mi><m:mi>k</m:mi><m:mi>t</m:mi></m:mrow></m:msup><m:mi>d</m:mi><m:mi>t</m:mi><m:mo>.</m:mo></m:mrow></m:math></equation></item>
+      </list></example><para id="id2254981">The general lesson is that we can recreate a vector <m:math overflow="scroll"><m:mi>x</m:mi></m:math> in an inner product space from the coefficients <m:math overflow="scroll"><m:mfenced separators="" open="{" close="}"><m:mfenced separators="" open="〈" close="〉"><m:mi>x</m:mi><m:mo>,</m:mo><m:msub><m:mi>v</m:mi><m:mi>k</m:mi></m:msub></m:mfenced></m:mfenced></m:math>. We can think of <m:math overflow="scroll"><m:mfenced separators="" open="{" close="}"><m:mfenced separators="" open="〈" close="〉"><m:mi>x</m:mi><m:mo>,</m:mo><m:msub><m:mi>v</m:mi><m:mi>k</m:mi></m:msub></m:mfenced></m:mfenced></m:math> as
+“transform coefficients.”
+</para>
+  </content>
+</document>

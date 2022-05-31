@@ -1,0 +1,42 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+
+<title>Bases</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m34017</md:content-id>
+  <md:title>Bases</md:title>
+  <md:abstract/>
+  <md:uuid>6eee92f4-d37b-4dae-8bed-f6612a6e8897</md:uuid>
+</metadata>
+
+<content>
+  
+      <para id="id2427141"><title>Definition 1</title>A <emphasis effect="italics">basis</emphasis> of a vector space <m:math overflow="scroll"><m:mi>V</m:mi></m:math> is a set of vectors <m:math overflow="scroll"><m:mi>B</m:mi></m:math> such that
+<list id="eip-id1165596911087">
+<item id="uid3"><m:math overflow="scroll"><m:mrow><m:mi> span </m:mi><m:mo>(</m:mo><m:mi>B</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mi>V</m:mi></m:mrow></m:math>.
+</item>
+        <item id="uid4"><m:math overflow="scroll"><m:mi>B</m:mi></m:math> is linearly independent.
+</item>
+      </list></para>
+      
+      <para id="id2427230">The second condition ensures that all bases of <m:math overflow="scroll"><m:mi>V</m:mi></m:math> will have the same size. In
+fact, the dimension of a vector space <m:math overflow="scroll"><m:mi>V</m:mi></m:math> is defined as the number of elements
+required in a basis for <m:math overflow="scroll"><m:mi>V</m:mi></m:math>. (Could easily be in infinite.)</para>
+      <!--empty paragraphs get left behind.-->
+
+<example id="fs-id8477797">
+
+      <list id="id2427274" display="block" list-type="bulleted">
+        <item id="uid5"><m:math overflow="scroll"><m:msup><m:mi mathvariant="double-struck">R</m:mi><m:mi>N</m:mi></m:msup></m:math> with <m:math overflow="scroll"><m:mi>B</m:mi></m:math> the “standard basis” for <m:math overflow="scroll"><m:msup><m:mi mathvariant="double-struck">R</m:mi><m:mi>N</m:mi></m:msup></m:math><equation id="id2427328"><m:math overflow="scroll" mode="display"><m:mrow><m:mrow><m:mo>{</m:mo><m:msub><m:mi>b</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>b</m:mi><m:mn>2</m:mn></m:msub><m:mo>,</m:mo><m:mo>...</m:mo><m:mo>,</m:mo><m:msub><m:mi>b</m:mi><m:mi>N</m:mi></m:msub><m:mo>}</m:mo></m:mrow><m:mo>=</m:mo><m:mfenced separators="" open="{" close="}"><m:mfenced separators="" open="[" close="]"><m:mtable><m:mtr><m:mtd><m:mn>1</m:mn></m:mtd></m:mtr><m:mtr><m:mtd><m:mn>0</m:mn></m:mtd></m:mtr><m:mtr><m:mtd><m:mo>⋮</m:mo></m:mtd></m:mtr><m:mtr><m:mtd><m:mn>0</m:mn></m:mtd></m:mtr></m:mtable></m:mfenced><m:mo>,</m:mo><m:mfenced separators="" open="[" close="]"><m:mtable><m:mtr><m:mtd><m:mn>0</m:mn></m:mtd></m:mtr><m:mtr><m:mtd><m:mn>1</m:mn></m:mtd></m:mtr><m:mtr><m:mtd><m:mo>⋮</m:mo></m:mtd></m:mtr><m:mtr><m:mtd><m:mn>0</m:mn></m:mtd></m:mtr></m:mtable></m:mfenced><m:mo>,</m:mo><m:mo>...</m:mo><m:mo>,</m:mo><m:mfenced separators="" open="[" close="]"><m:mtable><m:mtr><m:mtd><m:mn>0</m:mn></m:mtd></m:mtr><m:mtr><m:mtd><m:mn>0</m:mn></m:mtd></m:mtr><m:mtr><m:mtd><m:mo>⋮</m:mo></m:mtd></m:mtr><m:mtr><m:mtd><m:mn>1</m:mn></m:mtd></m:mtr></m:mtable></m:mfenced></m:mfenced></m:mrow></m:math></equation>
+Note that this easily extends to <m:math overflow="scroll"><m:mrow><m:msub><m:mi>ℓ</m:mi><m:mi>p</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi mathvariant="double-struck">Z</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math>.
+</item>
+        <item id="uid6"><m:math overflow="scroll"><m:msup><m:mi mathvariant="double-struck">R</m:mi><m:mi>N</m:mi></m:msup></m:math> with any set of <m:math overflow="scroll"><m:mi>N</m:mi></m:math> linearly independent vectors
+</item>
+        <item id="uid7"><m:math overflow="scroll"><m:mrow><m:mi>V</m:mi><m:mo>=</m:mo><m:mo>{</m:mo><m:mi> polynomialsofdegreeatmost </m:mi><m:mspace width="4pt"/><m:mi>p</m:mi><m:mo>}</m:mo></m:mrow></m:math><m:math overflow="scroll"><m:mrow><m:mi>B</m:mi><m:mo>=</m:mo><m:mo>{</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:mi>t</m:mi><m:mo>,</m:mo><m:msup><m:mi>t</m:mi><m:mn>2</m:mn></m:msup><m:mo>,</m:mo><m:mo>.</m:mo><m:mo>.</m:mo><m:mo>.</m:mo><m:mo>,</m:mo><m:msup><m:mi>t</m:mi><m:mi>p</m:mi></m:msup><m:mo>}</m:mo></m:mrow></m:math> (Note that the dimension of <m:math overflow="scroll"><m:mi>V</m:mi></m:math> is <m:math overflow="scroll"><m:mrow><m:mi>p</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:math>)
+</item>
+        <item id="uid8"><m:math overflow="scroll"><m:mrow><m:mi>V</m:mi><m:mo>=</m:mo><m:mo>{</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo><m:mo>:</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo><m:mspace width="4pt"/><m:mi> isperiodicwithperiod </m:mi><m:mspace width="4pt"/><m:mi>T</m:mi><m:mo>}</m:mo></m:mrow></m:math><m:math overflow="scroll"><m:mrow><m:mi>B</m:mi><m:mo>=</m:mo><m:msubsup><m:mrow><m:mo>{</m:mo><m:msup><m:mi>e</m:mi><m:mrow><m:mi>j</m:mi><m:mi>k</m:mi><m:mi>t</m:mi></m:mrow></m:msup><m:mo>}</m:mo></m:mrow><m:mrow><m:mi>k</m:mi><m:mo>=</m:mo><m:mo>-</m:mo><m:mi>∞</m:mi></m:mrow><m:mi>∞</m:mi></m:msubsup></m:mrow></m:math> (Fourier series, infinite dimensional)
+</item>
+      </list>
+</example>    
+</content>
+
+</document>

@@ -1,0 +1,45 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+  <title>Complete Vector Spaces</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m33548</md:content-id>
+  <md:title>Complete Vector Spaces</md:title>
+  <md:abstract/>
+  <md:uuid>168a64ae-83c2-486a-959e-225cf0b6fc29</md:uuid>
+</metadata>
+
+<content>
+       <para id="id145592"><title>Definition1</title>A complete normed vector space is called a <emphasis effect="italics">Banach space</emphasis>.</para>
+      <!--empty paragraphs get left behind.-->
+<example id="eip-id8903398">
+      
+      <list id="id145620" display="block" list-type="bulleted">
+        <item id="uid3"><m:math overflow="scroll"><m:mrow><m:mo>·</m:mo><m:mi>C</m:mi><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow></m:math> with <m:math overflow="scroll"><m:msub><m:mi>L</m:mi><m:mi>∞</m:mi></m:msub></m:math> norm, i.e., <m:math overflow="scroll"><m:mrow><m:msub><m:mfenced open="∥" close="∥"><m:mi>f</m:mi></m:mfenced><m:mi>∞</m:mi></m:msub><m:mo>=</m:mo><m:munder><m:mrow><m:mtext>ess</m:mtext><m:mspace width="4.pt"/><m:mtext>sup</m:mtext></m:mrow><m:mrow><m:mi>t</m:mi><m:mo>∈</m:mo><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow></m:munder><m:mrow><m:mo>|</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>|</m:mo></m:mrow></m:mrow></m:math> is a Banach space.
+</item>
+        <item id="uid4"><m:math overflow="scroll"><m:mrow><m:msub><m:mi>L</m:mi><m:mi>p</m:mi></m:msub><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow><m:mo>=</m:mo><m:msub><m:mrow><m:mo>{</m:mo><m:mi>f</m:mi><m:mo>:</m:mo><m:mo>∥</m:mo><m:mi>f</m:mi><m:mo>∥</m:mo></m:mrow><m:mi>p</m:mi></m:msub><m:mrow><m:mo>&lt;</m:mo><m:mi>∞</m:mi><m:mo>}</m:mo></m:mrow></m:mrow></m:math> for <m:math overflow="scroll"><m:mrow><m:mi>p</m:mi><m:mo>∈</m:mo><m:mo>[</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:mi>∞</m:mi><m:mo>]</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mo>-</m:mo><m:mi>∞</m:mi><m:mo>≤</m:mo><m:mi>a</m:mi><m:mo>&lt;</m:mo><m:mi>b</m:mi><m:mo>≤</m:mo><m:mi>∞</m:mi></m:mrow></m:math> is a Banach space.
+</item>
+        <item id="uid5"><m:math overflow="scroll"><m:mrow><m:msub><m:mi>ℓ</m:mi><m:mi>p</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi mathvariant="double-struck">N</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msub><m:mrow><m:mo>{</m:mo><m:mi> sequences </m:mi><m:mspace width="4pt"/><m:mi>x</m:mi><m:mo>:</m:mo><m:mo>∥</m:mo><m:mi>x</m:mi><m:mo>∥</m:mo></m:mrow><m:mi>p</m:mi></m:msub><m:mrow><m:mo>&lt;</m:mo><m:mi>∞</m:mi><m:mo>}</m:mo></m:mrow></m:mrow></m:math> for <m:math overflow="scroll"><m:mrow><m:mi>p</m:mi><m:mo>∈</m:mo><m:mo>[</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:mi>∞</m:mi><m:mo>]</m:mo></m:mrow></m:math> is a Banach space.
+</item>
+        <item id="uid6">Any finite-dimensional normed vector space is Banach, e.g., <m:math overflow="scroll"><m:msup><m:mi mathvariant="double-struck">R</m:mi><m:mi>N</m:mi></m:msup></m:math> or <m:math overflow="scroll"><m:msup><m:mi mathvariant="double-struck">C</m:mi><m:mi>N</m:mi></m:msup></m:math> with any norm.
+</item>
+        <item id="uid7"><m:math overflow="scroll"><m:mrow><m:mi>C</m:mi><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow></m:math> with <m:math overflow="scroll"><m:msub><m:mi>L</m:mi><m:mi>p</m:mi></m:msub></m:math> norm for <m:math overflow="scroll"><m:mrow><m:mi>p</m:mi><m:mo>&lt;</m:mo><m:mi>∞</m:mi></m:mrow></m:math> is not Banach.
+</item>
+      </list>
+</example>
+      <para id="id146552"><title>Definition 2</title>A complete inner product space is called a <emphasis effect="italics">Hilbert space</emphasis>.</para>
+      <!--empty paragraphs get left behind.-->
+<example id="eip-id9747695">
+      
+      <list id="id146580" display="block" list-type="bulleted">
+        <item id="uid9"><m:math overflow="scroll"><m:mrow><m:msub><m:mi>L</m:mi><m:mn>2</m:mn></m:msub><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow></m:mrow></m:math> is a Hilbert space.
+</item>
+        <item id="uid10"><m:math overflow="scroll"><m:mrow><m:msub><m:mi>ℓ</m:mi><m:mn>2</m:mn></m:msub><m:mrow><m:mo>(</m:mo><m:mi mathvariant="double-struck">N</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> is a Hilbert space.
+</item>
+        <item id="uid11">Any finite-dimensional inner product space is a Hilbert space.
+</item>
+      </list>
+</example>    
+  <para id="id146667">Note that every Hilbert space is Banach, but the converse is not true.
+Hilbert spaces will be extremely important in this course.</para>
+
+  </content>
+</document>

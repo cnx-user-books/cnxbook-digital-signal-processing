@@ -1,0 +1,213 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+  <title>Approximation in ℓ_p Norms</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m34019</md:content-id>
+  <md:title>Approximation in ℓ_p Norms</md:title>
+  <md:abstract/>
+  <md:uuid>78f88d18-1b69-4647-98dd-6d976e7e4a71</md:uuid>
+</metadata>
+
+<content>
+    
+<para id="id2253866">So far, our approximation problem has been posed in an inner product space, and we have thus measured our approximation error using norms that are induced by an inner product such as the <m:math overflow="scroll"><m:mrow><m:msub><m:mi>L</m:mi><m:mn>2</m:mn></m:msub><m:mo>/</m:mo><m:msub><m:mi>ℓ</m:mi><m:mn>2</m:mn></m:msub></m:mrow></m:math> norms (or weighted <m:math overflow="scroll"><m:mrow><m:msub><m:mi>L</m:mi><m:mn>2</m:mn></m:msub><m:mo>/</m:mo><m:msub><m:mi>ℓ</m:mi><m:mn>2</m:mn></m:msub></m:mrow></m:math> norms). Sometimes this is a natural choice – it can be interpreted as the “energy” in the error and arises often in the case of signals corrupted by Gaussian noise. However, more often than not, it is used simply because it is easy to deal with.</para>
+      <para id="id2253933">In some cases we might be interested in approximating with respect to other norms – in particular we will consider approximation with respect to
+<m:math overflow="scroll"><m:msub><m:mi>ℓ</m:mi><m:mi>p</m:mi></m:msub></m:math>-norms for <m:math overflow="scroll"><m:mrow><m:mi>p</m:mi><m:mo>≠</m:mo><m:mn>0</m:mn></m:mrow></m:math>. First, we introduce the concept of a “unit ball”. Any norm gives us rise to a unit ball, i.e., <m:math overflow="scroll"><m:mrow><m:mfenced separators="" open="{" close="}"><m:mi>x</m:mi><m:mo>:</m:mo><m:mfenced open="∥" close="∥"><m:mi>x</m:mi></m:mfenced><m:mo>=</m:mo><m:mn>1</m:mn></m:mfenced><m:mo>.</m:mo></m:mrow></m:math> Some important examples of unit balls for the <m:math overflow="scroll"><m:msub><m:mi>ℓ</m:mi><m:mi>p</m:mi></m:msub></m:math> norms in <m:math overflow="scroll"><m:msup><m:mi mathvariant="double-struck">R</m:mi><m:mn>2</m:mn></m:msup></m:math> are depicted below.</para>
+      <figure id="uid1" orient="horizontal"><subfigure id="id2254292">
+          <media id="id2254292_media" alt="Illustrations of the ell_p balls for p=1,2,infinity.  For p=2, the ball is a circle.  For p=infinity, it is a square.  For p=1, it is a diamond.">
+            <image mime-type="image/png" src="../../media/10_1.png" id="id2254292_onlineimage" width="231"><!-- NOTE: attribute width changes image size online (pixels). original width is 231. --></image>
+            <image mime-type="application/postscript" for="pdf" src="../../media/10_1.eps" id="id2254292_printimage" print-width="4.5cm">
+<!--NOTE: attribute width changes image size in printed PDF (if specified in .tex file)-->
+            </image>
+          </media>
+        </subfigure>
+        <subfigure id="id2254303">
+          <media id="id2254303_media" alt="">
+            <image mime-type="image/png" src="../../media/10_2.png" id="id2254303_onlineimage" width="231"><!-- NOTE: attribute width changes image size online (pixels). original width is 231. --></image>
+            <image mime-type="application/postscript" for="pdf" src="../../media/10_2.eps" id="id2254303_printimage" print-width="4.5cm">
+<!--NOTE: attribute width changes image size in printed PDF (if specified in .tex file)-->
+            </image>
+          </media>
+        </subfigure>
+        <subfigure id="id2254314">
+          <media id="id2254314_media" alt="">
+            <image mime-type="image/png" src="../../media/10_3.png" id="id2254314_onlineimage" width="231"><!-- NOTE: attribute width changes image size online (pixels). original width is 231. --></image>
+            <image mime-type="application/postscript" for="pdf" src="../../media/10_3.eps" id="id2254314_printimage" print-width="4.5cm">
+<!--NOTE: attribute width changes image size in printed PDF (if specified in .tex file)-->
+            </image>
+          </media>
+        </subfigure>
+      </figure>
+      <para id="id2254379">We now consider an example of approximating a point in <m:math overflow="scroll"><m:msup><m:mi mathvariant="double-struck">R</m:mi><m:mn>2</m:mn></m:msup></m:math> with a point
+in a 1-D subspace while measuring error using the <m:math overflow="scroll"><m:msub><m:mi>ℓ</m:mi><m:mi>p</m:mi></m:msub></m:math> norm for <m:math overflow="scroll"><m:mrow><m:mi>p</m:mi><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:mn>2</m:mn><m:mo>,</m:mo><m:mi>∞</m:mi></m:mrow></m:math>.</para>
+<example id="eip-id5918633">     
+ <para id="id2254437">Suppose <m:math overflow="scroll"><m:mrow><m:mi>V</m:mi><m:mo>=</m:mo><m:msup><m:mi mathvariant="double-struck">R</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:math>,</para>
+      <equation id="id2254466">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:mi>A</m:mi>
+            <m:mo>=</m:mo>
+            <m:mi> span </m:mi>
+            <m:mfenced open="(" close=")">
+              <m:mfenced separators="" open="[" close="]">
+                <m:mtable>
+                  <m:mtr>
+                    <m:mtd>
+                      <m:mn>2</m:mn>
+                    </m:mtd>
+                  </m:mtr>
+                  <m:mtr>
+                    <m:mtd>
+                      <m:mrow>
+                        <m:mo>-</m:mo>
+                        <m:mn>1</m:mn>
+                      </m:mrow>
+                    </m:mtd>
+                  </m:mtr>
+                </m:mtable>
+              </m:mfenced>
+            </m:mfenced>
+            <m:mo>,</m:mo>
+            <m:mspace width="1.em"/>
+            <m:mspace width="1.em"/>
+            <m:mi> and </m:mi>
+            <m:mspace width="1.em"/>
+            <m:mspace width="1.em"/>
+            <m:mi>x</m:mi>
+            <m:mo>=</m:mo>
+            <m:mfenced separators="" open="[" close="]">
+              <m:mtable>
+                <m:mtr>
+                  <m:mtd>
+                    <m:mn>2</m:mn>
+                  </m:mtd>
+                </m:mtr>
+                <m:mtr>
+                  <m:mtd>
+                    <m:mn>1</m:mn>
+                  </m:mtd>
+                </m:mtr>
+              </m:mtable>
+            </m:mfenced>
+            <m:mo>.</m:mo>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id2254546">We will want to find <m:math overflow="scroll"><m:mrow><m:mover accent="true"><m:mi>x</m:mi><m:mo>^</m:mo></m:mover><m:mo>∈</m:mo><m:mi>A</m:mi></m:mrow></m:math> that minimizes <m:math overflow="scroll"><m:msub><m:mfenced separators="" open="∥" close="∥"><m:mi>x</m:mi><m:mo>-</m:mo><m:mover accent="true"><m:mi>x</m:mi><m:mo>^</m:mo></m:mover></m:mfenced><m:mi>p</m:mi></m:msub></m:math>. Since <m:math overflow="scroll"><m:mrow><m:mover accent="true"><m:mi>x</m:mi><m:mo>^</m:mo></m:mover><m:mo>∈</m:mo><m:mi>A</m:mi></m:mrow></m:math>, we can write</para>
+      <equation id="id2254624">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:mover accent="true">
+              <m:mi>x</m:mi>
+              <m:mo>^</m:mo>
+            </m:mover>
+            <m:mo>=</m:mo>
+            <m:mfenced separators="" open="[" close="]">
+              <m:mtable>
+                <m:mtr>
+                  <m:mtd>
+                    <m:mrow>
+                      <m:mn>2</m:mn>
+                      <m:mi>α</m:mi>
+                    </m:mrow>
+                  </m:mtd>
+                </m:mtr>
+                <m:mtr>
+                  <m:mtd>
+                    <m:mrow>
+                      <m:mo>-</m:mo>
+                      <m:mi>α</m:mi>
+                    </m:mrow>
+                  </m:mtd>
+                </m:mtr>
+              </m:mtable>
+            </m:mfenced>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id2254668">and thus</para>
+      <equation id="id2254673">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:mi>e</m:mi>
+            <m:mo>=</m:mo>
+            <m:mi>x</m:mi>
+            <m:mo>-</m:mo>
+            <m:mover accent="true">
+              <m:mi>x</m:mi>
+              <m:mo>^</m:mo>
+            </m:mover>
+            <m:mo>=</m:mo>
+            <m:mfenced separators="" open="[" close="]">
+              <m:mtable>
+                <m:mtr>
+                  <m:mtd>
+                    <m:mrow>
+                      <m:mn>2</m:mn>
+                      <m:mo>-</m:mo>
+                      <m:mn>2</m:mn>
+                      <m:mi>α</m:mi>
+                    </m:mrow>
+                  </m:mtd>
+                </m:mtr>
+                <m:mtr>
+                  <m:mtd>
+                    <m:mrow>
+                      <m:mn>1</m:mn>
+                      <m:mo>+</m:mo>
+                      <m:mi>α</m:mi>
+                    </m:mrow>
+                  </m:mtd>
+                </m:mtr>
+              </m:mtable>
+            </m:mfenced>
+            <m:mo>.</m:mo>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id2254733">While we can solve for <m:math overflow="scroll"><m:mrow><m:mi>α</m:mi><m:mo>∈</m:mo><m:mi mathvariant="double-struck">R</m:mi></m:mrow></m:math> to minimize <m:math overflow="scroll"><m:msub><m:mfenced open="∥" close="∥"><m:mi>e</m:mi></m:mfenced><m:mi>p</m:mi></m:msub></m:math>
+directly in some cases, a geometric interpretation is also useful. In each
+case, on can imagine growing an <m:math overflow="scroll"><m:msub><m:mi>ℓ</m:mi><m:mi>p</m:mi></m:msub></m:math> ball centered on <m:math overflow="scroll"><m:mi>x</m:mi></m:math> until the ball
+intersects with <m:math overflow="scroll"><m:mi>A</m:mi></m:math>. This will be the point <m:math overflow="scroll"><m:mrow><m:mover accent="true"><m:mi>x</m:mi><m:mo>^</m:mo></m:mover><m:mo>∈</m:mo><m:mi>A</m:mi></m:mrow></m:math>. that is
+closest to <m:math overflow="scroll"><m:mi>x</m:mi></m:math> in the <m:math overflow="scroll"><m:msub><m:mi>ℓ</m:mi><m:mi>p</m:mi></m:msub></m:math> norm. We first illustrate this for the <m:math overflow="scroll"><m:msub><m:mi>ℓ</m:mi><m:mn>2</m:mn></m:msub></m:math> norm below:</para>
+      <figure id="uid2"><media id="uid2_media" alt="An illustration of approximation to a 1-D subspace in R2 using the ell_2 norm. The subspace is tangent to the sphere at the point where the radius of the sphere is just large enough to touch the line.  This provides another 'proof' of the orthogonality principle.">
+          <image mime-type="image/png" src="../../media/10_4.png" id="uid2_onlineimage" width="246"><!-- NOTE: attribute width changes image size online (pixels). original width is 246. --></image>
+          <image mime-type="application/postscript" for="pdf" src="../../media/10_4.eps" id="uid2_printimage" print-width="7.5cm">
+<!--NOTE: attribute width changes image size in printed PDF (if specified in .tex file)-->
+          </image>
+        </media>
+      </figure>
+      <para id="id2254878">In order to calculate <m:math overflow="scroll"><m:mover accent="true"><m:mi>x</m:mi><m:mo>^</m:mo></m:mover></m:math> we can apply the orthogonality principle. Since <m:math overflow="scroll"><m:mrow><m:mo>〈</m:mo><m:mi>e</m:mi><m:mo>,</m:mo><m:msup><m:mrow><m:mo>[</m:mo><m:mn>2</m:mn><m:mspace width="4pt"/><m:mn>1</m:mn><m:mo>]</m:mo></m:mrow><m:mi>T</m:mi></m:msup><m:mo>〉</m:mo><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> we obtain a solution defined by <m:math overflow="scroll"><m:mrow><m:mi>α</m:mi><m:mo>=</m:mo><m:mfrac><m:mn>3</m:mn><m:mn>5</m:mn></m:mfrac></m:mrow></m:math>.</para>
+      <para id="id2254956">We now observe that in the case of the <m:math overflow="scroll"><m:msub><m:mi>ℓ</m:mi><m:mi>∞</m:mi></m:msub></m:math> norm the picture changes somewhat. The closest point in <m:math overflow="scroll"><m:msub><m:mi>ℓ</m:mi><m:mi>∞</m:mi></m:msub></m:math> is illustrated below:</para>
+      <figure id="uid3"><media id="uid3_media" alt="An illustration of approximation to a 1-D subspace in R2 using the ell_infinity norm.  The square first touches the line at a different point than the sphere.  In this case both entries of the error vector have equal magnitude.">
+          <image mime-type="image/png" src="../../media/10_5.png" id="uid3_onlineimage" width="231"><!-- NOTE: attribute width changes image size online (pixels). original width is 231. --></image>
+          <image mime-type="application/postscript" for="pdf" src="../../media/10_5.eps" id="uid3_printimage" print-width="7.5cm">
+<!--NOTE: attribute width changes image size in printed PDF (if specified in .tex file)-->
+          </image>
+        </media>
+      </figure>
+      <para id="id2254999">Note that the error is no longer orthogonal to the subspace <m:math overflow="scroll"><m:mi>A</m:mi></m:math>. In this case we can still calculate <m:math overflow="scroll"><m:mover accent="true"><m:mi>x</m:mi><m:mo>^</m:mo></m:mover></m:math> from the observation that the two terms in the error should be equal, which yields <m:math overflow="scroll"><m:mrow><m:mi>α</m:mi><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>3</m:mn></m:mfrac></m:mrow></m:math>.</para>
+      <para id="id2255049">The situation is even more different for the case of the <m:math overflow="scroll"><m:msub><m:mi>ℓ</m:mi><m:mn>1</m:mn></m:msub></m:math> norm, which is illustrated below:
+</para>
+      <figure id="uid4"><media id="uid4_media" alt="An illustration of approximation to a 1-D subspace in R2 using the ell_1 norm.  The diamond first touches the line at yet another point.  In this case the error vector has only one non-zero value.">
+          <image mime-type="image/png" src="../../media/10_6.png" id="uid4_onlineimage" width="256"><!-- NOTE: attribute width changes image size online (pixels). original width is 256. --></image>
+          <image mime-type="application/postscript" for="pdf" src="../../media/10_6.eps" id="uid4_printimage" print-width="7.5cm">
+<!--NOTE: attribute width changes image size in printed PDF (if specified in .tex file)-->
+          </image>
+        </media>
+      </figure>
+      <para id="id2255079">We now observe that <m:math overflow="scroll"><m:mover accent="true"><m:mi>x</m:mi><m:mo>^</m:mo></m:mover></m:math> corresponds to <m:math overflow="scroll"><m:mrow><m:mi>α</m:mi><m:mo>=</m:mo><m:mn>1</m:mn></m:mrow></m:math>. Note that in this case the error term is <m:math overflow="scroll"><m:msup><m:mrow><m:mo>[</m:mo><m:mn>0</m:mn><m:mspace width="4pt"/><m:mn>2</m:mn><m:mo>]</m:mo></m:mrow><m:mi>T</m:mi></m:msup></m:math>. This punctuates a general trend: for large values of <m:math overflow="scroll"><m:mi>p</m:mi></m:math>, the <m:math overflow="scroll"><m:msub><m:mi>ℓ</m:mi><m:mi>p</m:mi></m:msub></m:math> norm tends to spread error evenly across all terms, while for small values of <m:math overflow="scroll"><m:mi>p</m:mi></m:math> the error is more highly concentrated.</para></example>
+      <para id="id2255172">When is it useful to approximate in <m:math overflow="scroll"><m:msub><m:mi>ℓ</m:mi><m:mi>p</m:mi></m:msub></m:math> or <m:math overflow="scroll"><m:msub><m:mi>L</m:mi><m:mi>p</m:mi></m:msub></m:math> norms for <m:math overflow="scroll"><m:mrow><m:mi>p</m:mi><m:mo>≠</m:mo><m:mn>0</m:mn></m:mrow></m:math>?</para>
+<!--empty paragraphs get left behind.-->
+<example id="eip-id3926105">
+      
+      <list id="id2255232" display="block" list-type="labeled-item"><item id="uid5"><label>Filter Design</label>In some cases we will want the best fit to a specified frequency response in an <m:math overflow="scroll"><m:msub><m:mi>L</m:mi><m:mi>∞</m:mi></m:msub></m:math> sense rather than the <m:math overflow="scroll"><m:msub><m:mi>L</m:mi><m:mn>2</m:mn></m:msub></m:math> sense. This minimizes the <emphasis effect="italics">maximum</emphasis> error rather than total energy in the error. In the figure below we illustrate a desired frequency response. If the <m:math overflow="scroll"><m:msub><m:mi>L</m:mi><m:mi>∞</m:mi></m:msub></m:math> norm of the error is small, then we are guaranteed that the approximation to our desired frequency response will lie within the illustrated bounds.
+<figure id="uid6"><media id="uid6_media" alt="An illustration depicting a desired frequency response (low-pass) and maximum bounds by which we will allow other the actual frequency response to deviate from the desired one. "><image mime-type="image/png" src="../../media/10_7.png" id="uid6_onlineimage" width="409"><!-- NOTE: attribute width changes image size online (pixels). original width is 409. --></image><image mime-type="application/postscript" for="pdf" src="../../media/10_7.eps" id="uid6_printimage" print-width="12.75cm"><!--NOTE: attribute width changes image size in printed PDF (if specified in .tex file)--></image></media></figure></item>
+        <item id="uid7"><label>Geometry representation</label>In compressing 3D geometry, can be useful to bound the <m:math overflow="scroll"><m:msub><m:mi>L</m:mi><m:mi>∞</m:mi></m:msub></m:math> error to ensure
+that basic shapes of narrow features (like poles, power lines, etc.) are preserved.
+</item>
+        <item id="uid8"><label>Sparsity</label>In the case where the error is known to be sparse (i.e., zero on most indices) it can be useful to measure the error in the <m:math overflow="scroll"><m:msub><m:mi>ℓ</m:mi><m:mn>1</m:mn></m:msub></m:math> norm.
+</item>
+      </list>
+    </example>
+ </content>
+</document>

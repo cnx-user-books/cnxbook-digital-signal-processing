@@ -1,0 +1,61 @@
+<col:collection xmlns="http://cnx.rice.edu/collxml" xmlns:md="http://cnx.rice.edu/mdml" xmlns:col="http://cnx.rice.edu/collxml" xml:lang="en">
+  <metadata xmlns:md="http://cnx.rice.edu/mdml" mdml-version="0.5">
+    <md:content-id>col11172</md:content-id>
+    <md:title>Digital Signal Processing</md:title>
+    <md:language>en</md:language>
+    <md:license url="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution License</md:license>
+    <md:uuid>6b2edc73-c5f4-4bd7-ba73-3bea3d9396ab</md:uuid>
+<md:slug>digital-signal-processing</md:slug>
+</metadata>
+  <col:content>
+    <col:module document="m33588"/>
+    <col:subcollection>
+      <md:title>Signal Representation and Approximation in Vector Spaces</md:title>
+      <col:content>
+        <col:module document="m33568"/>
+        <col:module document="m33586"/>
+        <col:module document="m33583"/>
+        <col:module document="m33561"/>
+        <col:module document="m33556"/>
+        <col:module document="m33573"/>
+        <col:module document="m33548"/>
+        <col:module document="m34036"/>
+        <col:module document="m34030"/>
+        <col:module document="m34073"/>
+        <col:module document="m34068"/>
+        <col:module document="m34058"/>
+        <col:module document="m34064"/>
+        <col:module document="m34042"/>
+        <col:module document="m34017"/>
+        <col:module document="m34067"/>
+        <col:module document="m34021"/>
+        <col:module document="m34050"/>
+        <col:module document="m34055"/>
+        <col:module document="m34062"/>
+        <col:module document="m34038"/>
+        <col:module document="m34019"/>
+      </col:content>
+    </col:subcollection>
+    <col:subcollection>
+      <md:title>Representation and Analysis of Systems</md:title>
+      <col:content>
+        <col:module document="m34053"/>
+        <col:module document="m34041"/>
+        <col:module document="m34026"/>
+        <col:module document="m34821"/>
+        <col:module document="m34819"/>
+        <col:module document="m34823"/>
+        <col:module document="m34822"/>
+        <col:module document="m34817"/>
+        <col:module document="m34818"/>
+        <col:module document="m34814"/>
+        <col:module document="m34815"/>
+        <col:module document="m34811"/>
+        <col:module document="m34816"/>
+        <col:module document="m34812"/>
+        <col:module document="m34820"/>
+        <col:module document="m34810"/>
+      </col:content>
+    </col:subcollection>
+  </col:content>
+</col:collection>

@@ -1,0 +1,329 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+
+<title>Inverse z-Transform</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m34815</md:content-id>
+  <md:title>Inverse z-Transform</md:title>
+  <md:abstract/>
+  <md:uuid>585a6a9e-8411-4e73-8f62-13bf63a3e8d7</md:uuid>
+</metadata>
+
+<content>
+<section id="id63795">
+      <title>Inverse <m:math overflow="scroll"><m:mi>z</m:mi></m:math>-transform</title>
+      <para id="id63809">Up to this point, we have ignored how to actually invert a z-transform to
+find <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>[</m:mo><m:mi>n</m:mi><m:mo>]</m:mo></m:mrow></m:math> from <m:math overflow="scroll"><m:mrow><m:mi>X</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow></m:math>. Doing so is very different from inverting a DTFT.
+We will consider three main techniques:</para>
+      <list id="id63845" display="block" list-type="enumerated">
+        <item id="uid4">Inspection (look it up in a table)
+</item>
+        <item id="uid5">Partial fraction expansion
+</item>
+        <item id="uid6">Power series expansion
+</item>
+      </list>
+      <para id="id63883">One can also use contour integration combined with the Cauchy Residue
+Theorem. See Oppenheim and Schafer for details.</para>
+      <section id="id63887"><title>Inspection</title><para id="id63893">Basically, become familiar with the <m:math overflow="scroll"><m:mi>z</m:mi></m:math>-transform pairs listed in tables, and
+“reverse engineer”</para>
+        <example id="eip-id2402802"><para id="id63906">
+Suppose that</para>
+        <equation id="id63909">
+          <m:math overflow="scroll" mode="display">
+            <m:mrow>
+              <m:mi>X</m:mi>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>z</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mo>=</m:mo>
+              <m:mfrac>
+                <m:mi>z</m:mi>
+                <m:mrow>
+                  <m:mi>z</m:mi>
+                  <m:mo>-</m:mo>
+                  <m:mi>a</m:mi>
+                </m:mrow>
+              </m:mfrac>
+              <m:mrow>
+                <m:mo>,</m:mo>
+                <m:mspace width="1.em"/>
+                <m:mo>|</m:mo>
+                <m:mi>z</m:mi>
+                <m:mo>|</m:mo>
+                <m:mo>&gt;</m:mo>
+                <m:mo>|</m:mo>
+                <m:mi>a</m:mi>
+                <m:mo>|</m:mo>
+                <m:mo>.</m:mo>
+              </m:mrow>
+            </m:mrow>
+          </m:math>
+        </equation>
+        <para id="id63964">By now you should be able to recognize that <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mrow><m:mo>[</m:mo><m:mi>n</m:mi><m:mo>]</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>a</m:mi><m:mi>n</m:mi></m:msup><m:mi>u</m:mi><m:mrow><m:mo>[</m:mo><m:mi>n</m:mi><m:mo>]</m:mo></m:mrow></m:mrow></m:math>.</para></example>
+      </section>
+      <section id="id64007"><title>Partial fraction expansion</title><para id="id64013">If <m:math overflow="scroll"><m:mrow><m:mi>X</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow></m:math> is rational, break it up into a sum of elementary forms, each of
+which can be inverted by inspection.</para>
+        <example id="eip-id1167506542574"><para id="id64033">
+Suppose that</para>
+        <equation id="id64036">
+          <m:math overflow="scroll" mode="display">
+            <m:mrow>
+              <m:mi>X</m:mi>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>z</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mo>=</m:mo>
+              <m:mfrac>
+                <m:mrow>
+                  <m:mn>1</m:mn>
+                  <m:mo>+</m:mo>
+                  <m:mn>2</m:mn>
+                  <m:msup>
+                    <m:mi>z</m:mi>
+                    <m:mrow>
+                      <m:mo>-</m:mo>
+                      <m:mn>1</m:mn>
+                    </m:mrow>
+                  </m:msup>
+                  <m:mo>+</m:mo>
+                  <m:msup>
+                    <m:mi>z</m:mi>
+                    <m:mrow>
+                      <m:mo>-</m:mo>
+                      <m:mn>2</m:mn>
+                    </m:mrow>
+                  </m:msup>
+                </m:mrow>
+                <m:mrow>
+                  <m:mn>1</m:mn>
+                  <m:mo>-</m:mo>
+                  <m:mfrac>
+                    <m:mn>3</m:mn>
+                    <m:mn>2</m:mn>
+                  </m:mfrac>
+                  <m:msup>
+                    <m:mi>z</m:mi>
+                    <m:mrow>
+                      <m:mo>-</m:mo>
+                      <m:mn>1</m:mn>
+                    </m:mrow>
+                  </m:msup>
+                  <m:mo>+</m:mo>
+                  <m:mfrac>
+                    <m:mn>1</m:mn>
+                    <m:mn>2</m:mn>
+                  </m:mfrac>
+                  <m:msup>
+                    <m:mi>z</m:mi>
+                    <m:mrow>
+                      <m:mo>-</m:mo>
+                      <m:mn>2</m:mn>
+                    </m:mrow>
+                  </m:msup>
+                </m:mrow>
+              </m:mfrac>
+              <m:mo>,</m:mo>
+              <m:mspace width="1.em"/>
+              <m:mrow>
+                <m:mo>|</m:mo>
+                <m:mi>z</m:mi>
+                <m:mo>|</m:mo>
+              </m:mrow>
+              <m:mo>&gt;</m:mo>
+              <m:mn>1</m:mn>
+              <m:mo>.</m:mo>
+            </m:mrow>
+          </m:math>
+        </equation>
+        <para id="id64150">By computing a partial fraction expansion we can decompose <m:math overflow="scroll"><m:mrow><m:mi>X</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow></m:math> into</para>
+        <equation id="id64171">
+          <m:math overflow="scroll" mode="display">
+            <m:mrow>
+              <m:mi>X</m:mi>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>z</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mo>=</m:mo>
+              <m:mfrac>
+                <m:mn>8</m:mn>
+                <m:mrow>
+                  <m:mn>1</m:mn>
+                  <m:mo>-</m:mo>
+                  <m:msup>
+                    <m:mi>z</m:mi>
+                    <m:mrow>
+                      <m:mo>-</m:mo>
+                      <m:mn>1</m:mn>
+                    </m:mrow>
+                  </m:msup>
+                </m:mrow>
+              </m:mfrac>
+              <m:mo>-</m:mo>
+              <m:mfrac>
+                <m:mn>9</m:mn>
+                <m:mrow>
+                  <m:mn>1</m:mn>
+                  <m:mo>-</m:mo>
+                  <m:mfrac>
+                    <m:mn>1</m:mn>
+                    <m:mn>2</m:mn>
+                  </m:mfrac>
+                  <m:msup>
+                    <m:mi>z</m:mi>
+                    <m:mrow>
+                      <m:mo>-</m:mo>
+                      <m:mn>1</m:mn>
+                    </m:mrow>
+                  </m:msup>
+                </m:mrow>
+              </m:mfrac>
+              <m:mo>+</m:mo>
+              <m:mn>2</m:mn>
+              <m:mo>,</m:mo>
+            </m:mrow>
+          </m:math>
+        </equation>
+        <para id="id64247">where each term in the sum can be inverted by inspection.</para></example>
+      </section>
+      <section id="id64254"><title>Power Series Expansion</title><para id="id64260">Recall that</para>
+        <equation id="uid7">
+          <m:math overflow="scroll" mode="display">
+            <m:mtable displaystyle="true">
+              <m:mtr>
+                <m:mtd columnalign="right">
+                  <m:mrow>
+                    <m:mi>X</m:mi>
+                    <m:mo>(</m:mo>
+                    <m:mi>z</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                </m:mtd>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:mo>=</m:mo>
+                    <m:munderover>
+                      <m:mo>∑</m:mo>
+                      <m:mrow>
+                        <m:mi>n</m:mi>
+                        <m:mo>=</m:mo>
+                        <m:mo>-</m:mo>
+                        <m:mi>∞</m:mi>
+                      </m:mrow>
+                      <m:mi>∞</m:mi>
+                    </m:munderover>
+                    <m:mi>x</m:mi>
+                    <m:mrow>
+                      <m:mo>[</m:mo>
+                      <m:mi>n</m:mi>
+                      <m:mo>]</m:mo>
+                    </m:mrow>
+                    <m:msup>
+                      <m:mi>z</m:mi>
+                      <m:mrow>
+                        <m:mo>-</m:mo>
+                        <m:mi>n</m:mi>
+                      </m:mrow>
+                    </m:msup>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd/>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:mo>=</m:mo>
+                    <m:mo>...</m:mo>
+                    <m:mi>x</m:mi>
+                    <m:mrow>
+                      <m:mo>[</m:mo>
+                      <m:mo>-</m:mo>
+                      <m:mn>2</m:mn>
+                      <m:mo>]</m:mo>
+                    </m:mrow>
+                    <m:msup>
+                      <m:mi>z</m:mi>
+                      <m:mn>2</m:mn>
+                    </m:msup>
+                    <m:mo>+</m:mo>
+                    <m:mi>x</m:mi>
+                    <m:mrow>
+                      <m:mo>[</m:mo>
+                      <m:mo>-</m:mo>
+                      <m:mn>1</m:mn>
+                      <m:mo>]</m:mo>
+                    </m:mrow>
+                    <m:mi>z</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mi>x</m:mi>
+                    <m:mrow>
+                      <m:mo>[</m:mo>
+                      <m:mn>0</m:mn>
+                      <m:mo>]</m:mo>
+                    </m:mrow>
+                    <m:mo>+</m:mo>
+                    <m:mi>x</m:mi>
+                    <m:mrow>
+                      <m:mo>[</m:mo>
+                      <m:mn>1</m:mn>
+                      <m:mo>]</m:mo>
+                    </m:mrow>
+                    <m:msup>
+                      <m:mi>z</m:mi>
+                      <m:mrow>
+                        <m:mo>-</m:mo>
+                        <m:mn>1</m:mn>
+                      </m:mrow>
+                    </m:msup>
+                    <m:mo>+</m:mo>
+                    <m:mi>x</m:mi>
+                    <m:mrow>
+                      <m:mo>[</m:mo>
+                      <m:mn>2</m:mn>
+                      <m:mo>]</m:mo>
+                    </m:mrow>
+                    <m:msup>
+                      <m:mi>z</m:mi>
+                      <m:mrow>
+                        <m:mo>-</m:mo>
+                        <m:mn>2</m:mn>
+                      </m:mrow>
+                    </m:msup>
+                    <m:mo>+</m:mo>
+                    <m:mo>...</m:mo>
+                    <m:mo>.</m:mo>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+            </m:mtable>
+          </m:math>
+        </equation>
+        <para id="id64446">
+If we know the coefficients for the Laurent series expansion of <m:math overflow="scroll"><m:mrow><m:mi>X</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow></m:math>, then these coefficients give us the
+inverse <m:math overflow="scroll"><m:mi>z</m:mi></m:math>-transform.</para>
+        
+        <example id="eip-id1170896679809">
+          <para id="eip-id1170879567073">Suppose</para>
+<equation id="uid9"><m:math overflow="scroll" mode="display"><m:mtable displaystyle="true"><m:mtr><m:mtd columnalign="right"><m:mrow><m:mi>X</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow></m:mtd><m:mtd columnalign="left"><m:mrow><m:mo>=</m:mo><m:msup><m:mi>z</m:mi><m:mn>2</m:mn></m:msup><m:mfenced separators="" open="(" close=")"><m:mn>1</m:mn><m:mo>-</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:msup><m:mi>z</m:mi><m:mrow><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msup></m:mfenced><m:mfenced separators="" open="(" close=")"><m:mn>1</m:mn><m:mo>+</m:mo><m:msup><m:mi>z</m:mi><m:mrow><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msup></m:mfenced><m:mfenced separators="" open="(" close=")"><m:mn>1</m:mn><m:mo>-</m:mo><m:msup><m:mi>z</m:mi><m:mrow><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msup></m:mfenced></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mrow><m:mo>=</m:mo><m:msup><m:mi>z</m:mi><m:mn>2</m:mn></m:msup><m:mo>-</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:mi>z</m:mi><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>+</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:msup><m:mi>z</m:mi><m:mrow><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msup></m:mrow></m:mtd></m:mtr></m:mtable></m:math></equation>
+<para id="eip-id1170887370147">Then</para>
+<equation id="id64664"><m:math overflow="scroll" mode="display"><m:mrow><m:mi>x</m:mi><m:mrow><m:mo>[</m:mo><m:mi>n</m:mi><m:mo>]</m:mo></m:mrow><m:mo>=</m:mo><m:mi>δ</m:mi><m:mrow><m:mo>[</m:mo><m:mi>n</m:mi><m:mo>+</m:mo><m:mn>2</m:mn><m:mo>]</m:mo></m:mrow><m:mo>-</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:mi>δ</m:mi><m:mrow><m:mo>[</m:mo><m:mi>n</m:mi><m:mo>+</m:mo><m:mn>1</m:mn><m:mo>]</m:mo></m:mrow><m:mo>-</m:mo><m:mi>δ</m:mi><m:mrow><m:mo>[</m:mo><m:mi>n</m:mi><m:mo>]</m:mo></m:mrow><m:mo>+</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:mi>δ</m:mi><m:mrow><m:mo>[</m:mo><m:mi>n</m:mi><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>]</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></equation></example>
+          <example id="eip-id1170889031093"><para id="eip-id1170886658560">Suppose</para>
+<equation id="id64768"><m:math overflow="scroll" mode="display"><m:mrow><m:mi>X</m:mi><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mo form="prefix">log</m:mo><m:mrow><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>+</m:mo><m:mi>a</m:mi><m:msup><m:mi>z</m:mi><m:mrow><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msup><m:mo>)</m:mo></m:mrow><m:mrow><m:mo>,</m:mo><m:mspace width="1.em"/><m:mo>|</m:mo><m:mi>z</m:mi><m:mo>|</m:mo><m:mo>&gt;</m:mo><m:mo>|</m:mo><m:mi>a</m:mi><m:mo>|</m:mo></m:mrow></m:mrow></m:math></equation>
+<para id="eip-id1170879612848">where <m:math overflow="scroll"><m:mo form="prefix">log</m:mo></m:math> denotes the complex logarithm. Recalling the Laurent series expansion</para>
+<equation id="id64852"><m:math overflow="scroll" mode="display"><m:mrow><m:mo form="prefix">log</m:mo><m:mrow><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>+</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:munderover><m:mrow><m:mo>∑</m:mo></m:mrow><m:mrow><m:mi>n</m:mi><m:mo>=</m:mo><m:mn>1</m:mn></m:mrow><m:mi>∞</m:mi></m:munderover><m:mfrac><m:mrow><m:msup><m:mrow><m:mo>(</m:mo><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>)</m:mo></m:mrow><m:mrow><m:mi>n</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:msup><m:msup><m:mi>x</m:mi><m:mi>n</m:mi></m:msup></m:mrow><m:mi>n</m:mi></m:mfrac></m:mrow></m:math></equation>
+<para id="eip-id1170885925960">we can write</para>
+<equation id="id64934"><m:math overflow="scroll" mode="display"><m:mrow><m:mi>X</m:mi><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:munderover><m:mrow><m:mo>∑</m:mo></m:mrow><m:mrow><m:mi>n</m:mi><m:mo>=</m:mo><m:mn>1</m:mn></m:mrow><m:mi>∞</m:mi></m:munderover><m:mfrac><m:mrow><m:msup><m:mrow><m:mo>(</m:mo><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>)</m:mo></m:mrow><m:mrow><m:mi>n</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:msup><m:msup><m:mi>a</m:mi><m:mi>n</m:mi></m:msup></m:mrow><m:mi>n</m:mi></m:mfrac><m:msup><m:mi>z</m:mi><m:mrow><m:mo>-</m:mo><m:mi>n</m:mi></m:mrow></m:msup><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="eip-id1170898079393">Thus we can infer that</para>
+
+<equation id="id65052"><m:math overflow="scroll" mode="display"><m:mrow><m:mi>x</m:mi><m:mrow><m:mo>[</m:mo><m:mi>n</m:mi><m:mo>]</m:mo></m:mrow><m:mo>=</m:mo><m:mfenced separators="" open="{" close=""><m:mtable><m:mtr><m:mtd columnalign="left"><m:mfrac><m:mrow><m:msup><m:mrow><m:mo>(</m:mo><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>)</m:mo></m:mrow><m:mrow><m:mi>n</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:msup><m:msup><m:mi>a</m:mi><m:mi>n</m:mi></m:msup></m:mrow><m:mi>n</m:mi></m:mfrac></m:mtd><m:mtd columnalign="left"><m:mrow><m:mi>n</m:mi><m:mo>≥</m:mo><m:mn>1</m:mn></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd columnalign="left"><m:mn>0</m:mn></m:mtd><m:mtd columnalign="left"><m:mrow><m:mi>n</m:mi><m:mo>≤</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:mtd></m:mtr></m:mtable></m:mfenced></m:mrow></m:math></equation></example>
+        
+      </section>
+    </section>
+</content>
+
+</document>

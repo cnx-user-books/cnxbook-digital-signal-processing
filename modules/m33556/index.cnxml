@@ -1,0 +1,112 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+  <title>Inner Product Spaces</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m33556</md:content-id>
+  <md:title>Inner Product Spaces</md:title>
+  <md:abstract/>
+  <md:uuid>1ee8e95e-0680-42af-8e7b-d69de1ba8bdf</md:uuid>
+</metadata>
+
+<content>
+      <para id="id2572937">Where normed vector spaces incorporate the concept of length into a vector
+space, inner product spaces incorporate the concept of angle.</para>
+      <para id="id2572943"><title>Definition 1</title>Let <m:math overflow="scroll"><m:mi>V</m:mi></m:math> be a vector space over <m:math overflow="scroll"><m:mi>K</m:mi></m:math>. An <emphasis effect="italics">inner product</emphasis> is a function <m:math overflow="scroll"><m:mrow><m:mo>〈</m:mo><m:mo>·</m:mo><m:mo>,</m:mo><m:mo>·</m:mo><m:mo>〉</m:mo><m:mo>:</m:mo><m:mi>V</m:mi><m:mo>×</m:mo><m:mi>V</m:mi><m:mo>→</m:mo><m:mi>K</m:mi></m:mrow></m:math> such that for all <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>,</m:mo><m:mi>y</m:mi><m:mo>,</m:mo><m:mi>z</m:mi><m:mo>∈</m:mo><m:mi>V</m:mi><m:mo>,</m:mo><m:mi>α</m:mi><m:mo>∈</m:mo><m:mi>K</m:mi></m:mrow></m:math></para>
+      <list id="id2573671" display="block" list-type="labeled-item" mark-suffix="">
+        <item id="uid2">
+          <label>IP1.</label>
+          <m:math overflow="scroll">
+            <m:mrow>
+              <m:mrow>
+                <m:mo>〈</m:mo>
+                <m:mi>x</m:mi>
+                <m:mo>,</m:mo>
+                <m:mi>y</m:mi>
+                <m:mo>〉</m:mo>
+              </m:mrow>
+              <m:mo>=</m:mo>
+              <m:mover>
+                <m:mrow>
+                  <m:mo>〈</m:mo>
+                  <m:mi>y</m:mi>
+                  <m:mo>,</m:mo>
+                  <m:mi>x</m:mi>
+                  <m:mo>〉</m:mo>
+                </m:mrow>
+                <m:mo>¯</m:mo>
+              </m:mover>
+            </m:mrow>
+          </m:math>
+        </item>
+        <item id="uid3">
+          <label>IP2.</label>
+          <m:math overflow="scroll">
+            <m:mrow>
+              <m:mo>〈</m:mo>
+              <m:mi>α</m:mi>
+              <m:mi>x</m:mi>
+              <m:mo>,</m:mo>
+              <m:mi>y</m:mi>
+              <m:mo>〉</m:mo>
+              <m:mo>=</m:mo>
+              <m:mi>α</m:mi>
+              <m:mo>〈</m:mo>
+              <m:mi>x</m:mi>
+              <m:mo>,</m:mo>
+              <m:mi>y</m:mi>
+              <m:mo>〉</m:mo>
+            </m:mrow>
+          </m:math>
+        </item>
+        <item id="uid4">
+          <label>IP3.</label>
+          <m:math overflow="scroll">
+            <m:mrow>
+              <m:mo>〈</m:mo>
+              <m:mi>x</m:mi>
+              <m:mo>+</m:mo>
+              <m:mi>y</m:mi>
+              <m:mo>,</m:mo>
+              <m:mi>z</m:mi>
+              <m:mo>〉</m:mo>
+              <m:mo>=</m:mo>
+              <m:mo>〈</m:mo>
+              <m:mi>x</m:mi>
+              <m:mo>,</m:mo>
+              <m:mi>z</m:mi>
+              <m:mo>〉</m:mo>
+              <m:mo>+</m:mo>
+              <m:mo>〈</m:mo>
+              <m:mi>y</m:mi>
+              <m:mo>,</m:mo>
+              <m:mi>z</m:mi>
+              <m:mo>〉</m:mo>
+            </m:mrow>
+          </m:math>
+        </item>
+        <item id="uid5"><label>IP4.</label><m:math overflow="scroll"><m:mrow><m:mo>〈</m:mo><m:mi>x</m:mi><m:mo>,</m:mo><m:mi>x</m:mi><m:mo>〉</m:mo><m:mo>≥</m:mo><m:mn>0</m:mn></m:mrow></m:math> with equality iff <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math>.
+</item>
+      </list>
+      <para id="id2573886">A vector space together with an inner product is called an <emphasis effect="italics">inner product
+space</emphasis>.</para>
+      <!--empty paragraphs get left behind.-->
+<example id="eip-id8892435">
+      <list id="id2573908" display="block" list-type="bulleted">
+        <item id="uid6"><m:math overflow="scroll"><m:mrow><m:mi>V</m:mi><m:mo>=</m:mo><m:msup><m:mi mathvariant="double-struck">C</m:mi><m:mi>N</m:mi></m:msup></m:mrow></m:math>, <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>〈</m:mo><m:mi>x</m:mi><m:mo>,</m:mo><m:mi>y</m:mi><m:mo>〉</m:mo></m:mrow><m:mo>:</m:mo><m:mo>=</m:mo><m:msubsup><m:mo>∑</m:mo><m:mrow><m:mi>i</m:mi><m:mo>=</m:mo><m:mn>1</m:mn></m:mrow><m:mi>N</m:mi></m:msubsup><m:msub><m:mi>x</m:mi><m:mi>i</m:mi></m:msub><m:mover><m:msub><m:mi>y</m:mi><m:mi>i</m:mi></m:msub><m:mo>¯</m:mo></m:mover><m:mo>=</m:mo><m:msup><m:mi>y</m:mi><m:mo>*</m:mo></m:msup><m:mi>x</m:mi></m:mrow></m:math></item>
+        <item id="uid7"><m:math overflow="scroll"><m:mrow><m:mi>V</m:mi><m:mo>=</m:mo><m:mi>C</m:mi><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow></m:math>, <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>〈</m:mo><m:mi>x</m:mi><m:mo>,</m:mo><m:mi>y</m:mi><m:mo>〉</m:mo></m:mrow><m:mo>:</m:mo><m:mo>=</m:mo><m:msubsup><m:mo>∫</m:mo><m:mi>a</m:mi><m:mi>b</m:mi></m:msubsup><m:mi>x</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mover><m:mrow><m:mi>y</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>¯</m:mo></m:mover><m:mi>d</m:mi><m:mi>t</m:mi></m:mrow></m:math></item>
+      </list>
+</example>
+      <para id="id2574347">Note that a valid inner product space induces a normed vector space with
+norm <m:math overflow="scroll"><m:mrow><m:mfenced open="∥" close="∥"><m:mi>x</m:mi></m:mfenced><m:mo>=</m:mo><m:msqrt><m:mrow><m:mo>〈</m:mo><m:mi>x</m:mi><m:mo>,</m:mo><m:mi>x</m:mi><m:mo>〉</m:mo></m:mrow></m:msqrt></m:mrow></m:math>. (Proof relies on Cauchy-Schwartz inequality.)
+In <m:math overflow="scroll"><m:msup><m:mi mathvariant="double-struck">R</m:mi><m:mi>N</m:mi></m:msup></m:math> or <m:math overflow="scroll"><m:msup><m:mi mathvariant="double-struck">C</m:mi><m:mi>N</m:mi></m:msup></m:math>, the standard inner product induces the <m:math overflow="scroll"><m:msub><m:mi>ℓ</m:mi><m:mn>2</m:mn></m:msub></m:math>-norm. We summarize the relationships between the various spaces introduced over the last few lectures in <link target-id="uid8"/>.</para>
+      <figure id="uid8"><media id="uid8_media" alt="A Venn diagram illustrating the relationships between the various mathematical spaces discussed up to this point.  Metric spaces and vector spaces have a nonzero intersection, and normed vector spaces lie within this intersection.  Inner product spaces lie within the set of normed vector spaces.">
+          <image mime-type="image/png" src="../../media/04_1.png" id="uid8_onlineimage" width="267"><!-- NOTE: attribute width changes image size online (pixels). original width is 267. --></image>
+          <image mime-type="application/postscript" for="pdf" src="../../media/04_1-fc2d.eps" id="uid8_printimage" print-width="11.25cm">
+            <!--NOTE: attribute width changes image size in printed PDF (if specified in .tex file)-->
+          </image>
+        </media>
+        
+      <caption>Venn diagram illustrating the relationship between vector and metric spaces.</caption></figure>
+      
+      
+  </content>
+</document>
